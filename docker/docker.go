@@ -3,10 +3,10 @@ package docker
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/hashicorp/cdktf-provider-docker-go/docker/jsii"
+	_init_ "github.com/hashicorp/cdktf-provider-docker-go/docker/v2/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/hashicorp/cdktf-provider-docker-go/docker/internal"
+	"github.com/hashicorp/cdktf-provider-docker-go/docker/v2/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -15,6 +15,10 @@ type Config interface {
 	cdktf.TerraformResource
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -28,6 +32,10 @@ type Config interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -48,6 +56,10 @@ type Config interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	// Experimental.
@@ -110,6 +122,16 @@ func (j *jsiiProxy_Config) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_Config) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Config) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -155,6 +177,16 @@ func (j *jsiiProxy_Config) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Config) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -250,6 +282,16 @@ func (j *jsiiProxy_Config) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_Config) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Config) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -317,6 +359,14 @@ func NewConfig_Override(c Config, scope constructs.Construct, id *string, config
 	)
 }
 
+func (j *jsiiProxy_Config) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Config) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -337,6 +387,14 @@ func (j *jsiiProxy_Config) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Config) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -369,6 +427,14 @@ func (j *jsiiProxy_Config) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Config) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -632,13 +698,19 @@ func (c *jsiiProxy_Config) ToTerraform() interface{} {
 
 type ConfigConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Base64-url-safe-encoded config data.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/config#data Config#data}
@@ -668,6 +740,10 @@ type Container interface {
 	Command() *[]*string
 	SetCommand(val *[]*string)
 	CommandInput() *[]*string
+	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	ContainerLogs() *string
@@ -709,6 +785,10 @@ type Container interface {
 	SetEnv(val *[]*string)
 	EnvInput() *[]*string
 	ExitCode() *float64
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -802,6 +882,10 @@ type Container interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	PublishAllPorts() interface{}
 	SetPublishAllPorts(val interface{})
 	PublishAllPortsInput() interface{}
@@ -1067,6 +1151,16 @@ func (j *jsiiProxy_Container) CommandInput() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_Container) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Container) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -1312,6 +1406,16 @@ func (j *jsiiProxy_Container) ExitCode() *float64 {
 	_jsii_.Get(
 		j,
 		"exitCode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -1947,6 +2051,16 @@ func (j *jsiiProxy_Container) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_Container) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Container) PublishAllPorts() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -2470,6 +2584,14 @@ func (j *jsiiProxy_Container) SetCommand(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_Container) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Container) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -2554,6 +2676,14 @@ func (j *jsiiProxy_Container) SetEnv(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"env",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Container) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -2738,6 +2868,14 @@ func (j *jsiiProxy_Container) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Container) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -4189,13 +4327,19 @@ func (c *jsiiProxy_ContainerCapabilitiesOutputReference) ToString() *string {
 
 type ContainerConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The ID of the image to back this container.
 	//
 	// The easiest way to get this value is to use the `docker_image` resource as is shown in the example.
@@ -14701,6 +14845,10 @@ type DataDockerImage interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
+	// Experimental.
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
@@ -14808,6 +14956,16 @@ func (j *jsiiProxy_DataDockerImage) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataDockerImage) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -14992,6 +15150,14 @@ func (j *jsiiProxy_DataDockerImage) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataDockerImage) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -15287,13 +15453,19 @@ func (d *jsiiProxy_DataDockerImage) ToTerraform() interface{} {
 
 type DataDockerImageConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the Docker image, including any tags or SHA256 repo digests.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/d/image#name DataDockerImage#name}
@@ -15321,6 +15493,10 @@ type DataDockerNetwork interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Driver() *string
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -15439,6 +15615,16 @@ func (j *jsiiProxy_DataDockerNetwork) Driver() *string {
 	_jsii_.Get(
 		j,
 		"driver",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataDockerNetwork) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -15643,6 +15829,14 @@ func (j *jsiiProxy_DataDockerNetwork) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataDockerNetwork) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -15922,13 +16116,19 @@ func (d *jsiiProxy_DataDockerNetwork) ToTerraform() interface{} {
 
 type DataDockerNetworkConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the Docker network.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/d/network#name DataDockerNetwork#name}
@@ -16575,6 +16775,10 @@ type DataDockerPlugin interface {
 	Enabled() cdktf.IResolvable
 	Env() *[]*string
 	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
+	// Experimental.
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
@@ -16722,6 +16926,16 @@ func (j *jsiiProxy_DataDockerPlugin) Env() *[]*string {
 	_jsii_.Get(
 		j,
 		"env",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataDockerPlugin) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -16914,6 +17128,14 @@ func (j *jsiiProxy_DataDockerPlugin) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataDockerPlugin) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -17209,13 +17431,19 @@ func (d *jsiiProxy_DataDockerPlugin) ToTerraform() interface{} {
 
 type DataDockerPluginConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/d/plugin#alias DataDockerPlugin#alias}
@@ -17244,6 +17472,10 @@ type DataDockerRegistryImage interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -17356,6 +17588,16 @@ func (j *jsiiProxy_DataDockerRegistryImage) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataDockerRegistryImage) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -17560,6 +17802,14 @@ func (j *jsiiProxy_DataDockerRegistryImage) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataDockerRegistryImage) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -17871,13 +18121,19 @@ func (d *jsiiProxy_DataDockerRegistryImage) ToTerraform() interface{} {
 
 type DataDockerRegistryImageConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the Docker image, including any tags. e.g. `alpine:latest`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/d/registry_image#name DataDockerRegistryImage#name}
@@ -18573,6 +18829,10 @@ type Image interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -18585,6 +18845,10 @@ type Image interface {
 	ForceRemove() interface{}
 	SetForceRemove(val interface{})
 	ForceRemoveInput() interface{}
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -18610,6 +18874,10 @@ type Image interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	PullTrigger() *string
 	SetPullTrigger(val *string)
 	PullTriggerInput() *string
@@ -18705,6 +18973,16 @@ func (j *jsiiProxy_Image) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_Image) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Image) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -18750,6 +19028,16 @@ func (j *jsiiProxy_Image) ForceRemoveInput() interface{} {
 	_jsii_.Get(
 		j,
 		"forceRemoveInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Image) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -18885,6 +19173,16 @@ func (j *jsiiProxy_Image) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_Image) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Image) PullTrigger() *string {
 	var returns *string
 	_jsii_.Get(
@@ -19002,6 +19300,14 @@ func NewImage_Override(i Image, scope constructs.Construct, id *string, config *
 	)
 }
 
+func (j *jsiiProxy_Image) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Image) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -19022,6 +19328,14 @@ func (j *jsiiProxy_Image) SetForceRemove(val interface{}) {
 	_jsii_.Set(
 		j,
 		"forceRemove",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Image) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -19062,6 +19376,14 @@ func (j *jsiiProxy_Image) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Image) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -20164,13 +20486,19 @@ func (i *jsiiProxy_ImageBuildOutputReference) ToString() *string {
 
 type ImageConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the Docker image, including any tags or SHA256 repo digests.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#name Image#name}
@@ -20218,6 +20546,10 @@ type Network interface {
 	SetCheckDuplicate(val interface{})
 	CheckDuplicateInput() interface{}
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -20230,6 +20562,10 @@ type Network interface {
 	Driver() *string
 	SetDriver(val *string)
 	DriverInput() *string
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -20269,6 +20605,10 @@ type Network interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	Scope() *string
@@ -20384,6 +20724,16 @@ func (j *jsiiProxy_Network) CheckDuplicateInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Network) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Network) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -20429,6 +20779,16 @@ func (j *jsiiProxy_Network) DriverInput() *string {
 	_jsii_.Get(
 		j,
 		"driverInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Network) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -20664,6 +21024,16 @@ func (j *jsiiProxy_Network) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_Network) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Network) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -20757,6 +21127,14 @@ func (j *jsiiProxy_Network) SetCheckDuplicate(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Network) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Network) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -20777,6 +21155,14 @@ func (j *jsiiProxy_Network) SetDriver(val *string) {
 	_jsii_.Set(
 		j,
 		"driver",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Network) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -20849,6 +21235,14 @@ func (j *jsiiProxy_Network) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Network) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -21208,13 +21602,19 @@ func (n *jsiiProxy_Network) ToTerraform() interface{} {
 
 type NetworkConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the Docker network.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/network#name Network#name}
@@ -22711,6 +23111,10 @@ type Plugin interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -22735,6 +23139,10 @@ type Plugin interface {
 	ForceDisable() interface{}
 	SetForceDisable(val interface{})
 	ForceDisableInput() interface{}
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -22761,6 +23169,10 @@ type Plugin interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	// Experimental.
@@ -22847,6 +23259,16 @@ func (j *jsiiProxy_Plugin) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Plugin) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
 		&returns,
 	)
 	return returns
@@ -22977,6 +23399,16 @@ func (j *jsiiProxy_Plugin) ForceDisableInput() interface{} {
 	_jsii_.Get(
 		j,
 		"forceDisableInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Plugin) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -23122,6 +23554,16 @@ func (j *jsiiProxy_Plugin) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_Plugin) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Plugin) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -23197,6 +23639,14 @@ func (j *jsiiProxy_Plugin) SetAlias(val *string) {
 	)
 }
 
+func (j *jsiiProxy_Plugin) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Plugin) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -23253,6 +23703,14 @@ func (j *jsiiProxy_Plugin) SetForceDisable(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Plugin) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Plugin) SetGrantAllPermissions(val interface{}) {
 	_jsii_.Set(
 		j,
@@ -23289,6 +23747,14 @@ func (j *jsiiProxy_Plugin) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Plugin) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -23624,13 +24090,19 @@ func (p *jsiiProxy_Plugin) ToTerraform() interface{} {
 
 type PluginConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Docker Plugin name.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/plugin#name Plugin#name}
@@ -24347,6 +24819,10 @@ type RegistryImage interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -24356,6 +24832,10 @@ type RegistryImage interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -24382,6 +24862,10 @@ type RegistryImage interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	Sha256Digest() *string
@@ -24469,6 +24953,16 @@ func (j *jsiiProxy_RegistryImage) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_RegistryImage) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RegistryImage) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -24494,6 +24988,16 @@ func (j *jsiiProxy_RegistryImage) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryImage) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -24629,6 +25133,16 @@ func (j *jsiiProxy_RegistryImage) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_RegistryImage) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RegistryImage) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -24706,6 +25220,14 @@ func NewRegistryImage_Override(r RegistryImage, scope constructs.Construct, id *
 	)
 }
 
+func (j *jsiiProxy_RegistryImage) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RegistryImage) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -24718,6 +25240,14 @@ func (j *jsiiProxy_RegistryImage) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RegistryImage) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -24766,6 +25296,14 @@ func (j *jsiiProxy_RegistryImage) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RegistryImage) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -28488,13 +29026,19 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) ToString() *string {
 
 type RegistryImageConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the Docker image.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/registry_image#name RegistryImage#name}
@@ -28526,6 +29070,10 @@ type Secret interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -28538,6 +29086,10 @@ type Secret interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -28560,6 +29112,10 @@ type Secret interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	// Experimental.
@@ -28624,6 +29180,16 @@ func (j *jsiiProxy_Secret) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_Secret) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Secret) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -28669,6 +29235,16 @@ func (j *jsiiProxy_Secret) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Secret) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -28784,6 +29360,16 @@ func (j *jsiiProxy_Secret) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_Secret) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Secret) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -28851,6 +29437,14 @@ func NewSecret_Override(s Secret, scope constructs.Construct, id *string, config
 	)
 }
 
+func (j *jsiiProxy_Secret) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Secret) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -28871,6 +29465,14 @@ func (j *jsiiProxy_Secret) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Secret) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -28903,6 +29505,14 @@ func (j *jsiiProxy_Secret) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Secret) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -29182,13 +29792,19 @@ func (s *jsiiProxy_Secret) ToTerraform() interface{} {
 
 type SecretConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Base64-url-safe-encoded secret data.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/secret#data Secret#data}
@@ -29881,6 +30497,10 @@ type Service interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	ConvergeConfig() ServiceConvergeConfigOutputReference
 	ConvergeConfigInput() *ServiceConvergeConfig
@@ -29894,6 +30514,10 @@ type Service interface {
 	SetDependsOn(val *[]*string)
 	EndpointSpec() ServiceEndpointSpecOutputReference
 	EndpointSpecInput() *ServiceEndpointSpec
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -29918,6 +30542,10 @@ type Service interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	RollbackConfig() ServiceRollbackConfigOutputReference
@@ -30021,6 +30649,16 @@ func (j *jsiiProxy_Service) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_Service) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Service) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -30086,6 +30724,16 @@ func (j *jsiiProxy_Service) EndpointSpecInput() *ServiceEndpointSpec {
 	_jsii_.Get(
 		j,
 		"endpointSpecInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Service) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -30221,6 +30869,16 @@ func (j *jsiiProxy_Service) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_Service) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Service) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -30348,6 +31006,14 @@ func NewService_Override(s Service, scope constructs.Construct, id *string, conf
 	)
 }
 
+func (j *jsiiProxy_Service) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Service) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -30360,6 +31026,14 @@ func (j *jsiiProxy_Service) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Service) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -30392,6 +31066,14 @@ func (j *jsiiProxy_Service) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Service) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -31286,13 +31968,19 @@ func (s *jsiiProxy_ServiceAuthOutputReference) ToString() *string {
 
 type ServiceConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the service.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/service#name Service#name}
@@ -50891,6 +51579,10 @@ type Volume interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -50906,6 +51598,10 @@ type Volume interface {
 	DriverOpts() *map[string]*string
 	SetDriverOpts(val *map[string]*string)
 	DriverOptsInput() *map[string]*string
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -50929,6 +51625,10 @@ type Volume interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	// Experimental.
@@ -50991,6 +51691,16 @@ func (j *jsiiProxy_Volume) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Volume) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
 		&returns,
 	)
 	return returns
@@ -51061,6 +51771,16 @@ func (j *jsiiProxy_Volume) DriverOptsInput() *map[string]*string {
 	_jsii_.Get(
 		j,
 		"driverOptsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Volume) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -51186,6 +51906,16 @@ func (j *jsiiProxy_Volume) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_Volume) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Volume) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -51253,6 +51983,14 @@ func NewVolume_Override(v Volume, scope constructs.Construct, id *string, config
 	)
 }
 
+func (j *jsiiProxy_Volume) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Volume) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -51285,6 +52023,14 @@ func (j *jsiiProxy_Volume) SetDriverOpts(val *map[string]*string) {
 	)
 }
 
+func (j *jsiiProxy_Volume) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Volume) SetId(val *string) {
 	_jsii_.Set(
 		j,
@@ -51313,6 +52059,14 @@ func (j *jsiiProxy_Volume) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Volume) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -51616,13 +52370,19 @@ func (v *jsiiProxy_Volume) ToTerraform() interface{} {
 
 type VolumeConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Driver type for the volume. Defaults to `local`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/volume#driver Volume#driver}
