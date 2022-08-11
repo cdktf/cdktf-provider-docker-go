@@ -10935,7 +10935,9 @@ func (c *jsiiProxy_ContainerNetworkDataOutputReference) ToString() *string {
 }
 
 type ContainerNetworksAdvanced struct {
-	// The name of the network.
+	// The name or id of the network to use.
+	//
+	// You can use `name` or `id` attribute from a `docker_network` resource.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#name Container#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
@@ -18893,6 +18895,9 @@ type Image interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Triggers() *map[string]*string
+	SetTriggers(val *map[string]*string)
+	TriggersInput() *map[string]*string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -18928,6 +18933,7 @@ type Image interface {
 	ResetOverrideLogicalId()
 	ResetPullTrigger()
 	ResetPullTriggers()
+	ResetTriggers()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -19273,6 +19279,26 @@ func (j *jsiiProxy_Image) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Image) Triggers() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"triggers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Image) TriggersInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"triggersInput",
+		&returns,
+	)
+	return returns
+}
+
 
 // Create a new {@link https://www.terraform.io/docs/providers/docker/r/image docker_image} Resource.
 func NewImage(scope constructs.Construct, id *string, config *ImageConfig) Image {
@@ -19400,6 +19426,14 @@ func (j *jsiiProxy_Image) SetPullTriggers(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"pullTriggers",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Image) SetTriggers(val *map[string]*string) {
+	_jsii_.Set(
+		j,
+		"triggers",
 		val,
 	)
 }
@@ -19653,6 +19687,14 @@ func (i *jsiiProxy_Image) ResetPullTriggers() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetPullTriggers",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Image) ResetTriggers() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTriggers",
 		nil, // no parameters
 	)
 }
@@ -20532,6 +20574,12 @@ type ImageConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#pull_triggers Image#pull_triggers}
 	PullTriggers *[]*string `field:"optional" json:"pullTriggers" yaml:"pullTriggers"`
+	// A map of arbitrary strings that, when changed, will force the `docker_image` resource to be replaced.
+	//
+	// This can be used to rebuild an image when contents of source code folders change
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#triggers Image#triggers}
+	Triggers *map[string]*string `field:"optional" json:"triggers" yaml:"triggers"`
 }
 
 // Represents a {@link https://www.terraform.io/docs/providers/docker/r/network docker_network}.
