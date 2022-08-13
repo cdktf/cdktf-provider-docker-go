@@ -1,0 +1,27 @@
+// Prebuilt docker Provider for Terraform CDK (cdktf)
+package docker
+
+
+type ContainerVolumes struct {
+	// The path in the container where the volume will be mounted.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#container_path Container#container_path}
+	ContainerPath *string `field:"optional" json:"containerPath" yaml:"containerPath"`
+	// The container where the volume is coming from.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#from_container Container#from_container}
+	FromContainer *string `field:"optional" json:"fromContainer" yaml:"fromContainer"`
+	// The path on the host where the volume is coming from.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#host_path Container#host_path}
+	HostPath *string `field:"optional" json:"hostPath" yaml:"hostPath"`
+	// If `true`, this volume will be readonly. Defaults to `false`.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#read_only Container#read_only}
+	ReadOnly interface{} `field:"optional" json:"readOnly" yaml:"readOnly"`
+	// The name of the docker volume which should be mounted.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#volume_name Container#volume_name}
+	VolumeName *string `field:"optional" json:"volumeName" yaml:"volumeName"`
+}
+
