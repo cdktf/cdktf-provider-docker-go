@@ -111,6 +111,9 @@ func (j *jsiiProxy_ContainerNetworksAdvancedList) WrapsSet() *bool {
 func NewContainerNetworksAdvancedList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerNetworksAdvancedList {
 	_init_.Initialize()
 
+	if err := validateNewContainerNetworksAdvancedListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ContainerNetworksAdvancedList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewContainerNetworksAdvancedList_Override(c ContainerNetworksAdvancedList, 
 	)
 }
 
-func (j *jsiiProxy_ContainerNetworksAdvancedList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ContainerNetworksAdvancedList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ContainerNetworksAdvancedList) SetInternalValue(val interface
 	)
 }
 
-func (j *jsiiProxy_ContainerNetworksAdvancedList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ContainerNetworksAdvancedList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ContainerNetworksAdvancedList) SetTerraformAttribute(val *str
 	)
 }
 
-func (j *jsiiProxy_ContainerNetworksAdvancedList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ContainerNetworksAdvancedList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ContainerNetworksAdvancedList) SetTerraformResource(val cdktf
 	)
 }
 
-func (j *jsiiProxy_ContainerNetworksAdvancedList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ContainerNetworksAdvancedList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (c *jsiiProxy_ContainerNetworksAdvancedList) ComputeFqn() *string {
 }
 
 func (c *jsiiProxy_ContainerNetworksAdvancedList) Get(index *float64) ContainerNetworksAdvancedOutputReference {
+	if err := c.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ContainerNetworksAdvancedOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (c *jsiiProxy_ContainerNetworksAdvancedList) Get(index *float64) ContainerN
 }
 
 func (c *jsiiProxy_ContainerNetworksAdvancedList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

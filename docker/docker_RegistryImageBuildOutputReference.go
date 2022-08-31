@@ -918,6 +918,9 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) VersionInput() *string {
 func NewRegistryImageBuildOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) RegistryImageBuildOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewRegistryImageBuildOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_RegistryImageBuildOutputReference{}
 
 	_jsii_.Create(
@@ -939,7 +942,10 @@ func NewRegistryImageBuildOutputReference_Override(r RegistryImageBuildOutputRef
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetBuildArgs(val *map[string]*string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetBuildArgs(val *map[string]*string) {
+	if err := j.validateSetBuildArgsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"buildArgs",
@@ -947,7 +953,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetBuildArgs(val *map[stri
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetBuildId(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetBuildId(val *string) {
+	if err := j.validateSetBuildIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"buildId",
@@ -955,7 +964,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetBuildId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCacheFrom(val *[]*string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetCacheFrom(val *[]*string) {
+	if err := j.validateSetCacheFromParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cacheFrom",
@@ -963,7 +975,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCacheFrom(val *[]*strin
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCgroupParent(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetCgroupParent(val *string) {
+	if err := j.validateSetCgroupParentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cgroupParent",
@@ -971,7 +986,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCgroupParent(val *strin
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -979,7 +997,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetComplexObjectIndex(val 
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -987,7 +1008,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetComplexObjectIsFromSet(
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetContext(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetContext(val *string) {
+	if err := j.validateSetContextParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"context",
@@ -995,7 +1019,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetContext(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCpuPeriod(val *float64) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetCpuPeriod(val *float64) {
+	if err := j.validateSetCpuPeriodParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cpuPeriod",
@@ -1003,7 +1030,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCpuPeriod(val *float64)
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCpuQuota(val *float64) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetCpuQuota(val *float64) {
+	if err := j.validateSetCpuQuotaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cpuQuota",
@@ -1011,7 +1041,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCpuQuota(val *float64) 
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCpuSetCpus(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetCpuSetCpus(val *string) {
+	if err := j.validateSetCpuSetCpusParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cpuSetCpus",
@@ -1019,7 +1052,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCpuSetCpus(val *string)
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCpuSetMems(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetCpuSetMems(val *string) {
+	if err := j.validateSetCpuSetMemsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cpuSetMems",
@@ -1027,7 +1063,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCpuSetMems(val *string)
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCpuShares(val *float64) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetCpuShares(val *float64) {
+	if err := j.validateSetCpuSharesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cpuShares",
@@ -1035,7 +1074,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetCpuShares(val *float64)
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetDockerfile(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetDockerfile(val *string) {
+	if err := j.validateSetDockerfileParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"dockerfile",
@@ -1043,7 +1085,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetDockerfile(val *string)
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetExtraHosts(val *[]*string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetExtraHosts(val *[]*string) {
+	if err := j.validateSetExtraHostsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"extraHosts",
@@ -1051,7 +1096,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetExtraHosts(val *[]*stri
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetForceRemove(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetForceRemove(val interface{}) {
+	if err := j.validateSetForceRemoveParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"forceRemove",
@@ -1059,7 +1107,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetForceRemove(val interfa
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetInternalValue(val *RegistryImageBuild) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetInternalValue(val *RegistryImageBuild) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -1067,7 +1118,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetInternalValue(val *Regi
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetIsolation(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetIsolation(val *string) {
+	if err := j.validateSetIsolationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"isolation",
@@ -1075,7 +1129,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetIsolation(val *string) 
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetLabels(val *map[string]*string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetLabels(val *map[string]*string) {
+	if err := j.validateSetLabelsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"labels",
@@ -1083,7 +1140,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetLabels(val *map[string]
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetMemory(val *float64) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetMemory(val *float64) {
+	if err := j.validateSetMemoryParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"memory",
@@ -1091,7 +1151,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetMemory(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetMemorySwap(val *float64) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetMemorySwap(val *float64) {
+	if err := j.validateSetMemorySwapParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"memorySwap",
@@ -1099,7 +1162,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetMemorySwap(val *float64
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetNetworkMode(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetNetworkMode(val *string) {
+	if err := j.validateSetNetworkModeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"networkMode",
@@ -1107,7 +1173,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetNetworkMode(val *string
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetNoCache(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetNoCache(val interface{}) {
+	if err := j.validateSetNoCacheParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"noCache",
@@ -1115,7 +1184,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetNoCache(val interface{}
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetPlatform(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetPlatform(val *string) {
+	if err := j.validateSetPlatformParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"platform",
@@ -1123,7 +1195,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetPlatform(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetPullParent(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetPullParent(val interface{}) {
+	if err := j.validateSetPullParentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"pullParent",
@@ -1131,7 +1206,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetPullParent(val interfac
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetRemoteContext(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetRemoteContext(val *string) {
+	if err := j.validateSetRemoteContextParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"remoteContext",
@@ -1139,7 +1217,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetRemoteContext(val *stri
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetRemove(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetRemove(val interface{}) {
+	if err := j.validateSetRemoveParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"remove",
@@ -1147,7 +1228,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetRemove(val interface{})
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetSecurityOpt(val *[]*string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetSecurityOpt(val *[]*string) {
+	if err := j.validateSetSecurityOptParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"securityOpt",
@@ -1155,7 +1239,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetSecurityOpt(val *[]*str
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetSessionId(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetSessionId(val *string) {
+	if err := j.validateSetSessionIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"sessionId",
@@ -1163,7 +1250,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetSessionId(val *string) 
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetShmSize(val *float64) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetShmSize(val *float64) {
+	if err := j.validateSetShmSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"shmSize",
@@ -1171,7 +1261,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetShmSize(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetSquash(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetSquash(val interface{}) {
+	if err := j.validateSetSquashParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"squash",
@@ -1179,7 +1272,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetSquash(val interface{})
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetSuppressOutput(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetSuppressOutput(val interface{}) {
+	if err := j.validateSetSuppressOutputParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"suppressOutput",
@@ -1187,7 +1283,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetSuppressOutput(val inte
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetTarget(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetTarget(val *string) {
+	if err := j.validateSetTargetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"target",
@@ -1195,7 +1294,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetTarget(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -1203,7 +1305,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetTerraformAttribute(val 
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -1211,7 +1316,10 @@ func (j *jsiiProxy_RegistryImageBuildOutputReference) SetTerraformResource(val c
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildOutputReference) SetVersion(val *string) {
+func (j *jsiiProxy_RegistryImageBuildOutputReference)SetVersion(val *string) {
+	if err := j.validateSetVersionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"version",
@@ -1233,6 +1341,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) ComputeFqn() *string {
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := r.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -1246,6 +1357,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) GetAnyMapAttribute(terrafo
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1259,6 +1373,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) GetBooleanAttribute(terraf
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := r.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -1272,6 +1389,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) GetBooleanMapAttribute(ter
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := r.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -1285,6 +1405,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) GetListAttribute(terraform
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := r.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -1298,6 +1421,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) GetNumberAttribute(terrafo
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := r.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -1311,6 +1437,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) GetNumberListAttribute(ter
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := r.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -1324,6 +1453,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) GetNumberMapAttribute(terr
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := r.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -1337,6 +1469,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) GetStringAttribute(terrafo
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := r.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -1363,6 +1498,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) InterpolationAsList() cdkt
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := r.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1376,6 +1514,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) InterpolationForAttribute(
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) PutAuthConfig(value interface{}) {
+	if err := r.validatePutAuthConfigParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"putAuthConfig",
@@ -1384,6 +1525,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) PutAuthConfig(value interf
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) PutUlimit(value interface{}) {
+	if err := r.validatePutUlimitParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"putUlimit",
@@ -1640,6 +1784,9 @@ func (r *jsiiProxy_RegistryImageBuildOutputReference) ResetVersion() {
 }
 
 func (r *jsiiProxy_RegistryImageBuildOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := r.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

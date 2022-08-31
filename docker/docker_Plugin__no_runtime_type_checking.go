@@ -1,0 +1,116 @@
+//go:build no_runtime_type_checking
+// +build no_runtime_type_checking
+
+// Prebuilt docker Provider for Terraform CDK (cdktf)
+package docker
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (p *jsiiProxy_Plugin) validateAddOverrideParameters(path *string, value interface{}) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateGetListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateGetStringAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (p *jsiiProxy_Plugin) validatePutGrantPermissionsParameters(value interface{}) error {
+	return nil
+}
+
+func validatePlugin_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetAliasParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetConnectionParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetEnabledParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetEnableTimeoutParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetEnvParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetForceDestroyParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetForceDisableParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetGrantAllPermissionsParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetNameParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Plugin) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func validateNewPluginParameters(scope constructs.Construct, id *string, config *PluginConfig) error {
+	return nil
+}
+

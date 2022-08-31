@@ -111,6 +111,9 @@ func (j *jsiiProxy_ContainerUlimitList) WrapsSet() *bool {
 func NewContainerUlimitList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerUlimitList {
 	_init_.Initialize()
 
+	if err := validateNewContainerUlimitListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ContainerUlimitList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewContainerUlimitList_Override(c ContainerUlimitList, terraformResource cd
 	)
 }
 
-func (j *jsiiProxy_ContainerUlimitList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ContainerUlimitList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ContainerUlimitList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ContainerUlimitList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ContainerUlimitList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ContainerUlimitList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ContainerUlimitList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ContainerUlimitList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ContainerUlimitList) SetTerraformResource(val cdktf.IInterpol
 	)
 }
 
-func (j *jsiiProxy_ContainerUlimitList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ContainerUlimitList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (c *jsiiProxy_ContainerUlimitList) ComputeFqn() *string {
 }
 
 func (c *jsiiProxy_ContainerUlimitList) Get(index *float64) ContainerUlimitOutputReference {
+	if err := c.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ContainerUlimitOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (c *jsiiProxy_ContainerUlimitList) Get(index *float64) ContainerUlimitOutpu
 }
 
 func (c *jsiiProxy_ContainerUlimitList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

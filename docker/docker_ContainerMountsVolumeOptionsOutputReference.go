@@ -247,6 +247,9 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) TerraformResourc
 func NewContainerMountsVolumeOptionsOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ContainerMountsVolumeOptionsOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewContainerMountsVolumeOptionsOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ContainerMountsVolumeOptionsOutputReference{}
 
 	_jsii_.Create(
@@ -268,7 +271,10 @@ func NewContainerMountsVolumeOptionsOutputReference_Override(c ContainerMountsVo
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -276,7 +282,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetComplexObject
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -284,7 +293,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetComplexObject
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetDriverName(val *string) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference)SetDriverName(val *string) {
+	if err := j.validateSetDriverNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"driverName",
@@ -292,7 +304,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetDriverName(va
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetDriverOptions(val *map[string]*string) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference)SetDriverOptions(val *map[string]*string) {
+	if err := j.validateSetDriverOptionsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"driverOptions",
@@ -300,7 +315,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetDriverOptions
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetInternalValue(val *ContainerMountsVolumeOptions) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference)SetInternalValue(val *ContainerMountsVolumeOptions) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -308,7 +326,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetInternalValue
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetNoCopy(val interface{}) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference)SetNoCopy(val interface{}) {
+	if err := j.validateSetNoCopyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"noCopy",
@@ -316,7 +337,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetNoCopy(val in
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -324,7 +348,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetTerraformAttr
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -346,6 +373,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) ComputeFqn() *st
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := c.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -359,6 +389,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetAnyMapAttribu
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := c.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -372,6 +405,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetBooleanAttrib
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := c.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -385,6 +421,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetBooleanMapAtt
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := c.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -398,6 +437,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetListAttribute
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := c.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -411,6 +453,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetNumberAttribu
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := c.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -424,6 +469,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetNumberListAtt
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := c.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -437,6 +485,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetNumberMapAttr
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := c.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -450,6 +501,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetStringAttribu
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := c.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -476,6 +530,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) InterpolationAsL
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := c.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -489,6 +546,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) InterpolationFor
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) PutLabels(value interface{}) {
+	if err := c.validatePutLabelsParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putLabels",
@@ -529,6 +589,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) ResetNoCopy() {
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

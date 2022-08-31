@@ -197,6 +197,9 @@ func (j *jsiiProxy_NetworkLabelsOutputReference) ValueInput() *string {
 func NewNetworkLabelsOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) NetworkLabelsOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewNetworkLabelsOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_NetworkLabelsOutputReference{}
 
 	_jsii_.Create(
@@ -218,7 +221,10 @@ func NewNetworkLabelsOutputReference_Override(n NetworkLabelsOutputReference, te
 	)
 }
 
-func (j *jsiiProxy_NetworkLabelsOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_NetworkLabelsOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -226,7 +232,10 @@ func (j *jsiiProxy_NetworkLabelsOutputReference) SetComplexObjectIndex(val inter
 	)
 }
 
-func (j *jsiiProxy_NetworkLabelsOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_NetworkLabelsOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -234,7 +243,10 @@ func (j *jsiiProxy_NetworkLabelsOutputReference) SetComplexObjectIsFromSet(val *
 	)
 }
 
-func (j *jsiiProxy_NetworkLabelsOutputReference) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_NetworkLabelsOutputReference)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -242,7 +254,10 @@ func (j *jsiiProxy_NetworkLabelsOutputReference) SetInternalValue(val interface{
 	)
 }
 
-func (j *jsiiProxy_NetworkLabelsOutputReference) SetLabel(val *string) {
+func (j *jsiiProxy_NetworkLabelsOutputReference)SetLabel(val *string) {
+	if err := j.validateSetLabelParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"label",
@@ -250,7 +265,10 @@ func (j *jsiiProxy_NetworkLabelsOutputReference) SetLabel(val *string) {
 	)
 }
 
-func (j *jsiiProxy_NetworkLabelsOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_NetworkLabelsOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -258,7 +276,10 @@ func (j *jsiiProxy_NetworkLabelsOutputReference) SetTerraformAttribute(val *stri
 	)
 }
 
-func (j *jsiiProxy_NetworkLabelsOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_NetworkLabelsOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -266,7 +287,10 @@ func (j *jsiiProxy_NetworkLabelsOutputReference) SetTerraformResource(val cdktf.
 	)
 }
 
-func (j *jsiiProxy_NetworkLabelsOutputReference) SetValue(val *string) {
+func (j *jsiiProxy_NetworkLabelsOutputReference)SetValue(val *string) {
+	if err := j.validateSetValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"value",
@@ -288,6 +312,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) ComputeFqn() *string {
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := n.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -301,6 +328,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) GetAnyMapAttribute(terraformAtt
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := n.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -314,6 +344,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) GetBooleanAttribute(terraformAt
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := n.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -327,6 +360,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) GetBooleanMapAttribute(terrafor
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := n.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -340,6 +376,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) GetListAttribute(terraformAttri
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := n.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -353,6 +392,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) GetNumberAttribute(terraformAtt
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := n.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -366,6 +408,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) GetNumberListAttribute(terrafor
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := n.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -379,6 +424,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) GetNumberMapAttribute(terraform
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := n.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -392,6 +440,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) GetStringAttribute(terraformAtt
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := n.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -418,6 +469,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) InterpolationAsList() cdktf.IRe
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := n.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -431,6 +485,9 @@ func (n *jsiiProxy_NetworkLabelsOutputReference) InterpolationForAttribute(prope
 }
 
 func (n *jsiiProxy_NetworkLabelsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := n.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

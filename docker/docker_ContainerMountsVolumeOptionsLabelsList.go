@@ -111,6 +111,9 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) WrapsSet() *bool {
 func NewContainerMountsVolumeOptionsLabelsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerMountsVolumeOptionsLabelsList {
 	_init_.Initialize()
 
+	if err := validateNewContainerMountsVolumeOptionsLabelsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ContainerMountsVolumeOptionsLabelsList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewContainerMountsVolumeOptionsLabelsList_Override(c ContainerMountsVolumeO
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) SetInternalValue(val 
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) SetTerraformAttribute
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) SetTerraformResource(
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ContainerMountsVolumeOptionsLabelsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) ComputeFqn() *string 
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) Get(index *float64) ContainerMountsVolumeOptionsLabelsOutputReference {
+	if err := c.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ContainerMountsVolumeOptionsLabelsOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) Get(index *float64) C
 }
 
 func (c *jsiiProxy_ContainerMountsVolumeOptionsLabelsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

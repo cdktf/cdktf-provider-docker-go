@@ -197,6 +197,9 @@ func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) TerraformRe
 func NewServiceTaskSpecPlacementPlatformsOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) ServiceTaskSpecPlacementPlatformsOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewServiceTaskSpecPlacementPlatformsOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference{}
 
 	_jsii_.Create(
@@ -218,7 +221,10 @@ func NewServiceTaskSpecPlacementPlatformsOutputReference_Override(s ServiceTaskS
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetArchitecture(val *string) {
+func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference)SetArchitecture(val *string) {
+	if err := j.validateSetArchitectureParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"architecture",
@@ -226,7 +232,10 @@ func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetArchitec
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -234,7 +243,10 @@ func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetComplexO
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -242,7 +254,10 @@ func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetComplexO
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -250,7 +265,10 @@ func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetInternal
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetOs(val *string) {
+func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference)SetOs(val *string) {
+	if err := j.validateSetOsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"os",
@@ -258,7 +276,10 @@ func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetOs(val *
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -266,7 +287,10 @@ func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetTerrafor
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -288,6 +312,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) ComputeFqn(
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := s.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -301,6 +328,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetAnyMapAt
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := s.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -314,6 +344,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetBooleanA
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := s.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -327,6 +360,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetBooleanM
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := s.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -340,6 +376,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetListAttr
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := s.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -353,6 +392,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetNumberAt
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := s.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -366,6 +408,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetNumberLi
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := s.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -379,6 +424,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetNumberMa
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := s.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -392,6 +440,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetStringAt
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := s.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -418,6 +469,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) Interpolati
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := s.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -431,6 +485,9 @@ func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) Interpolati
 }
 
 func (s *jsiiProxy_ServiceTaskSpecPlacementPlatformsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := s.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

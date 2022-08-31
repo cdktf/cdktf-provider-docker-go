@@ -353,6 +353,9 @@ func (j *jsiiProxy_DockerProvider) TerraformResourceType() *string {
 func NewDockerProvider(scope constructs.Construct, id *string, config *DockerProviderConfig) DockerProvider {
 	_init_.Initialize()
 
+	if err := validateNewDockerProviderParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DockerProvider{}
 
 	_jsii_.Create(
@@ -375,7 +378,7 @@ func NewDockerProvider_Override(d DockerProvider, scope constructs.Construct, id
 	)
 }
 
-func (j *jsiiProxy_DockerProvider) SetAlias(val *string) {
+func (j *jsiiProxy_DockerProvider)SetAlias(val *string) {
 	_jsii_.Set(
 		j,
 		"alias",
@@ -383,7 +386,7 @@ func (j *jsiiProxy_DockerProvider) SetAlias(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DockerProvider) SetCaMaterial(val *string) {
+func (j *jsiiProxy_DockerProvider)SetCaMaterial(val *string) {
 	_jsii_.Set(
 		j,
 		"caMaterial",
@@ -391,7 +394,7 @@ func (j *jsiiProxy_DockerProvider) SetCaMaterial(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DockerProvider) SetCertMaterial(val *string) {
+func (j *jsiiProxy_DockerProvider)SetCertMaterial(val *string) {
 	_jsii_.Set(
 		j,
 		"certMaterial",
@@ -399,7 +402,7 @@ func (j *jsiiProxy_DockerProvider) SetCertMaterial(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DockerProvider) SetCertPath(val *string) {
+func (j *jsiiProxy_DockerProvider)SetCertPath(val *string) {
 	_jsii_.Set(
 		j,
 		"certPath",
@@ -407,7 +410,7 @@ func (j *jsiiProxy_DockerProvider) SetCertPath(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DockerProvider) SetHost(val *string) {
+func (j *jsiiProxy_DockerProvider)SetHost(val *string) {
 	_jsii_.Set(
 		j,
 		"host",
@@ -415,7 +418,7 @@ func (j *jsiiProxy_DockerProvider) SetHost(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DockerProvider) SetKeyMaterial(val *string) {
+func (j *jsiiProxy_DockerProvider)SetKeyMaterial(val *string) {
 	_jsii_.Set(
 		j,
 		"keyMaterial",
@@ -423,7 +426,10 @@ func (j *jsiiProxy_DockerProvider) SetKeyMaterial(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DockerProvider) SetRegistryAuth(val interface{}) {
+func (j *jsiiProxy_DockerProvider)SetRegistryAuth(val interface{}) {
+	if err := j.validateSetRegistryAuthParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"registryAuth",
@@ -431,7 +437,7 @@ func (j *jsiiProxy_DockerProvider) SetRegistryAuth(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DockerProvider) SetSshOpts(val *[]*string) {
+func (j *jsiiProxy_DockerProvider)SetSshOpts(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"sshOpts",
@@ -459,6 +465,9 @@ func (j *jsiiProxy_DockerProvider) SetSshOpts(val *[]*string) {
 func DockerProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateDockerProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -483,6 +492,9 @@ func DockerProvider_TfResourceType() *string {
 }
 
 func (d *jsiiProxy_DockerProvider) AddOverride(path *string, value interface{}) {
+	if err := d.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"addOverride",
@@ -491,6 +503,9 @@ func (d *jsiiProxy_DockerProvider) AddOverride(path *string, value interface{}) 
 }
 
 func (d *jsiiProxy_DockerProvider) OverrideLogicalId(newLogicalId *string) {
+	if err := d.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"overrideLogicalId",

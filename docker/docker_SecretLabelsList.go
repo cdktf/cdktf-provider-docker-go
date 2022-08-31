@@ -111,6 +111,9 @@ func (j *jsiiProxy_SecretLabelsList) WrapsSet() *bool {
 func NewSecretLabelsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SecretLabelsList {
 	_init_.Initialize()
 
+	if err := validateNewSecretLabelsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SecretLabelsList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewSecretLabelsList_Override(s SecretLabelsList, terraformResource cdktf.II
 	)
 }
 
-func (j *jsiiProxy_SecretLabelsList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_SecretLabelsList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_SecretLabelsList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SecretLabelsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_SecretLabelsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_SecretLabelsList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SecretLabelsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_SecretLabelsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_SecretLabelsList) SetTerraformResource(val cdktf.IInterpolati
 	)
 }
 
-func (j *jsiiProxy_SecretLabelsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_SecretLabelsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (s *jsiiProxy_SecretLabelsList) ComputeFqn() *string {
 }
 
 func (s *jsiiProxy_SecretLabelsList) Get(index *float64) SecretLabelsOutputReference {
+	if err := s.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns SecretLabelsOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (s *jsiiProxy_SecretLabelsList) Get(index *float64) SecretLabelsOutputRefer
 }
 
 func (s *jsiiProxy_SecretLabelsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := s.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

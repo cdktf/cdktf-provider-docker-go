@@ -270,6 +270,9 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) TimeoutInput() *string {
 func NewContainerHealthcheckOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ContainerHealthcheckOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewContainerHealthcheckOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ContainerHealthcheckOutputReference{}
 
 	_jsii_.Create(
@@ -291,7 +294,10 @@ func NewContainerHealthcheckOutputReference_Override(c ContainerHealthcheckOutpu
 	)
 }
 
-func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -299,7 +305,10 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetComplexObjectIndex(va
 	)
 }
 
-func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -307,7 +316,10 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetComplexObjectIsFromSe
 	)
 }
 
-func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetInternalValue(val *ContainerHealthcheck) {
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetInternalValue(val *ContainerHealthcheck) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -315,7 +327,10 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetInternalValue(val *Co
 	)
 }
 
-func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetInterval(val *string) {
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetInterval(val *string) {
+	if err := j.validateSetIntervalParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"interval",
@@ -323,7 +338,10 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetInterval(val *string)
 	)
 }
 
-func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetRetries(val *float64) {
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetRetries(val *float64) {
+	if err := j.validateSetRetriesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"retries",
@@ -331,7 +349,10 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetRetries(val *float64)
 	)
 }
 
-func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetStartPeriod(val *string) {
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetStartPeriod(val *string) {
+	if err := j.validateSetStartPeriodParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"startPeriod",
@@ -339,7 +360,10 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetStartPeriod(val *stri
 	)
 }
 
-func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -347,7 +371,10 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetTerraformAttribute(va
 	)
 }
 
-func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -355,7 +382,10 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetTerraformResource(val
 	)
 }
 
-func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetTest(val *[]*string) {
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetTest(val *[]*string) {
+	if err := j.validateSetTestParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"test",
@@ -363,7 +393,10 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetTest(val *[]*string) 
 	)
 }
 
-func (j *jsiiProxy_ContainerHealthcheckOutputReference) SetTimeout(val *string) {
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetTimeout(val *string) {
+	if err := j.validateSetTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"timeout",
@@ -385,6 +418,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) ComputeFqn() *string {
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := c.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -398,6 +434,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetAnyMapAttribute(terra
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := c.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -411,6 +450,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetBooleanAttribute(terr
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := c.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -424,6 +466,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetBooleanMapAttribute(t
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := c.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -437,6 +482,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetListAttribute(terrafo
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := c.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -450,6 +498,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetNumberAttribute(terra
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := c.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -463,6 +514,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetNumberListAttribute(t
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := c.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -476,6 +530,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetNumberMapAttribute(te
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := c.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -489,6 +546,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetStringAttribute(terra
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := c.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -515,6 +575,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) InterpolationAsList() cd
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := c.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -560,6 +623,9 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) ResetTimeout() {
 }
 
 func (c *jsiiProxy_ContainerHealthcheckOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

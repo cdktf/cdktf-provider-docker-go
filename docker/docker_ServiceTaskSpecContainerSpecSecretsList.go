@@ -111,6 +111,9 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) WrapsSet() *bool {
 func NewServiceTaskSpecContainerSpecSecretsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ServiceTaskSpecContainerSpecSecretsList {
 	_init_.Initialize()
 
+	if err := validateNewServiceTaskSpecContainerSpecSecretsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ServiceTaskSpecContainerSpecSecretsList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewServiceTaskSpecContainerSpecSecretsList_Override(s ServiceTaskSpecContai
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) SetInternalValue(val
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) SetTerraformAttribut
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) SetTerraformResource
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) ComputeFqn() *string
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) Get(index *float64) ServiceTaskSpecContainerSpecSecretsOutputReference {
+	if err := s.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ServiceTaskSpecContainerSpecSecretsOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) Get(index *float64) 
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecSecretsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := s.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

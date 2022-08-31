@@ -366,6 +366,9 @@ func (j *jsiiProxy_ImageBuildOutputReference) TerraformResource() cdktf.IInterpo
 func NewImageBuildOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ImageBuildOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewImageBuildOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ImageBuildOutputReference{}
 
 	_jsii_.Create(
@@ -387,7 +390,10 @@ func NewImageBuildOutputReference_Override(i ImageBuildOutputReference, terrafor
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetBuildArg(val *map[string]*string) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetBuildArg(val *map[string]*string) {
+	if err := j.validateSetBuildArgParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"buildArg",
@@ -395,7 +401,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetBuildArg(val *map[string]*strin
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -403,7 +412,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetComplexObjectIndex(val interfac
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -411,7 +423,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetComplexObjectIsFromSet(val *boo
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetDockerfile(val *string) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetDockerfile(val *string) {
+	if err := j.validateSetDockerfileParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"dockerfile",
@@ -419,7 +434,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetDockerfile(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetForceRemove(val interface{}) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetForceRemove(val interface{}) {
+	if err := j.validateSetForceRemoveParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"forceRemove",
@@ -427,7 +445,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetForceRemove(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetInternalValue(val *ImageBuild) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetInternalValue(val *ImageBuild) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -435,7 +456,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetInternalValue(val *ImageBuild) 
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetLabel(val *map[string]*string) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetLabel(val *map[string]*string) {
+	if err := j.validateSetLabelParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"label",
@@ -443,7 +467,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetLabel(val *map[string]*string) 
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetNoCache(val interface{}) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetNoCache(val interface{}) {
+	if err := j.validateSetNoCacheParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"noCache",
@@ -451,7 +478,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetNoCache(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetPath(val *string) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetPath(val *string) {
+	if err := j.validateSetPathParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"path",
@@ -459,7 +489,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetPath(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetRemove(val interface{}) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetRemove(val interface{}) {
+	if err := j.validateSetRemoveParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"remove",
@@ -467,7 +500,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetRemove(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetTag(val *[]*string) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetTag(val *[]*string) {
+	if err := j.validateSetTagParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"tag",
@@ -475,7 +511,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetTag(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetTarget(val *string) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetTarget(val *string) {
+	if err := j.validateSetTargetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"target",
@@ -483,7 +522,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetTarget(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -491,7 +533,10 @@ func (j *jsiiProxy_ImageBuildOutputReference) SetTerraformAttribute(val *string)
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ImageBuildOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -513,6 +558,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) ComputeFqn() *string {
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := i.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -526,6 +574,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) GetAnyMapAttribute(terraformAttrib
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := i.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -539,6 +590,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) GetBooleanAttribute(terraformAttri
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := i.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -552,6 +606,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) GetBooleanMapAttribute(terraformAt
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := i.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -565,6 +622,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) GetListAttribute(terraformAttribut
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := i.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -578,6 +638,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) GetNumberAttribute(terraformAttrib
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := i.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -591,6 +654,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) GetNumberListAttribute(terraformAt
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := i.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -604,6 +670,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) GetNumberMapAttribute(terraformAtt
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := i.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -617,6 +686,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) GetStringAttribute(terraformAttrib
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := i.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -643,6 +715,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) InterpolationAsList() cdktf.IResol
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := i.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -720,6 +795,9 @@ func (i *jsiiProxy_ImageBuildOutputReference) ResetTarget() {
 }
 
 func (i *jsiiProxy_ImageBuildOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := i.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

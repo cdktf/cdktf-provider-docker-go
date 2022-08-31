@@ -111,6 +111,9 @@ func (j *jsiiProxy_ContainerDevicesList) WrapsSet() *bool {
 func NewContainerDevicesList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerDevicesList {
 	_init_.Initialize()
 
+	if err := validateNewContainerDevicesListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ContainerDevicesList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewContainerDevicesList_Override(c ContainerDevicesList, terraformResource 
 	)
 }
 
-func (j *jsiiProxy_ContainerDevicesList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ContainerDevicesList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ContainerDevicesList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ContainerDevicesList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ContainerDevicesList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ContainerDevicesList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ContainerDevicesList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ContainerDevicesList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ContainerDevicesList) SetTerraformResource(val cdktf.IInterpo
 	)
 }
 
-func (j *jsiiProxy_ContainerDevicesList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ContainerDevicesList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (c *jsiiProxy_ContainerDevicesList) ComputeFqn() *string {
 }
 
 func (c *jsiiProxy_ContainerDevicesList) Get(index *float64) ContainerDevicesOutputReference {
+	if err := c.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ContainerDevicesOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (c *jsiiProxy_ContainerDevicesList) Get(index *float64) ContainerDevicesOut
 }
 
 func (c *jsiiProxy_ContainerDevicesList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

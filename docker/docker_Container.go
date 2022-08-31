@@ -1830,6 +1830,9 @@ func (j *jsiiProxy_Container) WorkingDirInput() *string {
 func NewContainer(scope constructs.Construct, id *string, config *ContainerConfig) Container {
 	_init_.Initialize()
 
+	if err := validateNewContainerParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_Container{}
 
 	_jsii_.Create(
@@ -1852,7 +1855,10 @@ func NewContainer_Override(c Container, scope constructs.Construct, id *string, 
 	)
 }
 
-func (j *jsiiProxy_Container) SetAttach(val interface{}) {
+func (j *jsiiProxy_Container)SetAttach(val interface{}) {
+	if err := j.validateSetAttachParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"attach",
@@ -1860,7 +1866,10 @@ func (j *jsiiProxy_Container) SetAttach(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetCommand(val *[]*string) {
+func (j *jsiiProxy_Container)SetCommand(val *[]*string) {
+	if err := j.validateSetCommandParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"command",
@@ -1868,7 +1877,10 @@ func (j *jsiiProxy_Container) SetCommand(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetConnection(val interface{}) {
+func (j *jsiiProxy_Container)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -1876,7 +1888,7 @@ func (j *jsiiProxy_Container) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetCount(val *float64) {
+func (j *jsiiProxy_Container)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -1884,7 +1896,10 @@ func (j *jsiiProxy_Container) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetCpuSet(val *string) {
+func (j *jsiiProxy_Container)SetCpuSet(val *string) {
+	if err := j.validateSetCpuSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cpuSet",
@@ -1892,7 +1907,10 @@ func (j *jsiiProxy_Container) SetCpuSet(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetCpuShares(val *float64) {
+func (j *jsiiProxy_Container)SetCpuShares(val *float64) {
+	if err := j.validateSetCpuSharesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"cpuShares",
@@ -1900,7 +1918,7 @@ func (j *jsiiProxy_Container) SetCpuShares(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_Container)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -1908,7 +1926,10 @@ func (j *jsiiProxy_Container) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetDestroyGraceSeconds(val *float64) {
+func (j *jsiiProxy_Container)SetDestroyGraceSeconds(val *float64) {
+	if err := j.validateSetDestroyGraceSecondsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"destroyGraceSeconds",
@@ -1916,7 +1937,10 @@ func (j *jsiiProxy_Container) SetDestroyGraceSeconds(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetDns(val *[]*string) {
+func (j *jsiiProxy_Container)SetDns(val *[]*string) {
+	if err := j.validateSetDnsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"dns",
@@ -1924,7 +1948,10 @@ func (j *jsiiProxy_Container) SetDns(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetDnsOpts(val *[]*string) {
+func (j *jsiiProxy_Container)SetDnsOpts(val *[]*string) {
+	if err := j.validateSetDnsOptsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"dnsOpts",
@@ -1932,7 +1959,10 @@ func (j *jsiiProxy_Container) SetDnsOpts(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetDnsSearch(val *[]*string) {
+func (j *jsiiProxy_Container)SetDnsSearch(val *[]*string) {
+	if err := j.validateSetDnsSearchParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"dnsSearch",
@@ -1940,7 +1970,10 @@ func (j *jsiiProxy_Container) SetDnsSearch(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetDomainname(val *string) {
+func (j *jsiiProxy_Container)SetDomainname(val *string) {
+	if err := j.validateSetDomainnameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"domainname",
@@ -1948,7 +1981,10 @@ func (j *jsiiProxy_Container) SetDomainname(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetEntrypoint(val *[]*string) {
+func (j *jsiiProxy_Container)SetEntrypoint(val *[]*string) {
+	if err := j.validateSetEntrypointParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"entrypoint",
@@ -1956,7 +1992,10 @@ func (j *jsiiProxy_Container) SetEntrypoint(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetEnv(val *[]*string) {
+func (j *jsiiProxy_Container)SetEnv(val *[]*string) {
+	if err := j.validateSetEnvParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"env",
@@ -1964,7 +2003,7 @@ func (j *jsiiProxy_Container) SetEnv(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_Container)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -1972,7 +2011,10 @@ func (j *jsiiProxy_Container) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetGpus(val *string) {
+func (j *jsiiProxy_Container)SetGpus(val *string) {
+	if err := j.validateSetGpusParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"gpus",
@@ -1980,7 +2022,10 @@ func (j *jsiiProxy_Container) SetGpus(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetGroupAdd(val *[]*string) {
+func (j *jsiiProxy_Container)SetGroupAdd(val *[]*string) {
+	if err := j.validateSetGroupAddParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"groupAdd",
@@ -1988,7 +2033,10 @@ func (j *jsiiProxy_Container) SetGroupAdd(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetHostname(val *string) {
+func (j *jsiiProxy_Container)SetHostname(val *string) {
+	if err := j.validateSetHostnameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"hostname",
@@ -1996,7 +2044,10 @@ func (j *jsiiProxy_Container) SetHostname(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetId(val *string) {
+func (j *jsiiProxy_Container)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -2004,7 +2055,10 @@ func (j *jsiiProxy_Container) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetImage(val *string) {
+func (j *jsiiProxy_Container)SetImage(val *string) {
+	if err := j.validateSetImageParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"image",
@@ -2012,7 +2066,10 @@ func (j *jsiiProxy_Container) SetImage(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetInit(val interface{}) {
+func (j *jsiiProxy_Container)SetInit(val interface{}) {
+	if err := j.validateSetInitParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"init",
@@ -2020,7 +2077,10 @@ func (j *jsiiProxy_Container) SetInit(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetIpcMode(val *string) {
+func (j *jsiiProxy_Container)SetIpcMode(val *string) {
+	if err := j.validateSetIpcModeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"ipcMode",
@@ -2028,7 +2088,10 @@ func (j *jsiiProxy_Container) SetIpcMode(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_Container)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -2036,7 +2099,10 @@ func (j *jsiiProxy_Container) SetLifecycle(val *cdktf.TerraformResourceLifecycle
 	)
 }
 
-func (j *jsiiProxy_Container) SetLinks(val *[]*string) {
+func (j *jsiiProxy_Container)SetLinks(val *[]*string) {
+	if err := j.validateSetLinksParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"links",
@@ -2044,7 +2110,10 @@ func (j *jsiiProxy_Container) SetLinks(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetLogDriver(val *string) {
+func (j *jsiiProxy_Container)SetLogDriver(val *string) {
+	if err := j.validateSetLogDriverParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"logDriver",
@@ -2052,7 +2121,10 @@ func (j *jsiiProxy_Container) SetLogDriver(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetLogOpts(val *map[string]*string) {
+func (j *jsiiProxy_Container)SetLogOpts(val *map[string]*string) {
+	if err := j.validateSetLogOptsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"logOpts",
@@ -2060,7 +2132,10 @@ func (j *jsiiProxy_Container) SetLogOpts(val *map[string]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetLogs(val interface{}) {
+func (j *jsiiProxy_Container)SetLogs(val interface{}) {
+	if err := j.validateSetLogsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"logs",
@@ -2068,7 +2143,10 @@ func (j *jsiiProxy_Container) SetLogs(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetMaxRetryCount(val *float64) {
+func (j *jsiiProxy_Container)SetMaxRetryCount(val *float64) {
+	if err := j.validateSetMaxRetryCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxRetryCount",
@@ -2076,7 +2154,10 @@ func (j *jsiiProxy_Container) SetMaxRetryCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetMemory(val *float64) {
+func (j *jsiiProxy_Container)SetMemory(val *float64) {
+	if err := j.validateSetMemoryParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"memory",
@@ -2084,7 +2165,10 @@ func (j *jsiiProxy_Container) SetMemory(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetMemorySwap(val *float64) {
+func (j *jsiiProxy_Container)SetMemorySwap(val *float64) {
+	if err := j.validateSetMemorySwapParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"memorySwap",
@@ -2092,7 +2176,10 @@ func (j *jsiiProxy_Container) SetMemorySwap(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetMustRun(val interface{}) {
+func (j *jsiiProxy_Container)SetMustRun(val interface{}) {
+	if err := j.validateSetMustRunParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"mustRun",
@@ -2100,7 +2187,10 @@ func (j *jsiiProxy_Container) SetMustRun(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetName(val *string) {
+func (j *jsiiProxy_Container)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -2108,7 +2198,10 @@ func (j *jsiiProxy_Container) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetNetworkAlias(val *[]*string) {
+func (j *jsiiProxy_Container)SetNetworkAlias(val *[]*string) {
+	if err := j.validateSetNetworkAliasParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"networkAlias",
@@ -2116,7 +2209,10 @@ func (j *jsiiProxy_Container) SetNetworkAlias(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetNetworkMode(val *string) {
+func (j *jsiiProxy_Container)SetNetworkMode(val *string) {
+	if err := j.validateSetNetworkModeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"networkMode",
@@ -2124,7 +2220,10 @@ func (j *jsiiProxy_Container) SetNetworkMode(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetNetworks(val *[]*string) {
+func (j *jsiiProxy_Container)SetNetworks(val *[]*string) {
+	if err := j.validateSetNetworksParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"networks",
@@ -2132,7 +2231,10 @@ func (j *jsiiProxy_Container) SetNetworks(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetPidMode(val *string) {
+func (j *jsiiProxy_Container)SetPidMode(val *string) {
+	if err := j.validateSetPidModeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"pidMode",
@@ -2140,7 +2242,10 @@ func (j *jsiiProxy_Container) SetPidMode(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetPrivileged(val interface{}) {
+func (j *jsiiProxy_Container)SetPrivileged(val interface{}) {
+	if err := j.validateSetPrivilegedParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"privileged",
@@ -2148,7 +2253,7 @@ func (j *jsiiProxy_Container) SetPrivileged(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_Container)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -2156,7 +2261,10 @@ func (j *jsiiProxy_Container) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_Container)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -2164,7 +2272,10 @@ func (j *jsiiProxy_Container) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetPublishAllPorts(val interface{}) {
+func (j *jsiiProxy_Container)SetPublishAllPorts(val interface{}) {
+	if err := j.validateSetPublishAllPortsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"publishAllPorts",
@@ -2172,7 +2283,10 @@ func (j *jsiiProxy_Container) SetPublishAllPorts(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetReadOnly(val interface{}) {
+func (j *jsiiProxy_Container)SetReadOnly(val interface{}) {
+	if err := j.validateSetReadOnlyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"readOnly",
@@ -2180,7 +2294,10 @@ func (j *jsiiProxy_Container) SetReadOnly(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetRemoveVolumes(val interface{}) {
+func (j *jsiiProxy_Container)SetRemoveVolumes(val interface{}) {
+	if err := j.validateSetRemoveVolumesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"removeVolumes",
@@ -2188,7 +2305,10 @@ func (j *jsiiProxy_Container) SetRemoveVolumes(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetRestart(val *string) {
+func (j *jsiiProxy_Container)SetRestart(val *string) {
+	if err := j.validateSetRestartParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"restart",
@@ -2196,7 +2316,10 @@ func (j *jsiiProxy_Container) SetRestart(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetRm(val interface{}) {
+func (j *jsiiProxy_Container)SetRm(val interface{}) {
+	if err := j.validateSetRmParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"rm",
@@ -2204,7 +2327,10 @@ func (j *jsiiProxy_Container) SetRm(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetRuntime(val *string) {
+func (j *jsiiProxy_Container)SetRuntime(val *string) {
+	if err := j.validateSetRuntimeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"runtime",
@@ -2212,7 +2338,10 @@ func (j *jsiiProxy_Container) SetRuntime(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetSecurityOpts(val *[]*string) {
+func (j *jsiiProxy_Container)SetSecurityOpts(val *[]*string) {
+	if err := j.validateSetSecurityOptsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"securityOpts",
@@ -2220,7 +2349,10 @@ func (j *jsiiProxy_Container) SetSecurityOpts(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetShmSize(val *float64) {
+func (j *jsiiProxy_Container)SetShmSize(val *float64) {
+	if err := j.validateSetShmSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"shmSize",
@@ -2228,7 +2360,10 @@ func (j *jsiiProxy_Container) SetShmSize(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetStart(val interface{}) {
+func (j *jsiiProxy_Container)SetStart(val interface{}) {
+	if err := j.validateSetStartParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"start",
@@ -2236,7 +2371,10 @@ func (j *jsiiProxy_Container) SetStart(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetStdinOpen(val interface{}) {
+func (j *jsiiProxy_Container)SetStdinOpen(val interface{}) {
+	if err := j.validateSetStdinOpenParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"stdinOpen",
@@ -2244,7 +2382,10 @@ func (j *jsiiProxy_Container) SetStdinOpen(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetStopSignal(val *string) {
+func (j *jsiiProxy_Container)SetStopSignal(val *string) {
+	if err := j.validateSetStopSignalParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"stopSignal",
@@ -2252,7 +2393,10 @@ func (j *jsiiProxy_Container) SetStopSignal(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetStopTimeout(val *float64) {
+func (j *jsiiProxy_Container)SetStopTimeout(val *float64) {
+	if err := j.validateSetStopTimeoutParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"stopTimeout",
@@ -2260,7 +2404,10 @@ func (j *jsiiProxy_Container) SetStopTimeout(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetStorageOpts(val *map[string]*string) {
+func (j *jsiiProxy_Container)SetStorageOpts(val *map[string]*string) {
+	if err := j.validateSetStorageOptsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"storageOpts",
@@ -2268,7 +2415,10 @@ func (j *jsiiProxy_Container) SetStorageOpts(val *map[string]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetSysctls(val *map[string]*string) {
+func (j *jsiiProxy_Container)SetSysctls(val *map[string]*string) {
+	if err := j.validateSetSysctlsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"sysctls",
@@ -2276,7 +2426,10 @@ func (j *jsiiProxy_Container) SetSysctls(val *map[string]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetTmpfs(val *map[string]*string) {
+func (j *jsiiProxy_Container)SetTmpfs(val *map[string]*string) {
+	if err := j.validateSetTmpfsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"tmpfs",
@@ -2284,7 +2437,10 @@ func (j *jsiiProxy_Container) SetTmpfs(val *map[string]*string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetTty(val interface{}) {
+func (j *jsiiProxy_Container)SetTty(val interface{}) {
+	if err := j.validateSetTtyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"tty",
@@ -2292,7 +2448,10 @@ func (j *jsiiProxy_Container) SetTty(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetUser(val *string) {
+func (j *jsiiProxy_Container)SetUser(val *string) {
+	if err := j.validateSetUserParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"user",
@@ -2300,7 +2459,10 @@ func (j *jsiiProxy_Container) SetUser(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetUsernsMode(val *string) {
+func (j *jsiiProxy_Container)SetUsernsMode(val *string) {
+	if err := j.validateSetUsernsModeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"usernsMode",
@@ -2308,7 +2470,10 @@ func (j *jsiiProxy_Container) SetUsernsMode(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container) SetWorkingDir(val *string) {
+func (j *jsiiProxy_Container)SetWorkingDir(val *string) {
+	if err := j.validateSetWorkingDirParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"workingDir",
@@ -2336,6 +2501,9 @@ func (j *jsiiProxy_Container) SetWorkingDir(val *string) {
 func Container_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateContainer_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -2360,6 +2528,9 @@ func Container_TfResourceType() *string {
 }
 
 func (c *jsiiProxy_Container) AddOverride(path *string, value interface{}) {
+	if err := c.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"addOverride",
@@ -2368,6 +2539,9 @@ func (c *jsiiProxy_Container) AddOverride(path *string, value interface{}) {
 }
 
 func (c *jsiiProxy_Container) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := c.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -2381,6 +2555,9 @@ func (c *jsiiProxy_Container) GetAnyMapAttribute(terraformAttribute *string) *ma
 }
 
 func (c *jsiiProxy_Container) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := c.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -2394,6 +2571,9 @@ func (c *jsiiProxy_Container) GetBooleanAttribute(terraformAttribute *string) cd
 }
 
 func (c *jsiiProxy_Container) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := c.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -2407,6 +2587,9 @@ func (c *jsiiProxy_Container) GetBooleanMapAttribute(terraformAttribute *string)
 }
 
 func (c *jsiiProxy_Container) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := c.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -2420,6 +2603,9 @@ func (c *jsiiProxy_Container) GetListAttribute(terraformAttribute *string) *[]*s
 }
 
 func (c *jsiiProxy_Container) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := c.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -2433,6 +2619,9 @@ func (c *jsiiProxy_Container) GetNumberAttribute(terraformAttribute *string) *fl
 }
 
 func (c *jsiiProxy_Container) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := c.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -2446,6 +2635,9 @@ func (c *jsiiProxy_Container) GetNumberListAttribute(terraformAttribute *string)
 }
 
 func (c *jsiiProxy_Container) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := c.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -2459,6 +2651,9 @@ func (c *jsiiProxy_Container) GetNumberMapAttribute(terraformAttribute *string) 
 }
 
 func (c *jsiiProxy_Container) GetStringAttribute(terraformAttribute *string) *string {
+	if err := c.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -2472,6 +2667,9 @@ func (c *jsiiProxy_Container) GetStringAttribute(terraformAttribute *string) *st
 }
 
 func (c *jsiiProxy_Container) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := c.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -2485,6 +2683,9 @@ func (c *jsiiProxy_Container) GetStringMapAttribute(terraformAttribute *string) 
 }
 
 func (c *jsiiProxy_Container) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := c.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -2498,6 +2699,9 @@ func (c *jsiiProxy_Container) InterpolationForAttribute(terraformAttribute *stri
 }
 
 func (c *jsiiProxy_Container) OverrideLogicalId(newLogicalId *string) {
+	if err := c.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"overrideLogicalId",
@@ -2506,6 +2710,9 @@ func (c *jsiiProxy_Container) OverrideLogicalId(newLogicalId *string) {
 }
 
 func (c *jsiiProxy_Container) PutCapabilities(value *ContainerCapabilities) {
+	if err := c.validatePutCapabilitiesParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putCapabilities",
@@ -2514,6 +2721,9 @@ func (c *jsiiProxy_Container) PutCapabilities(value *ContainerCapabilities) {
 }
 
 func (c *jsiiProxy_Container) PutDevices(value interface{}) {
+	if err := c.validatePutDevicesParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putDevices",
@@ -2522,6 +2732,9 @@ func (c *jsiiProxy_Container) PutDevices(value interface{}) {
 }
 
 func (c *jsiiProxy_Container) PutHealthcheck(value *ContainerHealthcheck) {
+	if err := c.validatePutHealthcheckParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putHealthcheck",
@@ -2530,6 +2743,9 @@ func (c *jsiiProxy_Container) PutHealthcheck(value *ContainerHealthcheck) {
 }
 
 func (c *jsiiProxy_Container) PutHost(value interface{}) {
+	if err := c.validatePutHostParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putHost",
@@ -2538,6 +2754,9 @@ func (c *jsiiProxy_Container) PutHost(value interface{}) {
 }
 
 func (c *jsiiProxy_Container) PutLabels(value interface{}) {
+	if err := c.validatePutLabelsParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putLabels",
@@ -2546,6 +2765,9 @@ func (c *jsiiProxy_Container) PutLabels(value interface{}) {
 }
 
 func (c *jsiiProxy_Container) PutMounts(value interface{}) {
+	if err := c.validatePutMountsParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putMounts",
@@ -2554,6 +2776,9 @@ func (c *jsiiProxy_Container) PutMounts(value interface{}) {
 }
 
 func (c *jsiiProxy_Container) PutNetworksAdvanced(value interface{}) {
+	if err := c.validatePutNetworksAdvancedParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putNetworksAdvanced",
@@ -2562,6 +2787,9 @@ func (c *jsiiProxy_Container) PutNetworksAdvanced(value interface{}) {
 }
 
 func (c *jsiiProxy_Container) PutPorts(value interface{}) {
+	if err := c.validatePutPortsParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putPorts",
@@ -2570,6 +2798,9 @@ func (c *jsiiProxy_Container) PutPorts(value interface{}) {
 }
 
 func (c *jsiiProxy_Container) PutUlimit(value interface{}) {
+	if err := c.validatePutUlimitParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putUlimit",
@@ -2578,6 +2809,9 @@ func (c *jsiiProxy_Container) PutUlimit(value interface{}) {
 }
 
 func (c *jsiiProxy_Container) PutUpload(value interface{}) {
+	if err := c.validatePutUploadParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putUpload",
@@ -2586,6 +2820,9 @@ func (c *jsiiProxy_Container) PutUpload(value interface{}) {
 }
 
 func (c *jsiiProxy_Container) PutVolumes(value interface{}) {
+	if err := c.validatePutVolumesParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"putVolumes",

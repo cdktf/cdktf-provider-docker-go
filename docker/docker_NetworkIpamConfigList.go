@@ -111,6 +111,9 @@ func (j *jsiiProxy_NetworkIpamConfigList) WrapsSet() *bool {
 func NewNetworkIpamConfigList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkIpamConfigList {
 	_init_.Initialize()
 
+	if err := validateNewNetworkIpamConfigListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_NetworkIpamConfigList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewNetworkIpamConfigList_Override(n NetworkIpamConfigList, terraformResourc
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_NetworkIpamConfigList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_NetworkIpamConfigList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_NetworkIpamConfigList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_NetworkIpamConfigList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_NetworkIpamConfigList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_NetworkIpamConfigList) SetTerraformResource(val cdktf.IInterp
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_NetworkIpamConfigList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (n *jsiiProxy_NetworkIpamConfigList) ComputeFqn() *string {
 }
 
 func (n *jsiiProxy_NetworkIpamConfigList) Get(index *float64) NetworkIpamConfigOutputReference {
+	if err := n.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns NetworkIpamConfigOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (n *jsiiProxy_NetworkIpamConfigList) Get(index *float64) NetworkIpamConfigO
 }
 
 func (n *jsiiProxy_NetworkIpamConfigList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := n.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -271,6 +271,9 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 func NewServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference{}
 
 	_jsii_.Create(
@@ -292,7 +295,10 @@ func NewServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference_Over
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -300,7 +306,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -308,7 +317,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) SetDisable(val interface{}) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference)SetDisable(val interface{}) {
+	if err := j.validateSetDisableParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"disable",
@@ -316,7 +328,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) SetInternalValue(val *ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference)SetInternalValue(val *ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -324,7 +339,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) SetLevel(val *string) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference)SetLevel(val *string) {
+	if err := j.validateSetLevelParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"level",
@@ -332,7 +350,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) SetRole(val *string) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference)SetRole(val *string) {
+	if err := j.validateSetRoleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"role",
@@ -340,7 +361,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -348,7 +372,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -356,7 +383,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) SetType(val *string) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference)SetType(val *string) {
+	if err := j.validateSetTypeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"type",
@@ -364,7 +394,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 	)
 }
 
-func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) SetUser(val *string) {
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference)SetUser(val *string) {
+	if err := j.validateSetUserParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"user",
@@ -386,6 +419,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := s.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -399,6 +435,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := s.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -412,6 +451,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := s.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -425,6 +467,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := s.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -438,6 +483,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := s.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -451,6 +499,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := s.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -464,6 +515,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := s.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -477,6 +531,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := s.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -490,6 +547,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := s.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -516,6 +576,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := s.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -569,6 +632,9 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputRef
 }
 
 func (s *jsiiProxy_ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := s.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

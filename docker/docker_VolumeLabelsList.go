@@ -111,6 +111,9 @@ func (j *jsiiProxy_VolumeLabelsList) WrapsSet() *bool {
 func NewVolumeLabelsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VolumeLabelsList {
 	_init_.Initialize()
 
+	if err := validateNewVolumeLabelsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_VolumeLabelsList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewVolumeLabelsList_Override(v VolumeLabelsList, terraformResource cdktf.II
 	)
 }
 
-func (j *jsiiProxy_VolumeLabelsList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_VolumeLabelsList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_VolumeLabelsList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_VolumeLabelsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_VolumeLabelsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_VolumeLabelsList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_VolumeLabelsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_VolumeLabelsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_VolumeLabelsList) SetTerraformResource(val cdktf.IInterpolati
 	)
 }
 
-func (j *jsiiProxy_VolumeLabelsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_VolumeLabelsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (v *jsiiProxy_VolumeLabelsList) ComputeFqn() *string {
 }
 
 func (v *jsiiProxy_VolumeLabelsList) Get(index *float64) VolumeLabelsOutputReference {
+	if err := v.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns VolumeLabelsOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (v *jsiiProxy_VolumeLabelsList) Get(index *float64) VolumeLabelsOutputRefer
 }
 
 func (v *jsiiProxy_VolumeLabelsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := v.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

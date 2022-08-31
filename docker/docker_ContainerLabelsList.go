@@ -111,6 +111,9 @@ func (j *jsiiProxy_ContainerLabelsList) WrapsSet() *bool {
 func NewContainerLabelsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerLabelsList {
 	_init_.Initialize()
 
+	if err := validateNewContainerLabelsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ContainerLabelsList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewContainerLabelsList_Override(c ContainerLabelsList, terraformResource cd
 	)
 }
 
-func (j *jsiiProxy_ContainerLabelsList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ContainerLabelsList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ContainerLabelsList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ContainerLabelsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ContainerLabelsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ContainerLabelsList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ContainerLabelsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ContainerLabelsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ContainerLabelsList) SetTerraformResource(val cdktf.IInterpol
 	)
 }
 
-func (j *jsiiProxy_ContainerLabelsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ContainerLabelsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (c *jsiiProxy_ContainerLabelsList) ComputeFqn() *string {
 }
 
 func (c *jsiiProxy_ContainerLabelsList) Get(index *float64) ContainerLabelsOutputReference {
+	if err := c.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ContainerLabelsOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (c *jsiiProxy_ContainerLabelsList) Get(index *float64) ContainerLabelsOutpu
 }
 
 func (c *jsiiProxy_ContainerLabelsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

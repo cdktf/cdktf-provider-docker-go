@@ -111,6 +111,9 @@ func (j *jsiiProxy_ContainerMountsList) WrapsSet() *bool {
 func NewContainerMountsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerMountsList {
 	_init_.Initialize()
 
+	if err := validateNewContainerMountsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ContainerMountsList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewContainerMountsList_Override(c ContainerMountsList, terraformResource cd
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ContainerMountsList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ContainerMountsList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ContainerMountsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ContainerMountsList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ContainerMountsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ContainerMountsList) SetTerraformResource(val cdktf.IInterpol
 	)
 }
 
-func (j *jsiiProxy_ContainerMountsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ContainerMountsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (c *jsiiProxy_ContainerMountsList) ComputeFqn() *string {
 }
 
 func (c *jsiiProxy_ContainerMountsList) Get(index *float64) ContainerMountsOutputReference {
+	if err := c.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ContainerMountsOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (c *jsiiProxy_ContainerMountsList) Get(index *float64) ContainerMountsOutpu
 }
 
 func (c *jsiiProxy_ContainerMountsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

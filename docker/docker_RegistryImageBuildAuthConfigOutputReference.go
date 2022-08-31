@@ -342,6 +342,9 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) UserNameInput() 
 func NewRegistryImageBuildAuthConfigOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) RegistryImageBuildAuthConfigOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewRegistryImageBuildAuthConfigOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_RegistryImageBuildAuthConfigOutputReference{}
 
 	_jsii_.Create(
@@ -363,7 +366,10 @@ func NewRegistryImageBuildAuthConfigOutputReference_Override(r RegistryImageBuil
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetAuth(val *string) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetAuth(val *string) {
+	if err := j.validateSetAuthParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"auth",
@@ -371,7 +377,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetAuth(val *str
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -379,7 +388,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetComplexObject
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -387,7 +399,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetComplexObject
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetEmail(val *string) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetEmail(val *string) {
+	if err := j.validateSetEmailParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"email",
@@ -395,7 +410,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetEmail(val *st
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetHostName(val *string) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetHostName(val *string) {
+	if err := j.validateSetHostNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"hostName",
@@ -403,7 +421,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetHostName(val 
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetIdentityToken(val *string) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetIdentityToken(val *string) {
+	if err := j.validateSetIdentityTokenParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"identityToken",
@@ -411,7 +432,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetIdentityToken
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -419,7 +443,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetInternalValue
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetPassword(val *string) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetPassword(val *string) {
+	if err := j.validateSetPasswordParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"password",
@@ -427,7 +454,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetPassword(val 
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetRegistryToken(val *string) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetRegistryToken(val *string) {
+	if err := j.validateSetRegistryTokenParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"registryToken",
@@ -435,7 +465,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetRegistryToken
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetServerAddress(val *string) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetServerAddress(val *string) {
+	if err := j.validateSetServerAddressParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"serverAddress",
@@ -443,7 +476,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetServerAddress
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -451,7 +487,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetTerraformAttr
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -459,7 +498,10 @@ func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetTerraformReso
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) SetUserName(val *string) {
+func (j *jsiiProxy_RegistryImageBuildAuthConfigOutputReference)SetUserName(val *string) {
+	if err := j.validateSetUserNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"userName",
@@ -481,6 +523,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) ComputeFqn() *st
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := r.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -494,6 +539,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetAnyMapAttribu
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -507,6 +555,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetBooleanAttrib
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := r.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -520,6 +571,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetBooleanMapAtt
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := r.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -533,6 +587,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetListAttribute
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := r.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -546,6 +603,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetNumberAttribu
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := r.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -559,6 +619,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetNumberListAtt
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := r.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -572,6 +635,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetNumberMapAttr
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := r.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -585,6 +651,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetStringAttribu
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := r.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -611,6 +680,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) InterpolationAsL
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := r.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -680,6 +752,9 @@ func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) ResetUserName() 
 }
 
 func (r *jsiiProxy_RegistryImageBuildAuthConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := r.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

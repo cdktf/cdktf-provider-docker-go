@@ -111,6 +111,9 @@ func (j *jsiiProxy_RegistryImageBuildUlimitList) WrapsSet() *bool {
 func NewRegistryImageBuildUlimitList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RegistryImageBuildUlimitList {
 	_init_.Initialize()
 
+	if err := validateNewRegistryImageBuildUlimitListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_RegistryImageBuildUlimitList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewRegistryImageBuildUlimitList_Override(r RegistryImageBuildUlimitList, te
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildUlimitList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_RegistryImageBuildUlimitList) SetInternalValue(val interface{
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_RegistryImageBuildUlimitList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_RegistryImageBuildUlimitList) SetTerraformAttribute(val *stri
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_RegistryImageBuildUlimitList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_RegistryImageBuildUlimitList) SetTerraformResource(val cdktf.
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_RegistryImageBuildUlimitList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitList) ComputeFqn() *string {
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitList) Get(index *float64) RegistryImageBuildUlimitOutputReference {
+	if err := r.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns RegistryImageBuildUlimitOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitList) Get(index *float64) RegistryIma
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := r.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -295,6 +295,9 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) TerraformResource() cdk
 func NewServiceRollbackConfigOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) ServiceRollbackConfigOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewServiceRollbackConfigOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ServiceRollbackConfigOutputReference{}
 
 	_jsii_.Create(
@@ -316,7 +319,10 @@ func NewServiceRollbackConfigOutputReference_Override(s ServiceRollbackConfigOut
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -324,7 +330,10 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetComplexObjectIndex(v
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -332,7 +341,10 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetComplexObjectIsFromS
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetDelay(val *string) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetDelay(val *string) {
+	if err := j.validateSetDelayParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"delay",
@@ -340,7 +352,10 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetDelay(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetFailureAction(val *string) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetFailureAction(val *string) {
+	if err := j.validateSetFailureActionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"failureAction",
@@ -348,7 +363,10 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetFailureAction(val *s
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetInternalValue(val *ServiceRollbackConfig) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetInternalValue(val *ServiceRollbackConfig) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -356,7 +374,10 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetInternalValue(val *S
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetMaxFailureRatio(val *string) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetMaxFailureRatio(val *string) {
+	if err := j.validateSetMaxFailureRatioParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxFailureRatio",
@@ -364,7 +385,10 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetMaxFailureRatio(val 
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetMonitor(val *string) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetMonitor(val *string) {
+	if err := j.validateSetMonitorParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"monitor",
@@ -372,7 +396,10 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetMonitor(val *string)
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetOrder(val *string) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetOrder(val *string) {
+	if err := j.validateSetOrderParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"order",
@@ -380,7 +407,10 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetOrder(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetParallelism(val *float64) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetParallelism(val *float64) {
+	if err := j.validateSetParallelismParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"parallelism",
@@ -388,7 +418,10 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetParallelism(val *flo
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -396,7 +429,10 @@ func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetTerraformAttribute(v
 	)
 }
 
-func (j *jsiiProxy_ServiceRollbackConfigOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ServiceRollbackConfigOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -418,6 +454,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) ComputeFqn() *string {
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := s.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -431,6 +470,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetAnyMapAttribute(terr
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := s.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -444,6 +486,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetBooleanAttribute(ter
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := s.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -457,6 +502,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetBooleanMapAttribute(
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := s.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -470,6 +518,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetListAttribute(terraf
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := s.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -483,6 +534,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetNumberAttribute(terr
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := s.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -496,6 +550,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetNumberListAttribute(
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := s.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -509,6 +566,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetNumberMapAttribute(t
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := s.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -522,6 +582,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetStringAttribute(terr
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := s.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -548,6 +611,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) InterpolationAsList() c
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := s.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -609,6 +675,9 @@ func (s *jsiiProxy_ServiceRollbackConfigOutputReference) ResetParallelism() {
 }
 
 func (s *jsiiProxy_ServiceRollbackConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := s.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

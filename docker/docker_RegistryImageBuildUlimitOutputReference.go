@@ -220,6 +220,9 @@ func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) TerraformResource() 
 func NewRegistryImageBuildUlimitOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) RegistryImageBuildUlimitOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewRegistryImageBuildUlimitOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_RegistryImageBuildUlimitOutputReference{}
 
 	_jsii_.Create(
@@ -241,7 +244,10 @@ func NewRegistryImageBuildUlimitOutputReference_Override(r RegistryImageBuildUli
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -249,7 +255,10 @@ func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetComplexObjectInde
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -257,7 +266,10 @@ func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetComplexObjectIsFr
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetHard(val *float64) {
+func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference)SetHard(val *float64) {
+	if err := j.validateSetHardParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"hard",
@@ -265,7 +277,10 @@ func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetHard(val *float64
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -273,7 +288,10 @@ func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetInternalValue(val
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetName(val *string) {
+func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -281,7 +299,10 @@ func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetName(val *string)
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetSoft(val *float64) {
+func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference)SetSoft(val *float64) {
+	if err := j.validateSetSoftParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"soft",
@@ -289,7 +310,10 @@ func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetSoft(val *float64
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -297,7 +321,10 @@ func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetTerraformAttribut
 	)
 }
 
-func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_RegistryImageBuildUlimitOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -319,6 +346,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) ComputeFqn() *string
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := r.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -332,6 +362,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetAnyMapAttribute(t
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -345,6 +378,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetBooleanAttribute(
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := r.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -358,6 +394,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetBooleanMapAttribu
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := r.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -371,6 +410,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetListAttribute(ter
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := r.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -384,6 +426,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetNumberAttribute(t
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := r.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -397,6 +442,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetNumberListAttribu
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := r.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -410,6 +458,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetNumberMapAttribut
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := r.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -423,6 +474,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetStringAttribute(t
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := r.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -449,6 +503,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) InterpolationAsList(
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := r.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -462,6 +519,9 @@ func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) InterpolationForAttr
 }
 
 func (r *jsiiProxy_RegistryImageBuildUlimitOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := r.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

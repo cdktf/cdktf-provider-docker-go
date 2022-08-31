@@ -247,6 +247,9 @@ func (j *jsiiProxy_NetworkIpamConfigOutputReference) TerraformResource() cdktf.I
 func NewNetworkIpamConfigOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) NetworkIpamConfigOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewNetworkIpamConfigOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_NetworkIpamConfigOutputReference{}
 
 	_jsii_.Create(
@@ -268,7 +271,10 @@ func NewNetworkIpamConfigOutputReference_Override(n NetworkIpamConfigOutputRefer
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetAuxAddress(val *map[string]*string) {
+func (j *jsiiProxy_NetworkIpamConfigOutputReference)SetAuxAddress(val *map[string]*string) {
+	if err := j.validateSetAuxAddressParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"auxAddress",
@@ -276,7 +282,10 @@ func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetAuxAddress(val *map[stri
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_NetworkIpamConfigOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -284,7 +293,10 @@ func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetComplexObjectIndex(val i
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_NetworkIpamConfigOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -292,7 +304,10 @@ func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetComplexObjectIsFromSet(v
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetGateway(val *string) {
+func (j *jsiiProxy_NetworkIpamConfigOutputReference)SetGateway(val *string) {
+	if err := j.validateSetGatewayParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"gateway",
@@ -300,7 +315,10 @@ func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetGateway(val *string) {
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_NetworkIpamConfigOutputReference)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -308,7 +326,10 @@ func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetInternalValue(val interf
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetIpRange(val *string) {
+func (j *jsiiProxy_NetworkIpamConfigOutputReference)SetIpRange(val *string) {
+	if err := j.validateSetIpRangeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"ipRange",
@@ -316,7 +337,10 @@ func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetIpRange(val *string) {
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetSubnet(val *string) {
+func (j *jsiiProxy_NetworkIpamConfigOutputReference)SetSubnet(val *string) {
+	if err := j.validateSetSubnetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"subnet",
@@ -324,7 +348,10 @@ func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetSubnet(val *string) {
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_NetworkIpamConfigOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -332,7 +359,10 @@ func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetTerraformAttribute(val *
 	)
 }
 
-func (j *jsiiProxy_NetworkIpamConfigOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_NetworkIpamConfigOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -354,6 +384,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) ComputeFqn() *string {
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := n.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -367,6 +400,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetAnyMapAttribute(terrafor
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := n.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -380,6 +416,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetBooleanAttribute(terrafo
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := n.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -393,6 +432,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetBooleanMapAttribute(terr
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := n.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -406,6 +448,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetListAttribute(terraformA
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := n.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -419,6 +464,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetNumberAttribute(terrafor
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := n.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -432,6 +480,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetNumberListAttribute(terr
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := n.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -445,6 +496,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetNumberMapAttribute(terra
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := n.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -458,6 +512,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetStringAttribute(terrafor
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := n.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -484,6 +541,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) InterpolationAsList() cdktf
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := n.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -529,6 +589,9 @@ func (n *jsiiProxy_NetworkIpamConfigOutputReference) ResetSubnet() {
 }
 
 func (n *jsiiProxy_NetworkIpamConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := n.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

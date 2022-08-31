@@ -195,6 +195,9 @@ func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) TerraformResource
 func NewDataDockerNetworkIpamConfigOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) DataDockerNetworkIpamConfigOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewDataDockerNetworkIpamConfigOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataDockerNetworkIpamConfigOutputReference{}
 
 	_jsii_.Create(
@@ -216,7 +219,10 @@ func NewDataDockerNetworkIpamConfigOutputReference_Override(d DataDockerNetworkI
 	)
 }
 
-func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -224,7 +230,10 @@ func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) SetComplexObjectI
 	)
 }
 
-func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -232,7 +241,10 @@ func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) SetComplexObjectI
 	)
 }
 
-func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) SetInternalValue(val *DataDockerNetworkIpamConfig) {
+func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference)SetInternalValue(val *DataDockerNetworkIpamConfig) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -240,7 +252,10 @@ func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) SetInternalValue(
 	)
 }
 
-func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -248,7 +263,10 @@ func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) SetTerraformAttri
 	)
 }
 
-func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataDockerNetworkIpamConfigOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -270,6 +288,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) ComputeFqn() *str
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -283,6 +304,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetAnyMapAttribut
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -296,6 +320,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetBooleanAttribu
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -309,6 +336,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetBooleanMapAttr
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -322,6 +352,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetListAttribute(
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -335,6 +368,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetNumberAttribut
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -348,6 +384,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetNumberListAttr
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -361,6 +400,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetNumberMapAttri
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -374,6 +416,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetStringAttribut
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -400,6 +445,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) InterpolationAsLi
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := d.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -413,6 +461,9 @@ func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) InterpolationForA
 }
 
 func (d *jsiiProxy_DataDockerNetworkIpamConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(
