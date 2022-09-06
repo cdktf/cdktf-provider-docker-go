@@ -185,14 +185,6 @@ func (j *jsiiProxy_Image) validateSetForceRemoveParameters(val interface{}) erro
 	return nil
 }
 
-func (j *jsiiProxy_Image) validateSetIdParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (j *jsiiProxy_Image) validateSetKeepLocallyParameters(val interface{}) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

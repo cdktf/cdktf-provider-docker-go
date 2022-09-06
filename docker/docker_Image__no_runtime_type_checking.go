@@ -70,10 +70,6 @@ func (j *jsiiProxy_Image) validateSetForceRemoveParameters(val interface{}) erro
 	return nil
 }
 
-func (j *jsiiProxy_Image) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_Image) validateSetKeepLocallyParameters(val interface{}) error {
 	return nil
 }

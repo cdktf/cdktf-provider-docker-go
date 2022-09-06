@@ -43,8 +43,7 @@ type Image interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
+	ImageId() *string
 	KeepLocally() interface{}
 	SetKeepLocally(val interface{})
 	KeepLocallyInput() interface{}
@@ -113,7 +112,6 @@ type Image interface {
 	PutBuildAttribute(value *ImageBuild)
 	ResetBuildAttribute()
 	ResetForceRemove()
-	ResetId()
 	ResetKeepLocally()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -266,11 +264,11 @@ func (j *jsiiProxy_Image) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Image) IdInput() *string {
+func (j *jsiiProxy_Image) ImageId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"idInput",
+		"imageId",
 		&returns,
 	)
 	return returns
@@ -558,17 +556,6 @@ func (j *jsiiProxy_Image)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Image)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -909,14 +896,6 @@ func (i *jsiiProxy_Image) ResetForceRemove() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetForceRemove",
-		nil, // no parameters
-	)
-}
-
-func (i *jsiiProxy_Image) ResetId() {
-	_jsii_.InvokeVoid(
-		i,
-		"resetId",
 		nil, // no parameters
 	)
 }
