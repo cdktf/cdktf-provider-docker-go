@@ -44,6 +44,10 @@ type ContainerConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#command Container#command}
 	Command *[]*string `field:"optional" json:"command" yaml:"command"`
+	// The total number of milliseconds to wait for the container to reach status 'running'.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#container_read_refresh_timeout_milliseconds Container#container_read_refresh_timeout_milliseconds}
+	ContainerReadRefreshTimeoutMilliseconds *float64 `field:"optional" json:"containerReadRefreshTimeoutMilliseconds" yaml:"containerReadRefreshTimeoutMilliseconds"`
 	// A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#cpu_set Container#cpu_set}

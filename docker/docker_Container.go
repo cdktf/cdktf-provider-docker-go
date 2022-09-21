@@ -31,6 +31,9 @@ type Container interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	ContainerLogs() *string
+	ContainerReadRefreshTimeoutMilliseconds() *float64
+	SetContainerReadRefreshTimeoutMilliseconds(val *float64)
+	ContainerReadRefreshTimeoutMillisecondsInput() *float64
 	// Experimental.
 	Count() *float64
 	// Experimental.
@@ -280,6 +283,7 @@ type Container interface {
 	ResetAttach()
 	ResetCapabilities()
 	ResetCommand()
+	ResetContainerReadRefreshTimeoutMilliseconds()
 	ResetCpuSet()
 	ResetCpuShares()
 	ResetDestroyGraceSeconds()
@@ -460,6 +464,26 @@ func (j *jsiiProxy_Container) ContainerLogs() *string {
 	_jsii_.Get(
 		j,
 		"containerLogs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) ContainerReadRefreshTimeoutMilliseconds() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"containerReadRefreshTimeoutMilliseconds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) ContainerReadRefreshTimeoutMillisecondsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"containerReadRefreshTimeoutMillisecondsInput",
 		&returns,
 	)
 	return returns
@@ -1888,6 +1912,17 @@ func (j *jsiiProxy_Container)SetConnection(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Container)SetContainerReadRefreshTimeoutMilliseconds(val *float64) {
+	if err := j.validateSetContainerReadRefreshTimeoutMillisecondsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"containerReadRefreshTimeoutMilliseconds",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Container)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -2850,6 +2885,14 @@ func (c *jsiiProxy_Container) ResetCommand() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetCommand",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Container) ResetContainerReadRefreshTimeoutMilliseconds() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetContainerReadRefreshTimeoutMilliseconds",
 		nil, // no parameters
 	)
 }

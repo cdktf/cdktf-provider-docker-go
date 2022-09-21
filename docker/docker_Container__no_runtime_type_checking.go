@@ -114,6 +114,10 @@ func (j *jsiiProxy_Container) validateSetConnectionParameters(val interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_Container) validateSetContainerReadRefreshTimeoutMillisecondsParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_Container) validateSetCpuSetParameters(val *string) error {
 	return nil
 }
