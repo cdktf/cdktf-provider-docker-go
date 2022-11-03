@@ -240,6 +240,12 @@ type Container interface {
 	UsernsModeInput() *string
 	Volumes() ContainerVolumesList
 	VolumesInput() interface{}
+	Wait() interface{}
+	SetWait(val interface{})
+	WaitInput() interface{}
+	WaitTimeout() *float64
+	SetWaitTimeout(val *float64)
+	WaitTimeoutInput() *float64
 	WorkingDir() *string
 	SetWorkingDir(val *string)
 	WorkingDirInput() *string
@@ -342,6 +348,8 @@ type Container interface {
 	ResetUser()
 	ResetUsernsMode()
 	ResetVolumes()
+	ResetWait()
+	ResetWaitTimeout()
 	ResetWorkingDir()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
@@ -1828,6 +1836,46 @@ func (j *jsiiProxy_Container) VolumesInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Container) Wait() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"wait",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) WaitInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"waitInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) WaitTimeout() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"waitTimeout",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) WaitTimeoutInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"waitTimeoutInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Container) WorkingDir() *string {
 	var returns *string
 	_jsii_.Get(
@@ -2500,6 +2548,28 @@ func (j *jsiiProxy_Container)SetUsernsMode(val *string) {
 	_jsii_.Set(
 		j,
 		"usernsMode",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Container)SetWait(val interface{}) {
+	if err := j.validateSetWaitParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"wait",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Container)SetWaitTimeout(val *float64) {
+	if err := j.validateSetWaitTimeoutParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"waitTimeout",
 		val,
 	)
 }
@@ -3348,6 +3418,22 @@ func (c *jsiiProxy_Container) ResetVolumes() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetVolumes",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Container) ResetWait() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetWait",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Container) ResetWaitTimeout() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetWaitTimeout",
 		nil, // no parameters
 	)
 }

@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package container
 
@@ -314,6 +313,14 @@ func (j *jsiiProxy_Container) validateSetUserParameters(val *string) error {
 }
 
 func (j *jsiiProxy_Container) validateSetUsernsModeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Container) validateSetWaitParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Container) validateSetWaitTimeoutParameters(val *float64) error {
 	return nil
 }
 

@@ -288,6 +288,16 @@ type ContainerConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#volumes Container#volumes}
 	Volumes interface{} `field:"optional" json:"volumes" yaml:"volumes"`
+	// If `true`, then the Docker container is waited for being healthy state after creation.
+	//
+	// If `false`, then the container health state is not checked. Defaults to `false`.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#wait Container#wait}
+	Wait interface{} `field:"optional" json:"wait" yaml:"wait"`
+	// The timeout in seconds to wait the container to be healthy after creation. Defaults to `60`.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#wait_timeout Container#wait_timeout}
+	WaitTimeout *float64 `field:"optional" json:"waitTimeout" yaml:"waitTimeout"`
 	// The working directory for commands to run in.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#working_dir Container#working_dir}
