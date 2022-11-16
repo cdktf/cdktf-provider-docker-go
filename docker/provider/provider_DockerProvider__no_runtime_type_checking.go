@@ -16,6 +16,14 @@ func validateDockerProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDockerProvider_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateDockerProvider_IsTerraformProviderParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DockerProvider) validateSetRegistryAuthParameters(val interface{}) error {
 	return nil
 }

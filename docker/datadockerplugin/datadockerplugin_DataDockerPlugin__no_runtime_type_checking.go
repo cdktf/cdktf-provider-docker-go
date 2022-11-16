@@ -56,6 +56,14 @@ func validateDataDockerPlugin_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataDockerPlugin_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataDockerPlugin_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataDockerPlugin) validateSetAliasParameters(val *string) error {
 	return nil
 }

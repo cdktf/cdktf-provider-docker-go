@@ -1,9 +1,9 @@
-module github.com/cdktf/cdktf-provider-docker-go/docker/v3
+module github.com/cdktf/cdktf-provider-docker-go/docker/v4
 
 go 1.18
 
 require (
-	github.com/aws/jsii-runtime-go v1.70.0
-	github.com/hashicorp/terraform-cdk-go/cdktf v0.13.2
-	github.com/aws/constructs-go/constructs/v10 v10.1.147
+	github.com/aws/jsii-runtime-go v1.71.0
+	github.com/hashicorp/terraform-cdk-go/cdktf v0.14.0
+	github.com/aws/constructs-go/constructs/v10 v10.1.160
 )

@@ -100,6 +100,14 @@ func validateContainer_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateContainer_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateContainer_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Container) validateSetAttachParameters(val interface{}) error {
 	return nil
 }

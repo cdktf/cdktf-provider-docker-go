@@ -56,6 +56,14 @@ func validateDataDockerLogs_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataDockerLogs_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataDockerLogs_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataDockerLogs) validateSetDetailsParameters(val interface{}) error {
 	return nil
 }

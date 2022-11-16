@@ -2,10 +2,10 @@ package datadockerlogs
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v3/datadockerlogs/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v4/datadockerlogs/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -764,6 +764,44 @@ func DataDockerLogs_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-docker.dataDockerLogs.DataDockerLogs",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func DataDockerLogs_IsTerraformDataSource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDataDockerLogs_IsTerraformDataSourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-docker.dataDockerLogs.DataDockerLogs",
+		"isTerraformDataSource",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func DataDockerLogs_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDataDockerLogs_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-docker.dataDockerLogs.DataDockerLogs",
+		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
 	)
