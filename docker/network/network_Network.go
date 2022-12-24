@@ -59,6 +59,9 @@ type Network interface {
 	IpamDriver() *string
 	SetIpamDriver(val *string)
 	IpamDriverInput() *string
+	IpamOptions() *map[string]*string
+	SetIpamOptions(val *map[string]*string)
+	IpamOptionsInput() *map[string]*string
 	Ipv6() interface{}
 	SetIpv6(val interface{})
 	Ipv6Input() interface{}
@@ -128,6 +131,7 @@ type Network interface {
 	ResetInternal()
 	ResetIpamConfig()
 	ResetIpamDriver()
+	ResetIpamOptions()
 	ResetIpv6()
 	ResetLabels()
 	ResetOptions()
@@ -384,6 +388,26 @@ func (j *jsiiProxy_Network) IpamDriverInput() *string {
 	_jsii_.Get(
 		j,
 		"ipamDriverInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Network) IpamOptions() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"ipamOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Network) IpamOptionsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"ipamOptionsInput",
 		&returns,
 	)
 	return returns
@@ -697,6 +721,17 @@ func (j *jsiiProxy_Network)SetIpamDriver(val *string) {
 	_jsii_.Set(
 		j,
 		"ipamDriver",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Network)SetIpamOptions(val *map[string]*string) {
+	if err := j.validateSetIpamOptionsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ipamOptions",
 		val,
 	)
 }
@@ -1112,6 +1147,14 @@ func (n *jsiiProxy_Network) ResetIpamDriver() {
 	_jsii_.InvokeVoid(
 		n,
 		"resetIpamDriver",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_Network) ResetIpamOptions() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetIpamOptions",
 		nil, // no parameters
 	)
 }

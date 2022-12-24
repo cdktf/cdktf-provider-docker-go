@@ -56,6 +56,12 @@ type NetworkConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/network#ipam_driver Network#ipam_driver}
 	IpamDriver *string `field:"optional" json:"ipamDriver" yaml:"ipamDriver"`
+	// Provide explicit options to the IPAM driver.
+	//
+	// Valid options vary with `ipam_driver` and refer to that driver's documentation for more details.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/network#ipam_options Network#ipam_options}
+	IpamOptions *map[string]*string `field:"optional" json:"ipamOptions" yaml:"ipamOptions"`
 	// Enable IPv6 networking. Defaults to `false`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/network#ipv6 Network#ipv6}

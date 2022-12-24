@@ -73,6 +73,9 @@ type RegistryImage interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Triggers() *map[string]*string
+	SetTriggers(val *map[string]*string)
+	TriggersInput() *map[string]*string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -106,6 +109,7 @@ type RegistryImage interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTriggers()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -391,6 +395,26 @@ func (j *jsiiProxy_RegistryImage) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_RegistryImage) Triggers() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"triggers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryImage) TriggersInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"triggersInput",
+		&returns,
+	)
+	return returns
+}
+
 
 // Create a new {@link https://www.terraform.io/docs/providers/docker/r/registry_image docker_registry_image} Resource.
 func NewRegistryImage(scope constructs.Construct, id *string, config *RegistryImageConfig) RegistryImage {
@@ -526,6 +550,17 @@ func (j *jsiiProxy_RegistryImage)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RegistryImage)SetTriggers(val *map[string]*string) {
+	if err := j.validateSetTriggersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"triggers",
 		val,
 	)
 }
@@ -843,6 +878,14 @@ func (r *jsiiProxy_RegistryImage) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RegistryImage) ResetTriggers() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTriggers",
 		nil, // no parameters
 	)
 }

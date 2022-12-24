@@ -20,6 +20,9 @@ type Container interface {
 	CapabilitiesInput() *ContainerCapabilities
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	CgroupnsMode() *string
+	SetCgroupnsMode(val *string)
+	CgroupnsModeInput() *string
 	Command() *[]*string
 	SetCommand(val *[]*string)
 	CommandInput() *[]*string
@@ -287,6 +290,7 @@ type Container interface {
 	PutVolumes(value interface{})
 	ResetAttach()
 	ResetCapabilities()
+	ResetCgroupnsMode()
 	ResetCommand()
 	ResetContainerReadRefreshTimeoutMilliseconds()
 	ResetCpuSet()
@@ -421,6 +425,26 @@ func (j *jsiiProxy_Container) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) CgroupnsMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cgroupnsMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) CgroupnsModeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cgroupnsModeInput",
 		&returns,
 	)
 	return returns
@@ -1937,6 +1961,17 @@ func (j *jsiiProxy_Container)SetAttach(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Container)SetCgroupnsMode(val *string) {
+	if err := j.validateSetCgroupnsModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"cgroupnsMode",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Container)SetCommand(val *[]*string) {
 	if err := j.validateSetCommandParameters(val); err != nil {
 		panic(err)
@@ -2984,6 +3019,14 @@ func (c *jsiiProxy_Container) ResetCapabilities() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetCapabilities",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Container) ResetCgroupnsMode() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCgroupnsMode",
 		nil, // no parameters
 	)
 }

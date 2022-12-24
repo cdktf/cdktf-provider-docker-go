@@ -104,6 +104,10 @@ func (j *jsiiProxy_Network) validateSetIpamDriverParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Network) validateSetIpamOptionsParameters(val *map[string]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Network) validateSetIpv6Parameters(val interface{}) error {
 	return nil
 }

@@ -6,6 +6,12 @@ type DockerProviderRegistryAuth struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker#address DockerProvider#address}
 	Address *string `field:"required" json:"address" yaml:"address"`
+	// Setting this to `true` will tell the provider that this registry does not need authentication.
+	//
+	// Due to the docker internals, the provider will use dummy credentials (see https://github.com/kreuzwerker/terraform-provider-docker/issues/470 for more information). Defaults to `false`.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker#auth_disabled DockerProvider#auth_disabled}
+	AuthDisabled interface{} `field:"optional" json:"authDisabled" yaml:"authDisabled"`
 	// Path to docker json file for registry auth.
 	//
 	// Defaults to `~/.docker/config.json`. If `DOCKER_CONFIG` is set, the value of `DOCKER_CONFIG` is used as the path. `config_file` has predencen over all other options.

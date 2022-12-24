@@ -96,6 +96,10 @@ func (j *jsiiProxy_RegistryImage) validateSetProvisionersParameters(val *[]inter
 	return nil
 }
 
+func (j *jsiiProxy_RegistryImage) validateSetTriggersParameters(val *map[string]*string) error {
+	return nil
+}
+
 func validateNewRegistryImageParameters(scope constructs.Construct, id *string, config *RegistryImageConfig) error {
 	return nil
 }

@@ -112,6 +112,10 @@ func (j *jsiiProxy_Container) validateSetAttachParameters(val interface{}) error
 	return nil
 }
 
+func (j *jsiiProxy_Container) validateSetCgroupnsModeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Container) validateSetCommandParameters(val *[]*string) error {
 	return nil
 }

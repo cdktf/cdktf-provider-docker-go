@@ -37,9 +37,13 @@ type ContainerConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#capabilities Container#capabilities}
 	Capabilities *ContainerCapabilities `field:"optional" json:"capabilities" yaml:"capabilities"`
+	// Cgroup namespace mode to use for the container. Possible values are: `private`, `host`.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#cgroupns_mode Container#cgroupns_mode}
+	CgroupnsMode *string `field:"optional" json:"cgroupnsMode" yaml:"cgroupnsMode"`
 	// The command to use to start the container.
 	//
-	// For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-","baz.con"]`.
+	// For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be `["/usr/bin/myprogram","-f","baz.con"]`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#command Container#command}
 	Command *[]*string `field:"optional" json:"command" yaml:"command"`
