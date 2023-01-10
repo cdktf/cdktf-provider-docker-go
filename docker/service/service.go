@@ -1134,6 +1134,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetSecrets", GoMethod: "ResetSecrets"},
 			_jsii_.MemberMethod{JsiiMethod: "resetStopGracePeriod", GoMethod: "ResetStopGracePeriod"},
 			_jsii_.MemberMethod{JsiiMethod: "resetStopSignal", GoMethod: "ResetStopSignal"},
+			_jsii_.MemberMethod{JsiiMethod: "resetSysctl", GoMethod: "ResetSysctl"},
 			_jsii_.MemberMethod{JsiiMethod: "resetUser", GoMethod: "ResetUser"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "secrets", GoGetter: "Secrets"},
@@ -1142,6 +1143,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "stopGracePeriodInput", GoGetter: "StopGracePeriodInput"},
 			_jsii_.MemberProperty{JsiiProperty: "stopSignal", GoGetter: "StopSignal"},
 			_jsii_.MemberProperty{JsiiProperty: "stopSignalInput", GoGetter: "StopSignalInput"},
+			_jsii_.MemberProperty{JsiiProperty: "sysctl", GoGetter: "Sysctl"},
+			_jsii_.MemberProperty{JsiiProperty: "sysctlInput", GoGetter: "SysctlInput"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
@@ -1405,6 +1408,71 @@ func init() {
 			return &j
 		},
 	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-docker.service.ServiceTaskSpecNetworksAdvanced",
+		reflect.TypeOf((*ServiceTaskSpecNetworksAdvanced)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-docker.service.ServiceTaskSpecNetworksAdvancedList",
+		reflect.TypeOf((*ServiceTaskSpecNetworksAdvancedList)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "get", GoMethod: "Get"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "wrapsSet", GoGetter: "WrapsSet"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ServiceTaskSpecNetworksAdvancedList{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexList)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-docker.service.ServiceTaskSpecNetworksAdvancedOutputReference",
+		reflect.TypeOf((*ServiceTaskSpecNetworksAdvancedOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "aliases", GoGetter: "Aliases"},
+			_jsii_.MemberProperty{JsiiProperty: "aliasesInput", GoGetter: "AliasesInput"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "driverOpts", GoGetter: "DriverOpts"},
+			_jsii_.MemberProperty{JsiiProperty: "driverOptsInput", GoGetter: "DriverOptsInput"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "nameInput", GoGetter: "NameInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAliases", GoMethod: "ResetAliases"},
+			_jsii_.MemberMethod{JsiiMethod: "resetDriverOpts", GoMethod: "ResetDriverOpts"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ServiceTaskSpecNetworksAdvancedOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
 	_jsii_.RegisterClass(
 		"@cdktf/provider-docker.service.ServiceTaskSpecOutputReference",
 		reflect.TypeOf((*ServiceTaskSpecOutputReference)(nil)).Elem(),
@@ -1433,17 +1501,21 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "logDriver", GoGetter: "LogDriver"},
 			_jsii_.MemberProperty{JsiiProperty: "logDriverInput", GoGetter: "LogDriverInput"},
 			_jsii_.MemberProperty{JsiiProperty: "networks", GoGetter: "Networks"},
+			_jsii_.MemberProperty{JsiiProperty: "networksAdvanced", GoGetter: "NetworksAdvanced"},
+			_jsii_.MemberProperty{JsiiProperty: "networksAdvancedInput", GoGetter: "NetworksAdvancedInput"},
 			_jsii_.MemberProperty{JsiiProperty: "networksInput", GoGetter: "NetworksInput"},
 			_jsii_.MemberProperty{JsiiProperty: "placement", GoGetter: "Placement"},
 			_jsii_.MemberProperty{JsiiProperty: "placementInput", GoGetter: "PlacementInput"},
 			_jsii_.MemberMethod{JsiiMethod: "putContainerSpec", GoMethod: "PutContainerSpec"},
 			_jsii_.MemberMethod{JsiiMethod: "putLogDriver", GoMethod: "PutLogDriver"},
+			_jsii_.MemberMethod{JsiiMethod: "putNetworksAdvanced", GoMethod: "PutNetworksAdvanced"},
 			_jsii_.MemberMethod{JsiiMethod: "putPlacement", GoMethod: "PutPlacement"},
 			_jsii_.MemberMethod{JsiiMethod: "putResources", GoMethod: "PutResources"},
 			_jsii_.MemberMethod{JsiiMethod: "putRestartPolicy", GoMethod: "PutRestartPolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "resetForceUpdate", GoMethod: "ResetForceUpdate"},
 			_jsii_.MemberMethod{JsiiMethod: "resetLogDriver", GoMethod: "ResetLogDriver"},
 			_jsii_.MemberMethod{JsiiMethod: "resetNetworks", GoMethod: "ResetNetworks"},
+			_jsii_.MemberMethod{JsiiMethod: "resetNetworksAdvanced", GoMethod: "ResetNetworksAdvanced"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPlacement", GoMethod: "ResetPlacement"},
 			_jsii_.MemberMethod{JsiiMethod: "resetResources", GoMethod: "ResetResources"},
 			_jsii_.MemberMethod{JsiiMethod: "resetRestartPolicy", GoMethod: "ResetRestartPolicy"},

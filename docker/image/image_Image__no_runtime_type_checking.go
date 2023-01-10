@@ -88,6 +88,10 @@ func (j *jsiiProxy_Image) validateSetNameParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Image) validateSetPlatformParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Image) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }

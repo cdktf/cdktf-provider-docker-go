@@ -38,6 +38,8 @@ type ServiceTaskSpecOutputReference interface {
 	LogDriverInput() *ServiceTaskSpecLogDriver
 	Networks() *[]*string
 	SetNetworks(val *[]*string)
+	NetworksAdvanced() ServiceTaskSpecNetworksAdvancedList
+	NetworksAdvancedInput() interface{}
 	NetworksInput() *[]*string
 	Placement() ServiceTaskSpecPlacementOutputReference
 	PlacementInput() *ServiceTaskSpecPlacement
@@ -82,12 +84,14 @@ type ServiceTaskSpecOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutContainerSpec(value *ServiceTaskSpecContainerSpec)
 	PutLogDriver(value *ServiceTaskSpecLogDriver)
+	PutNetworksAdvanced(value interface{})
 	PutPlacement(value *ServiceTaskSpecPlacement)
 	PutResources(value *ServiceTaskSpecResources)
 	PutRestartPolicy(value *ServiceTaskSpecRestartPolicy)
 	ResetForceUpdate()
 	ResetLogDriver()
 	ResetNetworks()
+	ResetNetworksAdvanced()
 	ResetPlacement()
 	ResetResources()
 	ResetRestartPolicy()
@@ -222,6 +226,26 @@ func (j *jsiiProxy_ServiceTaskSpecOutputReference) Networks() *[]*string {
 	_jsii_.Get(
 		j,
 		"networks",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServiceTaskSpecOutputReference) NetworksAdvanced() ServiceTaskSpecNetworksAdvancedList {
+	var returns ServiceTaskSpecNetworksAdvancedList
+	_jsii_.Get(
+		j,
+		"networksAdvanced",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServiceTaskSpecOutputReference) NetworksAdvancedInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"networksAdvancedInput",
 		&returns,
 	)
 	return returns
@@ -661,6 +685,17 @@ func (s *jsiiProxy_ServiceTaskSpecOutputReference) PutLogDriver(value *ServiceTa
 	)
 }
 
+func (s *jsiiProxy_ServiceTaskSpecOutputReference) PutNetworksAdvanced(value interface{}) {
+	if err := s.validatePutNetworksAdvancedParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putNetworksAdvanced",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_ServiceTaskSpecOutputReference) PutPlacement(value *ServiceTaskSpecPlacement) {
 	if err := s.validatePutPlacementParameters(value); err != nil {
 		panic(err)
@@ -714,6 +749,14 @@ func (s *jsiiProxy_ServiceTaskSpecOutputReference) ResetNetworks() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetNetworks",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServiceTaskSpecOutputReference) ResetNetworksAdvanced() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetNetworksAdvanced",
 		nil, // no parameters
 	)
 }

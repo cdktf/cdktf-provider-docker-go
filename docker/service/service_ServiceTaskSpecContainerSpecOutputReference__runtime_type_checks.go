@@ -459,6 +459,14 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetStopS
 	return nil
 }
 
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetSysctlParameters(val *map[string]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

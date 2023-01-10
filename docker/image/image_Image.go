@@ -57,6 +57,9 @@ type Image interface {
 	// The tree node.
 	Node() constructs.Node
 	Output() *string
+	Platform() *string
+	SetPlatform(val *string)
+	PlatformInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -115,6 +118,7 @@ type Image interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPlatform()
 	ResetPullTrigger()
 	ResetPullTriggers()
 	ResetTriggers()
@@ -348,6 +352,26 @@ func (j *jsiiProxy_Image) Output() *string {
 	_jsii_.Get(
 		j,
 		"output",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Image) Platform() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"platform",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Image) PlatformInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"platformInput",
 		&returns,
 	)
 	return returns
@@ -588,6 +612,17 @@ func (j *jsiiProxy_Image)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Image)SetPlatform(val *string) {
+	if err := j.validateSetPlatformParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"platform",
 		val,
 	)
 }
@@ -949,6 +984,14 @@ func (i *jsiiProxy_Image) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Image) ResetPlatform() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetPlatform",
 		nil, // no parameters
 	)
 }

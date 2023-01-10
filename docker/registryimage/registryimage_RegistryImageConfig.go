@@ -44,7 +44,7 @@ type RegistryImageConfig struct {
 	KeepRemotely interface{} `field:"optional" json:"keepRemotely" yaml:"keepRemotely"`
 	// A map of arbitrary strings that, when changed, will force the `docker_registry_image` resource to be replaced.
 	//
-	// This can be used to rebuild an image when contents of source code folders change or to repush a local image
+	// This can be used to repush a local image
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/registry_image#triggers RegistryImage#triggers}
 	Triggers *map[string]*string `field:"optional" json:"triggers" yaml:"triggers"`

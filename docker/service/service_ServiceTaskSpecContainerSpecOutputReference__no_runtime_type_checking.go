@@ -136,6 +136,10 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetStopS
 	return nil
 }
 
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetSysctlParameters(val *map[string]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

@@ -82,6 +82,10 @@ type ServiceTaskSpecContainerSpec struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/service#stop_signal Service#stop_signal}
 	StopSignal *string `field:"optional" json:"stopSignal" yaml:"stopSignal"`
+	// Sysctls config (Linux only).
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/service#sysctl Service#sysctl}
+	Sysctl *map[string]*string `field:"optional" json:"sysctl" yaml:"sysctl"`
 	// The user inside the container.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/service#user Service#user}

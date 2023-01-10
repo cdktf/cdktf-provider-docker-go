@@ -78,6 +78,9 @@ type ServiceTaskSpecContainerSpecOutputReference interface {
 	StopSignal() *string
 	SetStopSignal(val *string)
 	StopSignalInput() *string
+	Sysctl() *map[string]*string
+	SetSysctl(val *map[string]*string)
+	SysctlInput() *map[string]*string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -139,6 +142,7 @@ type ServiceTaskSpecContainerSpecOutputReference interface {
 	ResetSecrets()
 	ResetStopGracePeriod()
 	ResetStopSignal()
+	ResetSysctl()
 	ResetUser()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -585,6 +589,26 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) StopSignalInput(
 	return returns
 }
 
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) Sysctl() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"sysctl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) SysctlInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"sysctlInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -803,6 +827,17 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference)SetStopSignal(val
 	_jsii_.Set(
 		j,
 		"stopSignal",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference)SetSysctl(val *map[string]*string) {
+	if err := j.validateSetSysctlParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"sysctl",
 		val,
 	)
 }
@@ -1254,6 +1289,14 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) ResetStopSignal(
 	_jsii_.InvokeVoid(
 		s,
 		"resetStopSignal",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) ResetSysctl() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSysctl",
 		nil, // no parameters
 	)
 }

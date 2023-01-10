@@ -52,6 +52,10 @@ func (s *jsiiProxy_ServiceTaskSpecOutputReference) validatePutLogDriverParameter
 	return nil
 }
 
+func (s *jsiiProxy_ServiceTaskSpecOutputReference) validatePutNetworksAdvancedParameters(value interface{}) error {
+	return nil
+}
+
 func (s *jsiiProxy_ServiceTaskSpecOutputReference) validatePutPlacementParameters(value *ServiceTaskSpecPlacement) error {
 	return nil
 }

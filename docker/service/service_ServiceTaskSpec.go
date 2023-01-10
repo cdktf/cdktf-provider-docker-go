@@ -18,6 +18,10 @@ type ServiceTaskSpec struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/service#networks Service#networks}
 	Networks *[]*string `field:"optional" json:"networks" yaml:"networks"`
+	// networks_advanced block.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/service#networks_advanced Service#networks_advanced}
+	NetworksAdvanced interface{} `field:"optional" json:"networksAdvanced" yaml:"networksAdvanced"`
 	// placement block.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/service#placement Service#placement}

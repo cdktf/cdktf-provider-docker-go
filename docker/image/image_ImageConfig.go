@@ -37,6 +37,10 @@ type ImageConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#keep_locally Image#keep_locally}
 	KeepLocally interface{} `field:"optional" json:"keepLocally" yaml:"keepLocally"`
+	// The platform to use when pulling the image. Defaults to the platform of the current machine.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#platform Image#platform}
+	Platform *string `field:"optional" json:"platform" yaml:"platform"`
 	// A value which cause an image pull when changed.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#pull_trigger Image#pull_trigger}
