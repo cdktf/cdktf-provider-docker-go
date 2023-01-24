@@ -52,10 +52,6 @@ func (r *jsiiProxy_RegistryImage) validateOverrideLogicalIdParameters(newLogical
 	return nil
 }
 
-func (r *jsiiProxy_RegistryImage) validatePutBuildAttributeParameters(value *RegistryImageBuild) error {
-	return nil
-}
-
 func validateRegistryImage_IsConstructParameters(x interface{}) error {
 	return nil
 }

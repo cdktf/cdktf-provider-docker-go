@@ -2,9 +2,9 @@ package service
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
 
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v5/service/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/service/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -36,11 +36,8 @@ type ServiceTaskSpecOutputReference interface {
 	SetInternalValue(val *ServiceTaskSpec)
 	LogDriver() ServiceTaskSpecLogDriverOutputReference
 	LogDriverInput() *ServiceTaskSpecLogDriver
-	Networks() *[]*string
-	SetNetworks(val *[]*string)
 	NetworksAdvanced() ServiceTaskSpecNetworksAdvancedList
 	NetworksAdvancedInput() interface{}
-	NetworksInput() *[]*string
 	Placement() ServiceTaskSpecPlacementOutputReference
 	PlacementInput() *ServiceTaskSpecPlacement
 	Resources() ServiceTaskSpecResourcesOutputReference
@@ -90,7 +87,6 @@ type ServiceTaskSpecOutputReference interface {
 	PutRestartPolicy(value *ServiceTaskSpecRestartPolicy)
 	ResetForceUpdate()
 	ResetLogDriver()
-	ResetNetworks()
 	ResetNetworksAdvanced()
 	ResetPlacement()
 	ResetResources()
@@ -221,16 +217,6 @@ func (j *jsiiProxy_ServiceTaskSpecOutputReference) LogDriverInput() *ServiceTask
 	return returns
 }
 
-func (j *jsiiProxy_ServiceTaskSpecOutputReference) Networks() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"networks",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ServiceTaskSpecOutputReference) NetworksAdvanced() ServiceTaskSpecNetworksAdvancedList {
 	var returns ServiceTaskSpecNetworksAdvancedList
 	_jsii_.Get(
@@ -246,16 +232,6 @@ func (j *jsiiProxy_ServiceTaskSpecOutputReference) NetworksAdvancedInput() inter
 	_jsii_.Get(
 		j,
 		"networksAdvancedInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ServiceTaskSpecOutputReference) NetworksInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"networksInput",
 		&returns,
 	)
 	return returns
@@ -429,17 +405,6 @@ func (j *jsiiProxy_ServiceTaskSpecOutputReference)SetInternalValue(val *ServiceT
 	_jsii_.Set(
 		j,
 		"internalValue",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ServiceTaskSpecOutputReference)SetNetworks(val *[]*string) {
-	if err := j.validateSetNetworksParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"networks",
 		val,
 	)
 }
@@ -741,14 +706,6 @@ func (s *jsiiProxy_ServiceTaskSpecOutputReference) ResetLogDriver() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetLogDriver",
-		nil, // no parameters
-	)
-}
-
-func (s *jsiiProxy_ServiceTaskSpecOutputReference) ResetNetworks() {
-	_jsii_.InvokeVoid(
-		s,
-		"resetNetworks",
 		nil, // no parameters
 	)
 }

@@ -14,10 +14,6 @@ type ServiceTaskSpec struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/service#log_driver Service#log_driver}
 	LogDriver *ServiceTaskSpecLogDriver `field:"optional" json:"logDriver" yaml:"logDriver"`
-	// Ids of the networks in which the  container will be put in.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/service#networks Service#networks}
-	Networks *[]*string `field:"optional" json:"networks" yaml:"networks"`
 	// networks_advanced block.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/service#networks_advanced Service#networks_advanced}

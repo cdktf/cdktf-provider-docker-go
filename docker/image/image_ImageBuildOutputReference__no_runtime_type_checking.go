@@ -152,10 +152,6 @@ func (j *jsiiProxy_ImageBuildOutputReference) validateSetNoCacheParameters(val i
 	return nil
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) validateSetPathParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ImageBuildOutputReference) validateSetPlatformParameters(val *string) error {
 	return nil
 }

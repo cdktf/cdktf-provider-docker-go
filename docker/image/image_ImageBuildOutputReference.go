@@ -2,9 +2,9 @@ package image
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
 
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v5/image/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/image/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -94,9 +94,6 @@ type ImageBuildOutputReference interface {
 	NoCache() interface{}
 	SetNoCache(val interface{})
 	NoCacheInput() interface{}
-	Path() *string
-	SetPath(val *string)
-	PathInput() *string
 	Platform() *string
 	SetPlatform(val *string)
 	PlatformInput() *string
@@ -175,7 +172,6 @@ type ImageBuildOutputReference interface {
 	ResetBuildId()
 	ResetCacheFrom()
 	ResetCgroupParent()
-	ResetContext()
 	ResetCpuPeriod()
 	ResetCpuQuota()
 	ResetCpuSetCpus()
@@ -191,7 +187,6 @@ type ImageBuildOutputReference interface {
 	ResetMemorySwap()
 	ResetNetworkMode()
 	ResetNoCache()
-	ResetPath()
 	ResetPlatform()
 	ResetPullParent()
 	ResetRemoteContext()
@@ -705,26 +700,6 @@ func (j *jsiiProxy_ImageBuildOutputReference) NoCacheInput() interface{} {
 	_jsii_.Get(
 		j,
 		"noCacheInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ImageBuildOutputReference) Path() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"path",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ImageBuildOutputReference) PathInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"pathInput",
 		&returns,
 	)
 	return returns
@@ -1302,17 +1277,6 @@ func (j *jsiiProxy_ImageBuildOutputReference)SetNoCache(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference)SetPath(val *string) {
-	if err := j.validateSetPathParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"path",
-		val,
-	)
-}
-
 func (j *jsiiProxy_ImageBuildOutputReference)SetPlatform(val *string) {
 	if err := j.validateSetPlatformParameters(val); err != nil {
 		panic(err)
@@ -1723,14 +1687,6 @@ func (i *jsiiProxy_ImageBuildOutputReference) ResetCgroupParent() {
 	)
 }
 
-func (i *jsiiProxy_ImageBuildOutputReference) ResetContext() {
-	_jsii_.InvokeVoid(
-		i,
-		"resetContext",
-		nil, // no parameters
-	)
-}
-
 func (i *jsiiProxy_ImageBuildOutputReference) ResetCpuPeriod() {
 	_jsii_.InvokeVoid(
 		i,
@@ -1847,14 +1803,6 @@ func (i *jsiiProxy_ImageBuildOutputReference) ResetNoCache() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetNoCache",
-		nil, // no parameters
-	)
-}
-
-func (i *jsiiProxy_ImageBuildOutputReference) ResetPath() {
-	_jsii_.InvokeVoid(
-		i,
-		"resetPath",
 		nil, // no parameters
 	)
 }

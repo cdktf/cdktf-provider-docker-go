@@ -2,6 +2,12 @@ package image
 
 
 type ImageBuild struct {
+	// Value to specify the build context.
+	//
+	// Currently, only a `PATH` context is supported. You can use the helper function '${path.cwd}/context-dir'. Please see https://docs.docker.com/build/building/context/ for more information about build contexts.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#context Image#context}
+	Context *string `field:"required" json:"context" yaml:"context"`
 	// auth_config block.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#auth_config Image#auth_config}
@@ -28,12 +34,6 @@ type ImageBuild struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#cgroup_parent Image#cgroup_parent}
 	CgroupParent *string `field:"optional" json:"cgroupParent" yaml:"cgroupParent"`
-	// Value to specify the build context.
-	//
-	// Currently, only a `PATH` context is supported. You can use the helper function '${path.cwd}/context-dir'. Please see https://docs.docker.com/build/building/context/ for more information about build contexts.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#context Image#context}
-	Context *string `field:"optional" json:"context" yaml:"context"`
 	// The length of a CPU period in microseconds.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#cpu_period Image#cpu_period}
@@ -94,10 +94,6 @@ type ImageBuild struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#no_cache Image#no_cache}
 	NoCache interface{} `field:"optional" json:"noCache" yaml:"noCache"`
-	// Context path.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#path Image#path}
-	Path *string `field:"optional" json:"path" yaml:"path"`
 	// Set platform if server is multi-platform capable.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#platform Image#platform}

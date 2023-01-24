@@ -2,10 +2,10 @@ package container
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v5/container/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/container/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -82,7 +82,6 @@ type Container interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
-	Gateway() *string
 	Gpus() *string
 	SetGpus(val *string)
 	GpusInput() *string
@@ -105,20 +104,15 @@ type Container interface {
 	Init() interface{}
 	SetInit(val interface{})
 	InitInput() interface{}
-	IpAddress() *string
 	IpcMode() *string
 	SetIpcMode(val *string)
 	IpcModeInput() *string
-	IpPrefixLength() *float64
 	Labels() ContainerLabelsList
 	LabelsInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
-	Links() *[]*string
-	SetLinks(val *[]*string)
-	LinksInput() *[]*string
 	LogDriver() *string
 	SetLogDriver(val *string)
 	LogDriverInput() *string
@@ -145,18 +139,12 @@ type Container interface {
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
-	NetworkAlias() *[]*string
-	SetNetworkAlias(val *[]*string)
-	NetworkAliasInput() *[]*string
 	NetworkData() ContainerNetworkDataList
 	NetworkMode() *string
 	SetNetworkMode(val *string)
 	NetworkModeInput() *string
-	Networks() *[]*string
-	SetNetworks(val *[]*string)
 	NetworksAdvanced() ContainerNetworksAdvancedList
 	NetworksAdvancedInput() interface{}
-	NetworksInput() *[]*string
 	// The tree node.
 	Node() constructs.Node
 	PidMode() *string
@@ -312,7 +300,6 @@ type Container interface {
 	ResetInit()
 	ResetIpcMode()
 	ResetLabels()
-	ResetLinks()
 	ResetLogDriver()
 	ResetLogOpts()
 	ResetLogs()
@@ -321,9 +308,7 @@ type Container interface {
 	ResetMemorySwap()
 	ResetMounts()
 	ResetMustRun()
-	ResetNetworkAlias()
 	ResetNetworkMode()
-	ResetNetworks()
 	ResetNetworksAdvanced()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -780,16 +765,6 @@ func (j *jsiiProxy_Container) FriendlyUniqueId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Container) Gateway() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"gateway",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Container) Gpus() *string {
 	var returns *string
 	_jsii_.Get(
@@ -950,16 +925,6 @@ func (j *jsiiProxy_Container) InitInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Container) IpAddress() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"ipAddress",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Container) IpcMode() *string {
 	var returns *string
 	_jsii_.Get(
@@ -975,16 +940,6 @@ func (j *jsiiProxy_Container) IpcModeInput() *string {
 	_jsii_.Get(
 		j,
 		"ipcModeInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Container) IpPrefixLength() *float64 {
-	var returns *float64
-	_jsii_.Get(
-		j,
-		"ipPrefixLength",
 		&returns,
 	)
 	return returns
@@ -1015,26 +970,6 @@ func (j *jsiiProxy_Container) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	_jsii_.Get(
 		j,
 		"lifecycle",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Container) Links() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"links",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Container) LinksInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"linksInput",
 		&returns,
 	)
 	return returns
@@ -1220,26 +1155,6 @@ func (j *jsiiProxy_Container) NameInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Container) NetworkAlias() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"networkAlias",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Container) NetworkAliasInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"networkAliasInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Container) NetworkData() ContainerNetworkDataList {
 	var returns ContainerNetworkDataList
 	_jsii_.Get(
@@ -1270,16 +1185,6 @@ func (j *jsiiProxy_Container) NetworkModeInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Container) Networks() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"networks",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Container) NetworksAdvanced() ContainerNetworksAdvancedList {
 	var returns ContainerNetworksAdvancedList
 	_jsii_.Get(
@@ -1295,16 +1200,6 @@ func (j *jsiiProxy_Container) NetworksAdvancedInput() interface{} {
 	_jsii_.Get(
 		j,
 		"networksAdvancedInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Container) NetworksInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"networksInput",
 		&returns,
 	)
 	return returns
@@ -2216,17 +2111,6 @@ func (j *jsiiProxy_Container)SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	)
 }
 
-func (j *jsiiProxy_Container)SetLinks(val *[]*string) {
-	if err := j.validateSetLinksParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"links",
-		val,
-	)
-}
-
 func (j *jsiiProxy_Container)SetLogDriver(val *string) {
 	if err := j.validateSetLogDriverParameters(val); err != nil {
 		panic(err)
@@ -2315,17 +2199,6 @@ func (j *jsiiProxy_Container)SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Container)SetNetworkAlias(val *[]*string) {
-	if err := j.validateSetNetworkAliasParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"networkAlias",
-		val,
-	)
-}
-
 func (j *jsiiProxy_Container)SetNetworkMode(val *string) {
 	if err := j.validateSetNetworkModeParameters(val); err != nil {
 		panic(err)
@@ -2333,17 +2206,6 @@ func (j *jsiiProxy_Container)SetNetworkMode(val *string) {
 	_jsii_.Set(
 		j,
 		"networkMode",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Container)SetNetworks(val *[]*string) {
-	if err := j.validateSetNetworksParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"networks",
 		val,
 	)
 }
@@ -3199,14 +3061,6 @@ func (c *jsiiProxy_Container) ResetLabels() {
 	)
 }
 
-func (c *jsiiProxy_Container) ResetLinks() {
-	_jsii_.InvokeVoid(
-		c,
-		"resetLinks",
-		nil, // no parameters
-	)
-}
-
 func (c *jsiiProxy_Container) ResetLogDriver() {
 	_jsii_.InvokeVoid(
 		c,
@@ -3271,26 +3125,10 @@ func (c *jsiiProxy_Container) ResetMustRun() {
 	)
 }
 
-func (c *jsiiProxy_Container) ResetNetworkAlias() {
-	_jsii_.InvokeVoid(
-		c,
-		"resetNetworkAlias",
-		nil, // no parameters
-	)
-}
-
 func (c *jsiiProxy_Container) ResetNetworkMode() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetNetworkMode",
-		nil, // no parameters
-	)
-}
-
-func (c *jsiiProxy_Container) ResetNetworks() {
-	_jsii_.InvokeVoid(
-		c,
-		"resetNetworks",
 		nil, // no parameters
 	)
 }

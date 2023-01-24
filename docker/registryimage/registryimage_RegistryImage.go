@@ -2,18 +2,16 @@ package registryimage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v5/registryimage/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/registryimage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
 // Represents a {@link https://www.terraform.io/docs/providers/docker/r/registry_image docker_registry_image}.
 type RegistryImage interface {
 	cdktf.TerraformResource
-	BuildAttribute() RegistryImageBuildOutputReference
-	BuildAttributeInput() *RegistryImageBuild
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -101,8 +99,6 @@ type RegistryImage interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutBuildAttribute(value *RegistryImageBuild)
-	ResetBuildAttribute()
 	ResetId()
 	ResetInsecureSkipVerify()
 	ResetKeepRemotely()
@@ -123,26 +119,6 @@ type RegistryImage interface {
 // The jsii proxy struct for RegistryImage
 type jsiiProxy_RegistryImage struct {
 	internal.Type__cdktfTerraformResource
-}
-
-func (j *jsiiProxy_RegistryImage) BuildAttribute() RegistryImageBuildOutputReference {
-	var returns RegistryImageBuildOutputReference
-	_jsii_.Get(
-		j,
-		"buildAttribute",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RegistryImage) BuildAttributeInput() *RegistryImageBuild {
-	var returns *RegistryImageBuild
-	_jsii_.Get(
-		j,
-		"buildAttributeInput",
-		&returns,
-	)
-	return returns
 }
 
 func (j *jsiiProxy_RegistryImage) CdktfStack() cdktf.TerraformStack {
@@ -828,25 +804,6 @@ func (r *jsiiProxy_RegistryImage) OverrideLogicalId(newLogicalId *string) {
 		r,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
-	)
-}
-
-func (r *jsiiProxy_RegistryImage) PutBuildAttribute(value *RegistryImageBuild) {
-	if err := r.validatePutBuildAttributeParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		r,
-		"putBuildAttribute",
-		[]interface{}{value},
-	)
-}
-
-func (r *jsiiProxy_RegistryImage) ResetBuildAttribute() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetBuildAttribute",
-		nil, // no parameters
 	)
 }
 

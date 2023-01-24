@@ -23,10 +23,6 @@ type RegistryImageConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/registry_image#name RegistryImage#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
-	// build block.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/registry_image#build RegistryImage#build}
-	BuildAttribute *RegistryImageBuild `field:"optional" json:"buildAttribute" yaml:"buildAttribute"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/registry_image#id RegistryImage#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.

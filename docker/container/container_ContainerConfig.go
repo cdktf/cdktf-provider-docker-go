@@ -136,10 +136,6 @@ type ContainerConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#labels Container#labels}
 	Labels interface{} `field:"optional" json:"labels" yaml:"labels"`
-	// Set of links for link based connectivity between containers that are running on the same host.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#links Container#links}
-	Links *[]*string `field:"optional" json:"links" yaml:"links"`
 	// The logging driver to use for the container.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#log_driver Container#log_driver}
@@ -176,18 +172,10 @@ type ContainerConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#must_run Container#must_run}
 	MustRun interface{} `field:"optional" json:"mustRun" yaml:"mustRun"`
-	// Set an alias for the container in all specified networks.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#network_alias Container#network_alias}
-	NetworkAlias *[]*string `field:"optional" json:"networkAlias" yaml:"networkAlias"`
 	// Network mode of the container.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#network_mode Container#network_mode}
 	NetworkMode *string `field:"optional" json:"networkMode" yaml:"networkMode"`
-	// ID of the networks in which the container is.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#networks Container#networks}
-	Networks *[]*string `field:"optional" json:"networks" yaml:"networks"`
 	// networks_advanced block.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/container#networks_advanced Container#networks_advanced}

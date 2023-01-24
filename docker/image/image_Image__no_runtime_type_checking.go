@@ -96,10 +96,6 @@ func (j *jsiiProxy_Image) validateSetProvisionersParameters(val *[]interface{}) 
 	return nil
 }
 
-func (j *jsiiProxy_Image) validateSetPullTriggerParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_Image) validateSetPullTriggersParameters(val *[]*string) error {
 	return nil
 }

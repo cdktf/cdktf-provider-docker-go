@@ -88,10 +88,6 @@ func (j *jsiiProxy_ServiceTaskSpecOutputReference) validateSetInternalValueParam
 	return nil
 }
 
-func (j *jsiiProxy_ServiceTaskSpecOutputReference) validateSetNetworksParameters(val *[]*string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ServiceTaskSpecOutputReference) validateSetRuntimeParameters(val *string) error {
 	return nil
 }

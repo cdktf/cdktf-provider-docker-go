@@ -41,10 +41,6 @@ type ImageConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#platform Image#platform}
 	Platform *string `field:"optional" json:"platform" yaml:"platform"`
-	// A value which cause an image pull when changed.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/r/image#pull_trigger Image#pull_trigger}
-	PullTrigger *string `field:"optional" json:"pullTrigger" yaml:"pullTrigger"`
 	// List of values which cause an image pull when changed.
 	//
 	// This is used to store the image digest from the registry when using the [docker_registry_image](../data-sources/registry_image.md).

@@ -2,10 +2,10 @@ package image
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v5/image/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/image/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -46,7 +46,6 @@ type Image interface {
 	KeepLocally() interface{}
 	SetKeepLocally(val interface{})
 	KeepLocallyInput() interface{}
-	Latest() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -56,7 +55,6 @@ type Image interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
-	Output() *string
 	Platform() *string
 	SetPlatform(val *string)
 	PlatformInput() *string
@@ -68,9 +66,6 @@ type Image interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
-	PullTrigger() *string
-	SetPullTrigger(val *string)
-	PullTriggerInput() *string
 	PullTriggers() *[]*string
 	SetPullTriggers(val *[]*string)
 	PullTriggersInput() *[]*string
@@ -119,7 +114,6 @@ type Image interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPlatform()
-	ResetPullTrigger()
 	ResetPullTriggers()
 	ResetTriggers()
 	SynthesizeAttributes() *map[string]interface{}
@@ -297,16 +291,6 @@ func (j *jsiiProxy_Image) KeepLocallyInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Image) Latest() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"latest",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Image) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -347,16 +331,6 @@ func (j *jsiiProxy_Image) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_Image) Output() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"output",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Image) Platform() *string {
 	var returns *string
 	_jsii_.Get(
@@ -392,26 +366,6 @@ func (j *jsiiProxy_Image) Provisioners() *[]interface{} {
 	_jsii_.Get(
 		j,
 		"provisioners",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Image) PullTrigger() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"pullTrigger",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Image) PullTriggerInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"pullTriggerInput",
 		&returns,
 	)
 	return returns
@@ -642,17 +596,6 @@ func (j *jsiiProxy_Image)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Image)SetPullTrigger(val *string) {
-	if err := j.validateSetPullTriggerParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"pullTrigger",
 		val,
 	)
 }
@@ -992,14 +935,6 @@ func (i *jsiiProxy_Image) ResetPlatform() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetPlatform",
-		nil, // no parameters
-	)
-}
-
-func (i *jsiiProxy_Image) ResetPullTrigger() {
-	_jsii_.InvokeVoid(
-		i,
-		"resetPullTrigger",
 		nil, // no parameters
 	)
 }
