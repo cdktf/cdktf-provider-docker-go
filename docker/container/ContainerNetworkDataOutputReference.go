@@ -35,6 +35,7 @@ type ContainerNetworkDataOutputReference interface {
 	IpAddress() *string
 	IpPrefixLength() *float64
 	Ipv6Gateway() *string
+	MacAddress() *string
 	NetworkName() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -188,6 +189,16 @@ func (j *jsiiProxy_ContainerNetworkDataOutputReference) Ipv6Gateway() *string {
 	_jsii_.Get(
 		j,
 		"ipv6Gateway",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ContainerNetworkDataOutputReference) MacAddress() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"macAddress",
 		&returns,
 	)
 	return returns

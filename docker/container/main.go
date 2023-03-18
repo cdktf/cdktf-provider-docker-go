@@ -857,6 +857,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "ipAddress", GoGetter: "IpAddress"},
 			_jsii_.MemberProperty{JsiiProperty: "ipPrefixLength", GoGetter: "IpPrefixLength"},
 			_jsii_.MemberProperty{JsiiProperty: "ipv6Gateway", GoGetter: "Ipv6Gateway"},
+			_jsii_.MemberProperty{JsiiProperty: "macAddress", GoGetter: "MacAddress"},
 			_jsii_.MemberProperty{JsiiProperty: "networkName", GoGetter: "NetworkName"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
