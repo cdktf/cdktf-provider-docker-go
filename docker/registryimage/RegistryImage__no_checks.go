@@ -68,6 +68,10 @@ func (j *jsiiProxy_RegistryImage) validateSetConnectionParameters(val interface{
 	return nil
 }
 
+func (j *jsiiProxy_RegistryImage) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RegistryImage) validateSetIdParameters(val *string) error {
 	return nil
 }

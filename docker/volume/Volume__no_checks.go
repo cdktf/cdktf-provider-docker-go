@@ -72,6 +72,10 @@ func (j *jsiiProxy_Volume) validateSetConnectionParameters(val interface{}) erro
 	return nil
 }
 
+func (j *jsiiProxy_Volume) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Volume) validateSetDriverParameters(val *string) error {
 	return nil
 }

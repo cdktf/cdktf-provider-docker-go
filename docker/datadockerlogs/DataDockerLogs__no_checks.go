@@ -64,6 +64,10 @@ func validateDataDockerLogs_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_DataDockerLogs) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataDockerLogs) validateSetDetailsParameters(val interface{}) error {
 	return nil
 }

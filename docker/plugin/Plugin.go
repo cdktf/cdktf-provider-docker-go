@@ -2,14 +2,14 @@ package plugin
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/plugin/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v7/plugin/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/docker/r/plugin docker_plugin}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/plugin docker_plugin}.
 type Plugin interface {
 	cdktf.TerraformResource
 	Alias() *string
@@ -24,9 +24,9 @@ type Plugin interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -191,8 +191,8 @@ func (j *jsiiProxy_Plugin) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Plugin) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Plugin) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -512,7 +512,7 @@ func (j *jsiiProxy_Plugin) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/docker/r/plugin docker_plugin} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/plugin docker_plugin} Resource.
 func NewPlugin(scope constructs.Construct, id *string, config *PluginConfig) Plugin {
 	_init_.Initialize()
 
@@ -530,7 +530,7 @@ func NewPlugin(scope constructs.Construct, id *string, config *PluginConfig) Plu
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/docker/r/plugin docker_plugin} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/plugin docker_plugin} Resource.
 func NewPlugin_Override(p Plugin, scope constructs.Construct, id *string, config *PluginConfig) {
 	_init_.Initialize()
 
@@ -563,7 +563,10 @@ func (j *jsiiProxy_Plugin)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Plugin)SetCount(val *float64) {
+func (j *jsiiProxy_Plugin)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

@@ -2,9 +2,9 @@ package plugin
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v7/jsii"
 
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/plugin/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v7/plugin/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

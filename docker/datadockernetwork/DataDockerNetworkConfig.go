@@ -8,7 +8,7 @@ type DataDockerNetworkConfig struct {
 	// Experimental.
 	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
 	// Experimental.
-	Count *float64 `field:"optional" json:"count" yaml:"count"`
+	Count interface{} `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
@@ -21,7 +21,7 @@ type DataDockerNetworkConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the Docker network.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/docker/d/network#name DataDockerNetwork#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/data-sources/network#name DataDockerNetwork#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 }
 

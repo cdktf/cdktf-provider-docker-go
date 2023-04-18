@@ -2,9 +2,9 @@ package network
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v7/jsii"
 
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/network/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v7/network/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

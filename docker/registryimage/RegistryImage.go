@@ -2,14 +2,14 @@ package registryimage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/registryimage/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v7/registryimage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/docker/r/registry_image docker_registry_image}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/registry_image docker_registry_image}.
 type RegistryImage interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type RegistryImage interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -151,8 +151,8 @@ func (j *jsiiProxy_RegistryImage) ConstructNodeMetadata() *map[string]interface{
 	return returns
 }
 
-func (j *jsiiProxy_RegistryImage) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_RegistryImage) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -392,7 +392,7 @@ func (j *jsiiProxy_RegistryImage) TriggersInput() *map[string]*string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/docker/r/registry_image docker_registry_image} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/registry_image docker_registry_image} Resource.
 func NewRegistryImage(scope constructs.Construct, id *string, config *RegistryImageConfig) RegistryImage {
 	_init_.Initialize()
 
@@ -410,7 +410,7 @@ func NewRegistryImage(scope constructs.Construct, id *string, config *RegistryIm
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/docker/r/registry_image docker_registry_image} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/registry_image docker_registry_image} Resource.
 func NewRegistryImage_Override(r RegistryImage, scope constructs.Construct, id *string, config *RegistryImageConfig) {
 	_init_.Initialize()
 
@@ -432,7 +432,10 @@ func (j *jsiiProxy_RegistryImage)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RegistryImage)SetCount(val *float64) {
+func (j *jsiiProxy_RegistryImage)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

@@ -68,6 +68,10 @@ func (j *jsiiProxy_DataDockerPlugin) validateSetAliasParameters(val *string) err
 	return nil
 }
 
+func (j *jsiiProxy_DataDockerPlugin) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataDockerPlugin) validateSetIdParameters(val *string) error {
 	return nil
 }

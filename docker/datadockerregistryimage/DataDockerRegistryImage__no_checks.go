@@ -64,6 +64,10 @@ func validateDataDockerRegistryImage_IsTerraformElementParameters(x interface{})
 	return nil
 }
 
+func (j *jsiiProxy_DataDockerRegistryImage) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataDockerRegistryImage) validateSetIdParameters(val *string) error {
 	return nil
 }

@@ -2,14 +2,14 @@ package container
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/container/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v7/container/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/docker/r/container docker_container}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/container docker_container}.
 type Container interface {
 	cdktf.TerraformResource
 	Attach() interface{}
@@ -37,9 +37,9 @@ type Container interface {
 	SetContainerReadRefreshTimeoutMilliseconds(val *float64)
 	ContainerReadRefreshTimeoutMillisecondsInput() *float64
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	CpuSet() *string
 	SetCpuSet(val *string)
 	CpuSetInput() *string
@@ -505,8 +505,8 @@ func (j *jsiiProxy_Container) ContainerReadRefreshTimeoutMillisecondsInput() *fl
 	return returns
 }
 
-func (j *jsiiProxy_Container) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Container) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -1816,7 +1816,7 @@ func (j *jsiiProxy_Container) WorkingDirInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/docker/r/container docker_container} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/container docker_container} Resource.
 func NewContainer(scope constructs.Construct, id *string, config *ContainerConfig) Container {
 	_init_.Initialize()
 
@@ -1834,7 +1834,7 @@ func NewContainer(scope constructs.Construct, id *string, config *ContainerConfi
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/docker/r/container docker_container} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/container docker_container} Resource.
 func NewContainer_Override(c Container, scope constructs.Construct, id *string, config *ContainerConfig) {
 	_init_.Initialize()
 
@@ -1900,7 +1900,10 @@ func (j *jsiiProxy_Container)SetContainerReadRefreshTimeoutMilliseconds(val *flo
 	)
 }
 
-func (j *jsiiProxy_Container)SetCount(val *float64) {
+func (j *jsiiProxy_Container)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

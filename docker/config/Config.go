@@ -2,14 +2,14 @@ package config
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v6/config/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v7/config/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/docker/r/config docker_config}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/config docker_config}.
 type Config interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type Config interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	Data() *string
 	SetData(val *string)
 	DataInput() *string
@@ -141,8 +141,8 @@ func (j *jsiiProxy_Config) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Config) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Config) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -332,7 +332,7 @@ func (j *jsiiProxy_Config) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/docker/r/config docker_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/config docker_config} Resource.
 func NewConfig(scope constructs.Construct, id *string, config *ConfigConfig) Config {
 	_init_.Initialize()
 
@@ -350,7 +350,7 @@ func NewConfig(scope constructs.Construct, id *string, config *ConfigConfig) Con
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/docker/r/config docker_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/config docker_config} Resource.
 func NewConfig_Override(c Config, scope constructs.Construct, id *string, config *ConfigConfig) {
 	_init_.Initialize()
 
@@ -372,7 +372,10 @@ func (j *jsiiProxy_Config)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Config)SetCount(val *float64) {
+func (j *jsiiProxy_Config)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

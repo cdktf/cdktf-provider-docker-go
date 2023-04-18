@@ -72,6 +72,10 @@ func (j *jsiiProxy_Image) validateSetConnectionParameters(val interface{}) error
 	return nil
 }
 
+func (j *jsiiProxy_Image) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Image) validateSetForceRemoveParameters(val interface{}) error {
 	return nil
 }
