@@ -7,6 +7,10 @@ package volume
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (v *jsiiProxy_Volume) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (v *jsiiProxy_Volume) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (v *jsiiProxy_Volume) validateGetStringMapAttributeParameters(terraformAttr
 	return nil
 }
 
+func (v *jsiiProxy_Volume) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (v *jsiiProxy_Volume) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (v *jsiiProxy_Volume) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (v *jsiiProxy_Volume) validateOverrideLogicalIdParameters(newLogicalId *str
 }
 
 func (v *jsiiProxy_Volume) validatePutLabelsParameters(value interface{}) error {
+	return nil
+}
+
+func validateVolume_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

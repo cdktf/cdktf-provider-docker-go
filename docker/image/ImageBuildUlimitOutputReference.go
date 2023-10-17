@@ -5,9 +5,9 @@ package image
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v9/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v10/jsii"
 
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v9/image/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v10/image/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

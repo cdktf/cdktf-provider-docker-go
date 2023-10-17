@@ -5,9 +5,9 @@ package volume
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v9/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-docker-go/docker/v10/jsii"
 
-	"github.com/cdktf/cdktf-provider-docker-go/docker/v9/volume/internal"
+	"github.com/cdktf/cdktf-provider-docker-go/docker/v10/volume/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

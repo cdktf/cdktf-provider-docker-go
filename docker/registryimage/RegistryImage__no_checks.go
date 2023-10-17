@@ -7,6 +7,10 @@ package registryimage
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_RegistryImage) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RegistryImage) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (r *jsiiProxy_RegistryImage) validateGetStringMapAttributeParameters(terraf
 	return nil
 }
 
+func (r *jsiiProxy_RegistryImage) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RegistryImage) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (r *jsiiProxy_RegistryImage) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (r *jsiiProxy_RegistryImage) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateRegistryImage_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

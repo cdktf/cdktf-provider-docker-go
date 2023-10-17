@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataDockerNetwork) validateOverrideLogicalIdParameters(newLog
 	return nil
 }
 
+func validateDataDockerNetwork_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataDockerNetwork_IsConstructParameters(x interface{}) error {
 	return nil
 }

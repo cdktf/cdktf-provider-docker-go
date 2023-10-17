@@ -7,6 +7,10 @@ package container
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (c *jsiiProxy_Container) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_Container) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (c *jsiiProxy_Container) validateGetStringMapAttributeParameters(terraformA
 	return nil
 }
 
+func (c *jsiiProxy_Container) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_Container) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (c *jsiiProxy_Container) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -96,6 +108,10 @@ func (c *jsiiProxy_Container) validatePutUploadParameters(value interface{}) err
 }
 
 func (c *jsiiProxy_Container) validatePutVolumesParameters(value interface{}) error {
+	return nil
+}
+
+func validateContainer_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

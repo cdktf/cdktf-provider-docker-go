@@ -15,6 +15,10 @@ func (d *jsiiProxy_DockerProvider) validateOverrideLogicalIdParameters(newLogica
 	return nil
 }
 
+func validateDockerProvider_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDockerProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }

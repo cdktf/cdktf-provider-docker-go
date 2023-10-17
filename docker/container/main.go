@@ -14,6 +14,7 @@ func init() {
 		"@cdktf/provider-docker.container.Container",
 		reflect.TypeOf((*Container)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addMoveTarget", GoMethod: "AddMoveTarget"},
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
 			_jsii_.MemberProperty{JsiiProperty: "attach", GoGetter: "Attach"},
 			_jsii_.MemberProperty{JsiiProperty: "attachInput", GoGetter: "AttachInput"},
@@ -79,6 +80,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "idInput", GoGetter: "IdInput"},
 			_jsii_.MemberProperty{JsiiProperty: "image", GoGetter: "Image"},
 			_jsii_.MemberProperty{JsiiProperty: "imageInput", GoGetter: "ImageInput"},
+			_jsii_.MemberMethod{JsiiMethod: "importFrom", GoMethod: "ImportFrom"},
 			_jsii_.MemberProperty{JsiiProperty: "init", GoGetter: "Init"},
 			_jsii_.MemberProperty{JsiiProperty: "initInput", GoGetter: "InitInput"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
@@ -101,6 +103,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "memorySwapInput", GoGetter: "MemorySwapInput"},
 			_jsii_.MemberProperty{JsiiProperty: "mounts", GoGetter: "Mounts"},
 			_jsii_.MemberProperty{JsiiProperty: "mountsInput", GoGetter: "MountsInput"},
+			_jsii_.MemberMethod{JsiiMethod: "moveTo", GoMethod: "MoveTo"},
 			_jsii_.MemberProperty{JsiiProperty: "mustRun", GoGetter: "MustRun"},
 			_jsii_.MemberProperty{JsiiProperty: "mustRunInput", GoGetter: "MustRunInput"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
