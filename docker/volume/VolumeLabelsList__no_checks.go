@@ -7,6 +7,10 @@ package volume
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (v *jsiiProxy_VolumeLabelsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (v *jsiiProxy_VolumeLabelsList) validateGetParameters(index *float64) error {
 	return nil
 }

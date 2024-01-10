@@ -7,6 +7,10 @@ package network
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (n *jsiiProxy_NetworkLabelsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (n *jsiiProxy_NetworkLabelsList) validateGetParameters(index *float64) error {
 	return nil
 }
