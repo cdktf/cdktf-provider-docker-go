@@ -59,10 +59,6 @@ func (i *jsiiProxy_ImageBuildOutputReference) validateResolveParameters(_context
 	return nil
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuildArgParameters(val *map[string]*string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuildArgsParameters(val *map[string]*string) error {
 	return nil
 }

@@ -1,12 +1,15 @@
-# CDKTF Go bindings for kreuzwerker/docker provider version 3.0.2
+# CDKTF Go bindings for kreuzwerker/docker provider version 3.1.2
 
-This repo builds and publishes the [Terraform docker provider](https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform docker provider](https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Go Package
 
 The go package is generated into the [`github.com/cdktf/cdktf-provider-docker-go`](https://github.com/cdktf/cdktf-provider-docker-go) package.
 
-`go get github.com/cdktf/cdktf-provider-docker-go/docker`
+`go get github.com/cdktf/cdktf-provider-docker-go/docker/<version>`
+
+Where `<version>` is the version of the prebuilt provider you would like to use e.g. `v11`. The full module name can be found
+within the [go.mod](https://github.com/cdktf/cdktf-provider-docker-go/blob/main/docker/go.mod#L1) file.
 
 ## Docs
 
@@ -20,7 +23,7 @@ This project is explicitly not tracking the Terraform docker provider version 1:
 These are the upstream dependencies:
 
 * [CDK for Terraform](https://cdk.tf)
-* [Terraform docker provider](https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2)
+* [Terraform docker provider](https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2)
 * [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.

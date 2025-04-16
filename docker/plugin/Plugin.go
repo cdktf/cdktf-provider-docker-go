@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/plugin docker_plugin}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/resources/plugin docker_plugin}.
 type Plugin interface {
 	cdktf.TerraformResource
 	Alias() *string
@@ -536,7 +536,7 @@ func (j *jsiiProxy_Plugin) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/plugin docker_plugin} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/resources/plugin docker_plugin} Resource.
 func NewPlugin(scope constructs.Construct, id *string, config *PluginConfig) Plugin {
 	_init_.Initialize()
 
@@ -554,7 +554,7 @@ func NewPlugin(scope constructs.Construct, id *string, config *PluginConfig) Plu
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/plugin docker_plugin} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/resources/plugin docker_plugin} Resource.
 func NewPlugin_Override(p Plugin, scope constructs.Construct, id *string, config *PluginConfig) {
 	_init_.Initialize()
 

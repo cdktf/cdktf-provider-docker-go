@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/container docker_container}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/resources/container docker_container}.
 type Container interface {
 	cdktf.TerraformResource
 	Attach() interface{}
@@ -43,12 +43,15 @@ type Container interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	Cpus() *string
+	SetCpus(val *string)
 	CpuSet() *string
 	SetCpuSet(val *string)
 	CpuSetInput() *string
 	CpuShares() *float64
 	SetCpuShares(val *float64)
 	CpuSharesInput() *float64
+	CpusInput() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -302,6 +305,7 @@ type Container interface {
 	ResetCgroupnsMode()
 	ResetCommand()
 	ResetContainerReadRefreshTimeoutMilliseconds()
+	ResetCpus()
 	ResetCpuSet()
 	ResetCpuShares()
 	ResetDestroyGraceSeconds()
@@ -539,6 +543,16 @@ func (j *jsiiProxy_Container) Count() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Container) Cpus() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cpus",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Container) CpuSet() *string {
 	var returns *string
 	_jsii_.Get(
@@ -574,6 +588,16 @@ func (j *jsiiProxy_Container) CpuSharesInput() *float64 {
 	_jsii_.Get(
 		j,
 		"cpuSharesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) CpusInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cpusInput",
 		&returns,
 	)
 	return returns
@@ -1840,7 +1864,7 @@ func (j *jsiiProxy_Container) WorkingDirInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/container docker_container} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/resources/container docker_container} Resource.
 func NewContainer(scope constructs.Construct, id *string, config *ContainerConfig) Container {
 	_init_.Initialize()
 
@@ -1858,7 +1882,7 @@ func NewContainer(scope constructs.Construct, id *string, config *ContainerConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.0.2/docs/resources/container docker_container} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/resources/container docker_container} Resource.
 func NewContainer_Override(c Container, scope constructs.Construct, id *string, config *ContainerConfig) {
 	_init_.Initialize()
 
@@ -1931,6 +1955,17 @@ func (j *jsiiProxy_Container)SetCount(val interface{}) {
 	_jsii_.Set(
 		j,
 		"count",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Container)SetCpus(val *string) {
+	if err := j.validateSetCpusParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"cpus",
 		val,
 	)
 }
@@ -3019,6 +3054,14 @@ func (c *jsiiProxy_Container) ResetContainerReadRefreshTimeoutMilliseconds() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetContainerReadRefreshTimeoutMilliseconds",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Container) ResetCpus() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCpus",
 		nil, // no parameters
 	)
 }

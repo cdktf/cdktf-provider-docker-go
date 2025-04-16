@@ -177,8 +177,6 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "authConfig", GoGetter: "AuthConfig"},
 			_jsii_.MemberProperty{JsiiProperty: "authConfigInput", GoGetter: "AuthConfigInput"},
-			_jsii_.MemberProperty{JsiiProperty: "buildArg", GoGetter: "BuildArg"},
-			_jsii_.MemberProperty{JsiiProperty: "buildArgInput", GoGetter: "BuildArgInput"},
 			_jsii_.MemberProperty{JsiiProperty: "buildArgs", GoGetter: "BuildArgs"},
 			_jsii_.MemberProperty{JsiiProperty: "buildArgsInput", GoGetter: "BuildArgsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "buildId", GoGetter: "BuildId"},
@@ -247,7 +245,6 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "remove", GoGetter: "Remove"},
 			_jsii_.MemberProperty{JsiiProperty: "removeInput", GoGetter: "RemoveInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAuthConfig", GoMethod: "ResetAuthConfig"},
-			_jsii_.MemberMethod{JsiiMethod: "resetBuildArg", GoMethod: "ResetBuildArg"},
 			_jsii_.MemberMethod{JsiiMethod: "resetBuildArgs", GoMethod: "ResetBuildArgs"},
 			_jsii_.MemberMethod{JsiiMethod: "resetBuildId", GoMethod: "ResetBuildId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCacheFrom", GoMethod: "ResetCacheFrom"},

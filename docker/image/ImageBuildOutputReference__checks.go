@@ -163,14 +163,6 @@ func (i *jsiiProxy_ImageBuildOutputReference) validateResolveParameters(_context
 	return nil
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuildArgParameters(val *map[string]*string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuildArgsParameters(val *map[string]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

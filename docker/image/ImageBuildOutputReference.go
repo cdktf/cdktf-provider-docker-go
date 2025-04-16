@@ -15,9 +15,6 @@ type ImageBuildOutputReference interface {
 	cdktf.ComplexObject
 	AuthConfig() ImageBuildAuthConfigList
 	AuthConfigInput() interface{}
-	BuildArg() *map[string]*string
-	SetBuildArg(val *map[string]*string)
-	BuildArgInput() *map[string]*string
 	BuildArgs() *map[string]*string
 	SetBuildArgs(val *map[string]*string)
 	BuildArgsInput() *map[string]*string
@@ -170,7 +167,6 @@ type ImageBuildOutputReference interface {
 	PutAuthConfig(value interface{})
 	PutUlimit(value interface{})
 	ResetAuthConfig()
-	ResetBuildArg()
 	ResetBuildArgs()
 	ResetBuildId()
 	ResetCacheFrom()
@@ -233,26 +229,6 @@ func (j *jsiiProxy_ImageBuildOutputReference) AuthConfigInput() interface{} {
 	_jsii_.Get(
 		j,
 		"authConfigInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ImageBuildOutputReference) BuildArg() *map[string]*string {
-	var returns *map[string]*string
-	_jsii_.Get(
-		j,
-		"buildArg",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ImageBuildOutputReference) BuildArgInput() *map[string]*string {
-	var returns *map[string]*string
-	_jsii_.Get(
-		j,
-		"buildArgInput",
 		&returns,
 	)
 	return returns
@@ -1016,17 +992,6 @@ func NewImageBuildOutputReference_Override(i ImageBuildOutputReference, terrafor
 	)
 }
 
-func (j *jsiiProxy_ImageBuildOutputReference)SetBuildArg(val *map[string]*string) {
-	if err := j.validateSetBuildArgParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"buildArg",
-		val,
-	)
-}
-
 func (j *jsiiProxy_ImageBuildOutputReference)SetBuildArgs(val *map[string]*string) {
 	if err := j.validateSetBuildArgsParameters(val); err != nil {
 		panic(err)
@@ -1646,14 +1611,6 @@ func (i *jsiiProxy_ImageBuildOutputReference) ResetAuthConfig() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetAuthConfig",
-		nil, // no parameters
-	)
-}
-
-func (i *jsiiProxy_ImageBuildOutputReference) ResetBuildArg() {
-	_jsii_.InvokeVoid(
-		i,
-		"resetBuildArg",
 		nil, // no parameters
 	)
 }
