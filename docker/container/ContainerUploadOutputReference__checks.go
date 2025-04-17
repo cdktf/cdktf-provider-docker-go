@@ -234,6 +234,14 @@ func (j *jsiiProxy_ContainerUploadOutputReference) validateSetInternalValueParam
 	return nil
 }
 
+func (j *jsiiProxy_ContainerUploadOutputReference) validateSetPermissionsParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ContainerUploadOutputReference) validateSetSourceParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

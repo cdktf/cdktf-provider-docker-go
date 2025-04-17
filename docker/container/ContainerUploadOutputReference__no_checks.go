@@ -79,6 +79,10 @@ func (j *jsiiProxy_ContainerUploadOutputReference) validateSetInternalValueParam
 	return nil
 }
 
+func (j *jsiiProxy_ContainerUploadOutputReference) validateSetPermissionsParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ContainerUploadOutputReference) validateSetSourceParameters(val *string) error {
 	return nil
 }

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/resources/image docker_image}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/resources/image docker_image}.
 type Image interface {
 	cdktf.TerraformResource
 	BuildAttribute() ImageBuildOutputReference
@@ -81,6 +81,8 @@ type Image interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ImageTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Triggers() *map[string]*string
 	SetTriggers(val *map[string]*string)
 	TriggersInput() *map[string]*string
@@ -128,6 +130,7 @@ type Image interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutBuildAttribute(value *ImageBuild)
+	PutTimeouts(value *ImageTimeouts)
 	ResetBuildAttribute()
 	ResetForceRemove()
 	ResetKeepLocally()
@@ -136,6 +139,7 @@ type Image interface {
 	ResetOverrideLogicalId()
 	ResetPlatform()
 	ResetPullTriggers()
+	ResetTimeouts()
 	ResetTriggers()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -465,6 +469,26 @@ func (j *jsiiProxy_Image) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Image) Timeouts() ImageTimeoutsOutputReference {
+	var returns ImageTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Image) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Image) Triggers() *map[string]*string {
 	var returns *map[string]*string
 	_jsii_.Get(
@@ -486,7 +510,7 @@ func (j *jsiiProxy_Image) TriggersInput() *map[string]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/resources/image docker_image} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/resources/image docker_image} Resource.
 func NewImage(scope constructs.Construct, id *string, config *ImageConfig) Image {
 	_init_.Initialize()
 
@@ -504,7 +528,7 @@ func NewImage(scope constructs.Construct, id *string, config *ImageConfig) Image
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/resources/image docker_image} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/resources/image docker_image} Resource.
 func NewImage_Override(i Image, scope constructs.Construct, id *string, config *ImageConfig) {
 	_init_.Initialize()
 
@@ -1013,6 +1037,17 @@ func (i *jsiiProxy_Image) PutBuildAttribute(value *ImageBuild) {
 	)
 }
 
+func (i *jsiiProxy_Image) PutTimeouts(value *ImageTimeouts) {
+	if err := i.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_Image) ResetBuildAttribute() {
 	_jsii_.InvokeVoid(
 		i,
@@ -1057,6 +1092,14 @@ func (i *jsiiProxy_Image) ResetPullTriggers() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetPullTriggers",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Image) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

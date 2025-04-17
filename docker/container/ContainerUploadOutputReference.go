@@ -44,6 +44,9 @@ type ContainerUploadOutputReference interface {
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	Permissions() *string
+	SetPermissions(val *string)
+	PermissionsInput() *string
 	Source() *string
 	SetSource(val *string)
 	SourceHash() *string
@@ -85,6 +88,7 @@ type ContainerUploadOutputReference interface {
 	ResetContent()
 	ResetContentBase64()
 	ResetExecutable()
+	ResetPermissions()
 	ResetSource()
 	ResetSourceHash()
 	// Produce the Token's value at resolution time.
@@ -227,6 +231,26 @@ func (j *jsiiProxy_ContainerUploadOutputReference) InternalValue() interface{} {
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ContainerUploadOutputReference) Permissions() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"permissions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ContainerUploadOutputReference) PermissionsInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"permissionsInput",
 		&returns,
 	)
 	return returns
@@ -393,6 +417,17 @@ func (j *jsiiProxy_ContainerUploadOutputReference)SetInternalValue(val interface
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ContainerUploadOutputReference)SetPermissions(val *string) {
+	if err := j.validateSetPermissionsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"permissions",
 		val,
 	)
 }
@@ -647,6 +682,14 @@ func (c *jsiiProxy_ContainerUploadOutputReference) ResetExecutable() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetExecutable",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ContainerUploadOutputReference) ResetPermissions() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPermissions",
 		nil, // no parameters
 	)
 }

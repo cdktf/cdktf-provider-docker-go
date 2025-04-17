@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/data-sources/plugin docker_plugin}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/data-sources/plugin docker_plugin}.
 type DataDockerPlugin interface {
 	cdktf.TerraformDataSource
 	Alias() *string
@@ -344,7 +344,7 @@ func (j *jsiiProxy_DataDockerPlugin) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/data-sources/plugin docker_plugin} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/data-sources/plugin docker_plugin} Data Source.
 func NewDataDockerPlugin(scope constructs.Construct, id *string, config *DataDockerPluginConfig) DataDockerPlugin {
 	_init_.Initialize()
 
@@ -362,7 +362,7 @@ func NewDataDockerPlugin(scope constructs.Construct, id *string, config *DataDoc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.1.2/docs/data-sources/plugin docker_plugin} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/data-sources/plugin docker_plugin} Data Source.
 func NewDataDockerPlugin_Override(d DataDockerPlugin, scope constructs.Construct, id *string, config *DataDockerPluginConfig) {
 	_init_.Initialize()
 

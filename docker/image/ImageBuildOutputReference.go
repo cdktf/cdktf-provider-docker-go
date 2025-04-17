@@ -106,6 +106,8 @@ type ImageBuildOutputReference interface {
 	Remove() interface{}
 	SetRemove(val interface{})
 	RemoveInput() interface{}
+	Secrets() ImageBuildSecretsList
+	SecretsInput() interface{}
 	SecurityOpt() *[]*string
 	SetSecurityOpt(val *[]*string)
 	SecurityOptInput() *[]*string
@@ -165,6 +167,7 @@ type ImageBuildOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutAuthConfig(value interface{})
+	PutSecrets(value interface{})
 	PutUlimit(value interface{})
 	ResetAuthConfig()
 	ResetBuildArgs()
@@ -190,6 +193,7 @@ type ImageBuildOutputReference interface {
 	ResetPullParent()
 	ResetRemoteContext()
 	ResetRemove()
+	ResetSecrets()
 	ResetSecurityOpt()
 	ResetSessionId()
 	ResetShmSize()
@@ -759,6 +763,26 @@ func (j *jsiiProxy_ImageBuildOutputReference) RemoveInput() interface{} {
 	_jsii_.Get(
 		j,
 		"removeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ImageBuildOutputReference) Secrets() ImageBuildSecretsList {
+	var returns ImageBuildSecretsList
+	_jsii_.Get(
+		j,
+		"secrets",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ImageBuildOutputReference) SecretsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"secretsInput",
 		&returns,
 	)
 	return returns
@@ -1596,6 +1620,17 @@ func (i *jsiiProxy_ImageBuildOutputReference) PutAuthConfig(value interface{}) {
 	)
 }
 
+func (i *jsiiProxy_ImageBuildOutputReference) PutSecrets(value interface{}) {
+	if err := i.validatePutSecretsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"putSecrets",
+		[]interface{}{value},
+	)
+}
+
 func (i *jsiiProxy_ImageBuildOutputReference) PutUlimit(value interface{}) {
 	if err := i.validatePutUlimitParameters(value); err != nil {
 		panic(err)
@@ -1795,6 +1830,14 @@ func (i *jsiiProxy_ImageBuildOutputReference) ResetRemove() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetRemove",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_ImageBuildOutputReference) ResetSecrets() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSecrets",
 		nil, // no parameters
 	)
 }

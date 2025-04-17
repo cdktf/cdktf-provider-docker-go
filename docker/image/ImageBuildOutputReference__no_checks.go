@@ -51,6 +51,10 @@ func (i *jsiiProxy_ImageBuildOutputReference) validatePutAuthConfigParameters(va
 	return nil
 }
 
+func (i *jsiiProxy_ImageBuildOutputReference) validatePutSecretsParameters(value interface{}) error {
+	return nil
+}
+
 func (i *jsiiProxy_ImageBuildOutputReference) validatePutUlimitParameters(value interface{}) error {
 	return nil
 }

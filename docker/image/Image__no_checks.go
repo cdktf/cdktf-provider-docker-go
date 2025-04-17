@@ -79,6 +79,10 @@ func (i *jsiiProxy_Image) validatePutBuildAttributeParameters(value *ImageBuild)
 	return nil
 }
 
+func (i *jsiiProxy_Image) validatePutTimeoutsParameters(value *ImageTimeouts) error {
+	return nil
+}
+
 func validateImage_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
