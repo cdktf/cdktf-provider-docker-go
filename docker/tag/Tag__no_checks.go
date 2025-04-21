@@ -115,6 +115,10 @@ func (j *jsiiProxy_Tag) validateSetSourceImageParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Tag) validateSetTagTriggersParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Tag) validateSetTargetImageParameters(val *string) error {
 	return nil
 }

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/data-sources/network docker_network}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs/data-sources/network docker_network}.
 type DataDockerNetwork interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -330,7 +330,7 @@ func (j *jsiiProxy_DataDockerNetwork) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/data-sources/network docker_network} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs/data-sources/network docker_network} Data Source.
 func NewDataDockerNetwork(scope constructs.Construct, id *string, config *DataDockerNetworkConfig) DataDockerNetwork {
 	_init_.Initialize()
 
@@ -348,7 +348,7 @@ func NewDataDockerNetwork(scope constructs.Construct, id *string, config *DataDo
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/data-sources/network docker_network} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs/data-sources/network docker_network} Data Source.
 func NewDataDockerNetwork_Override(d DataDockerNetwork, scope constructs.Construct, id *string, config *DataDockerNetworkConfig) {
 	_init_.Initialize()
 

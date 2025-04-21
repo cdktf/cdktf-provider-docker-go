@@ -12,9 +12,11 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/resources/registry_image docker_registry_image}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs/resources/registry_image docker_registry_image}.
 type RegistryImage interface {
 	cdktf.TerraformResource
+	AuthConfig() RegistryImageAuthConfigOutputReference
+	AuthConfigInput() *RegistryImageAuthConfig
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -120,6 +122,8 @@ type RegistryImage interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutAuthConfig(value *RegistryImageAuthConfig)
+	ResetAuthConfig()
 	ResetId()
 	ResetInsecureSkipVerify()
 	ResetKeepRemotely()
@@ -143,6 +147,26 @@ type RegistryImage interface {
 // The jsii proxy struct for RegistryImage
 type jsiiProxy_RegistryImage struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_RegistryImage) AuthConfig() RegistryImageAuthConfigOutputReference {
+	var returns RegistryImageAuthConfigOutputReference
+	_jsii_.Get(
+		j,
+		"authConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryImage) AuthConfigInput() *RegistryImageAuthConfig {
+	var returns *RegistryImageAuthConfig
+	_jsii_.Get(
+		j,
+		"authConfigInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RegistryImage) CdktfStack() cdktf.TerraformStack {
@@ -416,7 +440,7 @@ func (j *jsiiProxy_RegistryImage) TriggersInput() *map[string]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/resources/registry_image docker_registry_image} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs/resources/registry_image docker_registry_image} Resource.
 func NewRegistryImage(scope constructs.Construct, id *string, config *RegistryImageConfig) RegistryImage {
 	_init_.Initialize()
 
@@ -434,7 +458,7 @@ func NewRegistryImage(scope constructs.Construct, id *string, config *RegistryIm
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/resources/registry_image docker_registry_image} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs/resources/registry_image docker_registry_image} Resource.
 func NewRegistryImage_Override(r RegistryImage, scope constructs.Construct, id *string, config *RegistryImageConfig) {
 	_init_.Initialize()
 
@@ -918,6 +942,25 @@ func (r *jsiiProxy_RegistryImage) OverrideLogicalId(newLogicalId *string) {
 		r,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (r *jsiiProxy_RegistryImage) PutAuthConfig(value *RegistryImageAuthConfig) {
+	if err := r.validatePutAuthConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putAuthConfig",
+		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_RegistryImage) ResetAuthConfig() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAuthConfig",
+		nil, // no parameters
 	)
 }
 

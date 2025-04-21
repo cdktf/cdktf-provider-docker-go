@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs docker}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs docker}.
 type DockerProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -31,6 +31,12 @@ type DockerProvider interface {
 	CertPathInput() *string
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	Context() *string
+	SetContext(val *string)
+	ContextInput() *string
+	DisableDockerDaemonCheck() interface{}
+	SetDisableDockerDaemonCheck(val interface{})
+	DisableDockerDaemonCheckInput() interface{}
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -68,6 +74,8 @@ type DockerProvider interface {
 	ResetCaMaterial()
 	ResetCertMaterial()
 	ResetCertPath()
+	ResetContext()
+	ResetDisableDockerDaemonCheck()
 	ResetHost()
 	ResetKeyMaterial()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -188,6 +196,46 @@ func (j *jsiiProxy_DockerProvider) ConstructNodeMetadata() *map[string]interface
 	_jsii_.Get(
 		j,
 		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DockerProvider) Context() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"context",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DockerProvider) ContextInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"contextInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DockerProvider) DisableDockerDaemonCheck() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableDockerDaemonCheck",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DockerProvider) DisableDockerDaemonCheckInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableDockerDaemonCheckInput",
 		&returns,
 	)
 	return returns
@@ -354,7 +402,7 @@ func (j *jsiiProxy_DockerProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs docker} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs docker} Resource.
 func NewDockerProvider(scope constructs.Construct, id *string, config *DockerProviderConfig) DockerProvider {
 	_init_.Initialize()
 
@@ -372,7 +420,7 @@ func NewDockerProvider(scope constructs.Construct, id *string, config *DockerPro
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs docker} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs docker} Resource.
 func NewDockerProvider_Override(d DockerProvider, scope constructs.Construct, id *string, config *DockerProviderConfig) {
 	_init_.Initialize()
 
@@ -411,6 +459,25 @@ func (j *jsiiProxy_DockerProvider)SetCertPath(val *string) {
 	_jsii_.Set(
 		j,
 		"certPath",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DockerProvider)SetContext(val *string) {
+	_jsii_.Set(
+		j,
+		"context",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DockerProvider)SetDisableDockerDaemonCheck(val interface{}) {
+	if err := j.validateSetDisableDockerDaemonCheckParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"disableDockerDaemonCheck",
 		val,
 	)
 }
@@ -603,6 +670,22 @@ func (d *jsiiProxy_DockerProvider) ResetCertPath() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetCertPath",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DockerProvider) ResetContext() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetContext",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DockerProvider) ResetDisableDockerDaemonCheck() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDisableDockerDaemonCheck",
 		nil, // no parameters
 	)
 }

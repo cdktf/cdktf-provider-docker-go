@@ -31,6 +31,10 @@ func validateDockerProvider_IsTerraformProviderParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_DockerProvider) validateSetDisableDockerDaemonCheckParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DockerProvider) validateSetRegistryAuthParameters(val interface{}) error {
 	return nil
 }

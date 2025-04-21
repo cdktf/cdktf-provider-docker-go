@@ -75,6 +75,10 @@ func (r *jsiiProxy_RegistryImage) validateOverrideLogicalIdParameters(newLogical
 	return nil
 }
 
+func (r *jsiiProxy_RegistryImage) validatePutAuthConfigParameters(value *RegistryImageAuthConfig) error {
+	return nil
+}
+
 func validateRegistryImage_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

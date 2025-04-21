@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/resources/tag docker_tag}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs/resources/tag docker_tag}.
 type Tag interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -62,6 +62,9 @@ type Tag interface {
 	SetSourceImage(val *string)
 	SourceImageId() *string
 	SourceImageInput() *string
+	TagTriggers() *[]*string
+	SetTagTriggers(val *[]*string)
+	TagTriggersInput() *[]*string
 	TargetImage() *string
 	SetTargetImage(val *string)
 	TargetImageInput() *string
@@ -118,6 +121,7 @@ type Tag interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTagTriggers()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -316,6 +320,26 @@ func (j *jsiiProxy_Tag) SourceImageInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Tag) TagTriggers() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"tagTriggers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Tag) TagTriggersInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"tagTriggersInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Tag) TargetImage() *string {
 	var returns *string
 	_jsii_.Get(
@@ -367,7 +391,7 @@ func (j *jsiiProxy_Tag) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/resources/tag docker_tag} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs/resources/tag docker_tag} Resource.
 func NewTag(scope constructs.Construct, id *string, config *TagConfig) Tag {
 	_init_.Initialize()
 
@@ -385,7 +409,7 @@ func NewTag(scope constructs.Construct, id *string, config *TagConfig) Tag {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.2.0/docs/resources/tag docker_tag} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs/resources/tag docker_tag} Resource.
 func NewTag_Override(t Tag, scope constructs.Construct, id *string, config *TagConfig) {
 	_init_.Initialize()
 
@@ -482,6 +506,17 @@ func (j *jsiiProxy_Tag)SetSourceImage(val *string) {
 	_jsii_.Set(
 		j,
 		"sourceImage",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Tag)SetTagTriggers(val *[]*string) {
+	if err := j.validateSetTagTriggersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tagTriggers",
 		val,
 	)
 }
@@ -862,6 +897,14 @@ func (t *jsiiProxy_Tag) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_Tag) ResetTagTriggers() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetTagTriggers",
 		nil, // no parameters
 	)
 }

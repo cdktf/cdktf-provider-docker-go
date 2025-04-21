@@ -74,6 +74,23 @@ func validateDockerProvider_IsTerraformProviderParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_DockerProvider) validateSetDisableDockerDaemonCheckParameters(val interface{}) error {
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DockerProvider) validateSetRegistryAuthParameters(val interface{}) error {
 	switch val.(type) {
 	case cdktf.IResolvable:
