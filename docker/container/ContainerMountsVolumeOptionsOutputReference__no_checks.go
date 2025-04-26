@@ -79,6 +79,10 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) validateSetNoCop
 	return nil
 }
 
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) validateSetSubpathParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	return nil
 }

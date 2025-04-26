@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs docker}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.4.0/docs docker}.
 type DockerProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -402,7 +402,7 @@ func (j *jsiiProxy_DockerProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs docker} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.4.0/docs docker} Resource.
 func NewDockerProvider(scope constructs.Construct, id *string, config *DockerProviderConfig) DockerProvider {
 	_init_.Initialize()
 
@@ -420,7 +420,7 @@ func NewDockerProvider(scope constructs.Construct, id *string, config *DockerPro
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.3.0/docs docker} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.4.0/docs docker} Resource.
 func NewDockerProvider_Override(d DockerProvider, scope constructs.Construct, id *string, config *DockerProviderConfig) {
 	_init_.Initialize()
 

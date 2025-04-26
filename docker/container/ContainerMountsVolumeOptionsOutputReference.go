@@ -43,6 +43,9 @@ type ContainerMountsVolumeOptionsOutputReference interface {
 	NoCopy() interface{}
 	SetNoCopy(val interface{})
 	NoCopyInput() interface{}
+	Subpath() *string
+	SetSubpath(val *string)
+	SubpathInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -80,6 +83,7 @@ type ContainerMountsVolumeOptionsOutputReference interface {
 	ResetDriverOptions()
 	ResetLabels()
 	ResetNoCopy()
+	ResetSubpath()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -225,6 +229,26 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) NoCopyInput() in
 	return returns
 }
 
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) Subpath() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"subpath",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) SubpathInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"subpathInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -335,6 +359,17 @@ func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference)SetNoCopy(val int
 	_jsii_.Set(
 		j,
 		"noCopy",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ContainerMountsVolumeOptionsOutputReference)SetSubpath(val *string) {
+	if err := j.validateSetSubpathParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"subpath",
 		val,
 	)
 }
@@ -586,6 +621,14 @@ func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) ResetNoCopy() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetNoCopy",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ContainerMountsVolumeOptionsOutputReference) ResetSubpath() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetSubpath",
 		nil, // no parameters
 	)
 }
