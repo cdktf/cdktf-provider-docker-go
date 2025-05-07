@@ -18,9 +18,15 @@ type ImageBuildOutputReference interface {
 	BuildArgs() *map[string]*string
 	SetBuildArgs(val *map[string]*string)
 	BuildArgsInput() *map[string]*string
+	Builder() *string
+	SetBuilder(val *string)
+	BuilderInput() *string
 	BuildId() *string
 	SetBuildId(val *string)
 	BuildIdInput() *string
+	BuildLogFile() *string
+	SetBuildLogFile(val *string)
+	BuildLogFileInput() *string
 	CacheFrom() *[]*string
 	SetCacheFrom(val *[]*string)
 	CacheFromInput() *[]*string
@@ -171,7 +177,9 @@ type ImageBuildOutputReference interface {
 	PutUlimit(value interface{})
 	ResetAuthConfig()
 	ResetBuildArgs()
+	ResetBuilder()
 	ResetBuildId()
+	ResetBuildLogFile()
 	ResetCacheFrom()
 	ResetCgroupParent()
 	ResetCpuPeriod()
@@ -258,6 +266,26 @@ func (j *jsiiProxy_ImageBuildOutputReference) BuildArgsInput() *map[string]*stri
 	return returns
 }
 
+func (j *jsiiProxy_ImageBuildOutputReference) Builder() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"builder",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ImageBuildOutputReference) BuilderInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"builderInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ImageBuildOutputReference) BuildId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -273,6 +301,26 @@ func (j *jsiiProxy_ImageBuildOutputReference) BuildIdInput() *string {
 	_jsii_.Get(
 		j,
 		"buildIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ImageBuildOutputReference) BuildLogFile() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"buildLogFile",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ImageBuildOutputReference) BuildLogFileInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"buildLogFileInput",
 		&returns,
 	)
 	return returns
@@ -1027,6 +1075,17 @@ func (j *jsiiProxy_ImageBuildOutputReference)SetBuildArgs(val *map[string]*strin
 	)
 }
 
+func (j *jsiiProxy_ImageBuildOutputReference)SetBuilder(val *string) {
+	if err := j.validateSetBuilderParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"builder",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ImageBuildOutputReference)SetBuildId(val *string) {
 	if err := j.validateSetBuildIdParameters(val); err != nil {
 		panic(err)
@@ -1034,6 +1093,17 @@ func (j *jsiiProxy_ImageBuildOutputReference)SetBuildId(val *string) {
 	_jsii_.Set(
 		j,
 		"buildId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ImageBuildOutputReference)SetBuildLogFile(val *string) {
+	if err := j.validateSetBuildLogFileParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"buildLogFile",
 		val,
 	)
 }
@@ -1658,10 +1728,26 @@ func (i *jsiiProxy_ImageBuildOutputReference) ResetBuildArgs() {
 	)
 }
 
+func (i *jsiiProxy_ImageBuildOutputReference) ResetBuilder() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetBuilder",
+		nil, // no parameters
+	)
+}
+
 func (i *jsiiProxy_ImageBuildOutputReference) ResetBuildId() {
 	_jsii_.InvokeVoid(
 		i,
 		"resetBuildId",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_ImageBuildOutputReference) ResetBuildLogFile() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetBuildLogFile",
 		nil, // no parameters
 	)
 }

@@ -9,7 +9,7 @@ type ServiceTaskSpecContainerSpecMountsBindOptions struct {
 	//
 	// See the [docs](https://docs.docker.com/storage/bind-mounts/#configure-bind-propagation) for details. Defaults to `rprivate`
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.4.0/docs/resources/service#propagation Service#propagation}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#propagation Service#propagation}
 	Propagation *string `field:"optional" json:"propagation" yaml:"propagation"`
 }
 

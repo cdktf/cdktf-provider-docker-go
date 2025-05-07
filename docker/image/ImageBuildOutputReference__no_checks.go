@@ -67,7 +67,15 @@ func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuildArgsParameters(val
 	return nil
 }
 
+func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuilderParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuildIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuildLogFileParameters(val *string) error {
 	return nil
 }
 

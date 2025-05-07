@@ -24,7 +24,7 @@ type DataDockerNetworkConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the Docker network.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.4.0/docs/data-sources/network#name DataDockerNetwork#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/data-sources/network#name DataDockerNetwork#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 }
 

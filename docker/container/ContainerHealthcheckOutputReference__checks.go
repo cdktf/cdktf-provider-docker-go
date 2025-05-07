@@ -190,6 +190,14 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) validateSetRetriesParame
 	return nil
 }
 
+func (j *jsiiProxy_ContainerHealthcheckOutputReference) validateSetStartIntervalParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ContainerHealthcheckOutputReference) validateSetStartPeriodParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

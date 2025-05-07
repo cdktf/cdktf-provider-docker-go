@@ -202,7 +202,23 @@ func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuildArgsParameters(val
 	return nil
 }
 
+func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuilderParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuildIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ImageBuildOutputReference) validateSetBuildLogFileParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

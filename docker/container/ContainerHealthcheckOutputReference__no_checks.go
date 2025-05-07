@@ -71,6 +71,10 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) validateSetRetriesParame
 	return nil
 }
 
+func (j *jsiiProxy_ContainerHealthcheckOutputReference) validateSetStartIntervalParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ContainerHealthcheckOutputReference) validateSetStartPeriodParameters(val *string) error {
 	return nil
 }

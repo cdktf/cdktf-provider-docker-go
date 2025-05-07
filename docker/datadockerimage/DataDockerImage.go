@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.4.0/docs/data-sources/image docker_image}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/data-sources/image docker_image}.
 type DataDockerImage interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -299,7 +299,7 @@ func (j *jsiiProxy_DataDockerImage) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.4.0/docs/data-sources/image docker_image} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/data-sources/image docker_image} Data Source.
 func NewDataDockerImage(scope constructs.Construct, id *string, config *DataDockerImageConfig) DataDockerImage {
 	_init_.Initialize()
 
@@ -317,7 +317,7 @@ func NewDataDockerImage(scope constructs.Construct, id *string, config *DataDock
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.4.0/docs/data-sources/image docker_image} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/data-sources/image docker_image} Data Source.
 func NewDataDockerImage_Override(d DataDockerImage, scope constructs.Construct, id *string, config *DataDockerImageConfig) {
 	_init_.Initialize()
 

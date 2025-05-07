@@ -38,6 +38,9 @@ type ContainerHealthcheckOutputReference interface {
 	Retries() *float64
 	SetRetries(val *float64)
 	RetriesInput() *float64
+	StartInterval() *string
+	SetStartInterval(val *string)
+	StartIntervalInput() *string
 	StartPeriod() *string
 	SetStartPeriod(val *string)
 	StartPeriodInput() *string
@@ -81,6 +84,7 @@ type ContainerHealthcheckOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetInterval()
 	ResetRetries()
+	ResetStartInterval()
 	ResetStartPeriod()
 	ResetTimeout()
 	// Produce the Token's value at resolution time.
@@ -183,6 +187,26 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference) RetriesInput() *float64 
 	_jsii_.Get(
 		j,
 		"retriesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ContainerHealthcheckOutputReference) StartInterval() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"startInterval",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ContainerHealthcheckOutputReference) StartIntervalInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"startIntervalInput",
 		&returns,
 	)
 	return returns
@@ -347,6 +371,17 @@ func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetRetries(val *float64) 
 	_jsii_.Set(
 		j,
 		"retries",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ContainerHealthcheckOutputReference)SetStartInterval(val *string) {
+	if err := j.validateSetStartIntervalParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"startInterval",
 		val,
 	)
 }
@@ -604,6 +639,14 @@ func (c *jsiiProxy_ContainerHealthcheckOutputReference) ResetRetries() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetRetries",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_ContainerHealthcheckOutputReference) ResetStartInterval() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetStartInterval",
 		nil, // no parameters
 	)
 }
