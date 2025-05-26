@@ -87,6 +87,14 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetArgsP
 	return nil
 }
 
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetCapAddParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetCapDropParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetCommandParameters(val *[]*string) error {
 	return nil
 }

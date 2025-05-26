@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/container docker_container}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/container docker_container}.
 type Container interface {
 	cdktf.TerraformResource
 	Attach() interface{}
@@ -43,6 +43,12 @@ type Container interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CpuPeriod() *float64
+	SetCpuPeriod(val *float64)
+	CpuPeriodInput() *float64
+	CpuQuota() *float64
+	SetCpuQuota(val *float64)
+	CpuQuotaInput() *float64
 	Cpus() *string
 	SetCpus(val *string)
 	CpuSet() *string
@@ -305,6 +311,8 @@ type Container interface {
 	ResetCgroupnsMode()
 	ResetCommand()
 	ResetContainerReadRefreshTimeoutMilliseconds()
+	ResetCpuPeriod()
+	ResetCpuQuota()
 	ResetCpus()
 	ResetCpuSet()
 	ResetCpuShares()
@@ -538,6 +546,46 @@ func (j *jsiiProxy_Container) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) CpuPeriod() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"cpuPeriod",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) CpuPeriodInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"cpuPeriodInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) CpuQuota() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"cpuQuota",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) CpuQuotaInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"cpuQuotaInput",
 		&returns,
 	)
 	return returns
@@ -1864,7 +1912,7 @@ func (j *jsiiProxy_Container) WorkingDirInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/container docker_container} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/container docker_container} Resource.
 func NewContainer(scope constructs.Construct, id *string, config *ContainerConfig) Container {
 	_init_.Initialize()
 
@@ -1882,7 +1930,7 @@ func NewContainer(scope constructs.Construct, id *string, config *ContainerConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/container docker_container} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/container docker_container} Resource.
 func NewContainer_Override(c Container, scope constructs.Construct, id *string, config *ContainerConfig) {
 	_init_.Initialize()
 
@@ -1955,6 +2003,28 @@ func (j *jsiiProxy_Container)SetCount(val interface{}) {
 	_jsii_.Set(
 		j,
 		"count",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Container)SetCpuPeriod(val *float64) {
+	if err := j.validateSetCpuPeriodParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"cpuPeriod",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Container)SetCpuQuota(val *float64) {
+	if err := j.validateSetCpuQuotaParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"cpuQuota",
 		val,
 	)
 }
@@ -3054,6 +3124,22 @@ func (c *jsiiProxy_Container) ResetContainerReadRefreshTimeoutMilliseconds() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetContainerReadRefreshTimeoutMilliseconds",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Container) ResetCpuPeriod() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCpuPeriod",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Container) ResetCpuQuota() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCpuQuota",
 		nil, // no parameters
 	)
 }

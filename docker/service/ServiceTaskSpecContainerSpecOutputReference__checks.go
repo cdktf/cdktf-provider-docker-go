@@ -297,6 +297,22 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetArgsP
 	return nil
 }
 
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetCapAddParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetCapDropParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) validateSetCommandParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

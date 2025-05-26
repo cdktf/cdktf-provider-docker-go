@@ -159,6 +159,14 @@ func (j *jsiiProxy_Container) validateSetCountParameters(val interface{}) error 
 	return nil
 }
 
+func (j *jsiiProxy_Container) validateSetCpuPeriodParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Container) validateSetCpuQuotaParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_Container) validateSetCpusParameters(val *string) error {
 	return nil
 }

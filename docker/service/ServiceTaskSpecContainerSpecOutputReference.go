@@ -16,6 +16,12 @@ type ServiceTaskSpecContainerSpecOutputReference interface {
 	Args() *[]*string
 	SetArgs(val *[]*string)
 	ArgsInput() *[]*string
+	CapAdd() *[]*string
+	SetCapAdd(val *[]*string)
+	CapAddInput() *[]*string
+	CapDrop() *[]*string
+	SetCapDrop(val *[]*string)
+	CapDropInput() *[]*string
 	Command() *[]*string
 	SetCommand(val *[]*string)
 	CommandInput() *[]*string
@@ -128,6 +134,8 @@ type ServiceTaskSpecContainerSpecOutputReference interface {
 	PutPrivileges(value *ServiceTaskSpecContainerSpecPrivileges)
 	PutSecrets(value interface{})
 	ResetArgs()
+	ResetCapAdd()
+	ResetCapDrop()
 	ResetCommand()
 	ResetConfigs()
 	ResetDir()
@@ -177,6 +185,46 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) ArgsInput() *[]*
 	_jsii_.Get(
 		j,
 		"argsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) CapAdd() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"capAdd",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) CapAddInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"capAddInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) CapDrop() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"capDrop",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) CapDropInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"capDropInput",
 		&returns,
 	)
 	return returns
@@ -691,6 +739,28 @@ func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference)SetArgs(val *[]*s
 	)
 }
 
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference)SetCapAdd(val *[]*string) {
+	if err := j.validateSetCapAddParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"capAdd",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference)SetCapDrop(val *[]*string) {
+	if err := j.validateSetCapDropParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"capDrop",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference)SetCommand(val *[]*string) {
 	if err := j.validateSetCommandParameters(val); err != nil {
 		panic(err)
@@ -1156,6 +1226,22 @@ func (s *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) ResetArgs() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetArgs",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) ResetCapAdd() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetCapAdd",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ServiceTaskSpecContainerSpecOutputReference) ResetCapDrop() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetCapDrop",
 		nil, // no parameters
 	)
 }

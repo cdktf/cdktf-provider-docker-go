@@ -24,44 +24,44 @@ type ServiceConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the service.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#name Service#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/service#name Service#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// task_spec block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#task_spec Service#task_spec}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/service#task_spec Service#task_spec}
 	TaskSpec *ServiceTaskSpec `field:"required" json:"taskSpec" yaml:"taskSpec"`
 	// auth block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#auth Service#auth}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/service#auth Service#auth}
 	Auth *ServiceAuth `field:"optional" json:"auth" yaml:"auth"`
 	// converge_config block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#converge_config Service#converge_config}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/service#converge_config Service#converge_config}
 	ConvergeConfig *ServiceConvergeConfig `field:"optional" json:"convergeConfig" yaml:"convergeConfig"`
 	// endpoint_spec block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#endpoint_spec Service#endpoint_spec}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/service#endpoint_spec Service#endpoint_spec}
 	EndpointSpec *ServiceEndpointSpec `field:"optional" json:"endpointSpec" yaml:"endpointSpec"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#id Service#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/service#id Service#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// labels block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#labels Service#labels}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/service#labels Service#labels}
 	Labels interface{} `field:"optional" json:"labels" yaml:"labels"`
 	// mode block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#mode Service#mode}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/service#mode Service#mode}
 	Mode *ServiceMode `field:"optional" json:"mode" yaml:"mode"`
 	// rollback_config block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#rollback_config Service#rollback_config}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/service#rollback_config Service#rollback_config}
 	RollbackConfig *ServiceRollbackConfig `field:"optional" json:"rollbackConfig" yaml:"rollbackConfig"`
 	// update_config block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.5.0/docs/resources/service#update_config Service#update_config}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/service#update_config Service#update_config}
 	UpdateConfig *ServiceUpdateConfig `field:"optional" json:"updateConfig" yaml:"updateConfig"`
 }
 
