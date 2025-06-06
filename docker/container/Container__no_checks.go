@@ -143,6 +143,10 @@ func (j *jsiiProxy_Container) validateSetCgroupnsModeParameters(val *string) err
 	return nil
 }
 
+func (j *jsiiProxy_Container) validateSetCgroupParentParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Container) validateSetCommandParameters(val *[]*string) error {
 	return nil
 }

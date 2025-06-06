@@ -442,6 +442,14 @@ func (j *jsiiProxy_BuildxBuilder) validateSetDriverOptionsParameters(val *map[st
 	return nil
 }
 
+func (j *jsiiProxy_BuildxBuilder) validateSetEndpointParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_BuildxBuilder) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

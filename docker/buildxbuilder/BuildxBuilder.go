@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/buildx_builder docker_buildx_builder}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/buildx_builder docker_buildx_builder}.
 type BuildxBuilder interface {
 	cdktf.TerraformResource
 	Append() interface{}
@@ -51,6 +51,9 @@ type BuildxBuilder interface {
 	DriverOptions() *map[string]*string
 	SetDriverOptions(val *map[string]*string)
 	DriverOptionsInput() *map[string]*string
+	Endpoint() *string
+	SetEndpoint(val *string)
+	EndpointInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -153,6 +156,7 @@ type BuildxBuilder interface {
 	ResetDockerContainer()
 	ResetDriver()
 	ResetDriverOptions()
+	ResetEndpoint()
 	ResetId()
 	ResetKubernetes()
 	ResetName()
@@ -366,6 +370,26 @@ func (j *jsiiProxy_BuildxBuilder) DriverOptionsInput() *map[string]*string {
 	_jsii_.Get(
 		j,
 		"driverOptionsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BuildxBuilder) Endpoint() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"endpoint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_BuildxBuilder) EndpointInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"endpointInput",
 		&returns,
 	)
 	return returns
@@ -622,7 +646,7 @@ func (j *jsiiProxy_BuildxBuilder) UseInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/buildx_builder docker_buildx_builder} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/buildx_builder docker_buildx_builder} Resource.
 func NewBuildxBuilder(scope constructs.Construct, id *string, config *BuildxBuilderConfig) BuildxBuilder {
 	_init_.Initialize()
 
@@ -640,7 +664,7 @@ func NewBuildxBuilder(scope constructs.Construct, id *string, config *BuildxBuil
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/buildx_builder docker_buildx_builder} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/buildx_builder docker_buildx_builder} Resource.
 func NewBuildxBuilder_Override(b BuildxBuilder, scope constructs.Construct, id *string, config *BuildxBuilderConfig) {
 	_init_.Initialize()
 
@@ -743,6 +767,17 @@ func (j *jsiiProxy_BuildxBuilder)SetDriverOptions(val *map[string]*string) {
 	_jsii_.Set(
 		j,
 		"driverOptions",
+		val,
+	)
+}
+
+func (j *jsiiProxy_BuildxBuilder)SetEndpoint(val *string) {
+	if err := j.validateSetEndpointParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"endpoint",
 		val,
 	)
 }
@@ -1278,6 +1313,14 @@ func (b *jsiiProxy_BuildxBuilder) ResetDriverOptions() {
 	_jsii_.InvokeVoid(
 		b,
 		"resetDriverOptions",
+		nil, // no parameters
+	)
+}
+
+func (b *jsiiProxy_BuildxBuilder) ResetEndpoint() {
+	_jsii_.InvokeVoid(
+		b,
+		"resetEndpoint",
 		nil, // no parameters
 	)
 }

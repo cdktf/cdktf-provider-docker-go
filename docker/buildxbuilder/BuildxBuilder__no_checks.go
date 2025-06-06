@@ -135,6 +135,10 @@ func (j *jsiiProxy_BuildxBuilder) validateSetDriverOptionsParameters(val *map[st
 	return nil
 }
 
+func (j *jsiiProxy_BuildxBuilder) validateSetEndpointParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_BuildxBuilder) validateSetIdParameters(val *string) error {
 	return nil
 }

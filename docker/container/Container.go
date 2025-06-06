@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/container docker_container}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/container docker_container}.
 type Container interface {
 	cdktf.TerraformResource
 	Attach() interface{}
@@ -26,6 +26,9 @@ type Container interface {
 	CgroupnsMode() *string
 	SetCgroupnsMode(val *string)
 	CgroupnsModeInput() *string
+	CgroupParent() *string
+	SetCgroupParent(val *string)
+	CgroupParentInput() *string
 	Command() *[]*string
 	SetCommand(val *[]*string)
 	CommandInput() *[]*string
@@ -309,6 +312,7 @@ type Container interface {
 	ResetAttach()
 	ResetCapabilities()
 	ResetCgroupnsMode()
+	ResetCgroupParent()
 	ResetCommand()
 	ResetContainerReadRefreshTimeoutMilliseconds()
 	ResetCpuPeriod()
@@ -466,6 +470,26 @@ func (j *jsiiProxy_Container) CgroupnsModeInput() *string {
 	_jsii_.Get(
 		j,
 		"cgroupnsModeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) CgroupParent() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cgroupParent",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Container) CgroupParentInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"cgroupParentInput",
 		&returns,
 	)
 	return returns
@@ -1912,7 +1936,7 @@ func (j *jsiiProxy_Container) WorkingDirInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/container docker_container} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/container docker_container} Resource.
 func NewContainer(scope constructs.Construct, id *string, config *ContainerConfig) Container {
 	_init_.Initialize()
 
@@ -1930,7 +1954,7 @@ func NewContainer(scope constructs.Construct, id *string, config *ContainerConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.0/docs/resources/container docker_container} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/container docker_container} Resource.
 func NewContainer_Override(c Container, scope constructs.Construct, id *string, config *ContainerConfig) {
 	_init_.Initialize()
 
@@ -1959,6 +1983,17 @@ func (j *jsiiProxy_Container)SetCgroupnsMode(val *string) {
 	_jsii_.Set(
 		j,
 		"cgroupnsMode",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Container)SetCgroupParent(val *string) {
+	if err := j.validateSetCgroupParentParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"cgroupParent",
 		val,
 	)
 }
@@ -3108,6 +3143,14 @@ func (c *jsiiProxy_Container) ResetCgroupnsMode() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetCgroupnsMode",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Container) ResetCgroupParent() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCgroupParent",
 		nil, // no parameters
 	)
 }
