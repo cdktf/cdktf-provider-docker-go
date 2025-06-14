@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/config docker_config}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/config docker_config}.
 type Config interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -356,7 +356,7 @@ func (j *jsiiProxy_Config) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/config docker_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/config docker_config} Resource.
 func NewConfig(scope constructs.Construct, id *string, config *ConfigConfig) Config {
 	_init_.Initialize()
 
@@ -374,7 +374,7 @@ func NewConfig(scope constructs.Construct, id *string, config *ConfigConfig) Con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/config docker_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/config docker_config} Resource.
 func NewConfig_Override(c Config, scope constructs.Construct, id *string, config *ConfigConfig) {
 	_init_.Initialize()
 

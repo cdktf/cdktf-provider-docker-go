@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/buildx_builder docker_buildx_builder}.
+// Represents a {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder docker_buildx_builder}.
 type BuildxBuilder interface {
 	cdktf.TerraformResource
 	Append() interface{}
@@ -646,7 +646,7 @@ func (j *jsiiProxy_BuildxBuilder) UseInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/buildx_builder docker_buildx_builder} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder docker_buildx_builder} Resource.
 func NewBuildxBuilder(scope constructs.Construct, id *string, config *BuildxBuilderConfig) BuildxBuilder {
 	_init_.Initialize()
 
@@ -664,7 +664,7 @@ func NewBuildxBuilder(scope constructs.Construct, id *string, config *BuildxBuil
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/buildx_builder docker_buildx_builder} Resource.
+// Create a new {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder docker_buildx_builder} Resource.
 func NewBuildxBuilder_Override(b BuildxBuilder, scope constructs.Construct, id *string, config *BuildxBuilderConfig) {
 	_init_.Initialize()
 

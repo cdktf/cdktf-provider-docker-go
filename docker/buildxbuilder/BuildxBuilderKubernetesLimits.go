@@ -7,15 +7,15 @@ package buildxbuilder
 type BuildxBuilderKubernetesLimits struct {
 	// CPU limit for the Kubernetes pod.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/buildx_builder#cpu BuildxBuilder#cpu}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#cpu BuildxBuilder#cpu}
 	Cpu *string `field:"optional" json:"cpu" yaml:"cpu"`
 	// Ephemeral storage limit for the Kubernetes pod.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/buildx_builder#ephemeral_storage BuildxBuilder#ephemeral_storage}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#ephemeral_storage BuildxBuilder#ephemeral_storage}
 	EphemeralStorage *string `field:"optional" json:"ephemeralStorage" yaml:"ephemeralStorage"`
 	// Memory limit for the Kubernetes pod.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.1/docs/resources/buildx_builder#memory BuildxBuilder#memory}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kreuzwerker/docker/3.6.2/docs/resources/buildx_builder#memory BuildxBuilder#memory}
 	Memory *string `field:"optional" json:"memory" yaml:"memory"`
 }
 
